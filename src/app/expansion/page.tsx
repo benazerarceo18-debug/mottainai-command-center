@@ -26,12 +26,20 @@ export default function ExpansionPage() {
             Rock #2 — On Track | 50-Store Roadmap by 2033
           </p>
         </div>
-        <Link
-          href="/expansion-deck"
-          className="bg-gold text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gold-light transition-colors"
-        >
-          Board Presentation Mode →
-        </Link>
+        <div className="flex gap-2">
+          <Link
+            href="/sites"
+            className="bg-white text-navy border border-border px-4 py-2 rounded-lg text-sm font-medium hover:border-gold transition-colors"
+          >
+            2 Tested Locations →
+          </Link>
+          <Link
+            href="/expansion-deck"
+            className="bg-gold text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gold-light transition-colors"
+          >
+            Board Presentation Mode →
+          </Link>
+        </div>
       </div>
 
       {/* Pipeline Tracker */}

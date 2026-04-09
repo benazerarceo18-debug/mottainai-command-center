@@ -6,7 +6,7 @@ export const BRAND = {
   positioning: 'Value-segment fast-casual Japanese ramen concept by the makers of Yushoken',
   architecture: 'Endorsed brand — "By the makers of Yushoken"',
   tone: 'Friendly, inclusive, approachable — no chef ego',
-  priceRange: '₱150–250',
+  priceRange: '₱250–450',
   status: 'Under Development',
   target: '50 stores by 2033',
   annualRevenue: '₱900M',
@@ -17,10 +17,10 @@ export const BRAND = {
     { name: 'Office Worker', age: '25-40', description: 'Needs a reliable lunch option. Appreciates efficiency and good value.' },
     { name: 'Delivery-First Customer', age: '20-35', description: 'Orders through GrabFood/Foodpanda. Values packaging quality and delivery speed.' },
   ],
-  competitiveFrame: ['Yoshinoya', 'Pepper Lunch', 'Tokyo Tokyo', 'Ramen Nagi (value sets)'],
+  competitiveFrame: ['Tokyo Tokyo', 'Marugame Udon', 'Ramen Kuroda', 'Yoshinoya'],
   nonNegotiables: [
     'Single unified concept — no tiers',
-    'Price band ₱150–250',
+    'Price band ₱250–450',
     'Food cost ₱70/bowl (≤35% FC%)',
     'Friendly, inclusive tone',
     'Endorsed brand model (By the makers of Yushoken)',
@@ -48,7 +48,7 @@ export const UNIT_ECONOMICS = {
 export const KPIS: KPI[] = [
   { id: 'rock-1', label: 'Rock #1 Menu Development', value: 'Complete', status: 'success', description: '7 core SKUs locked with FC ≤35%. Aoyama-san signed off.' },
   { id: 'rock-2', label: 'Rock #2 Expansion Playbook', value: 'On Track', status: 'warning', description: '65% complete. 8 appendices in progress, target Jun 2026.' },
-  { id: 'pipeline', label: 'Pipeline Sites', value: '3 Active', status: 'info', description: 'SM MOA (evaluated), SM North EDSA and Ayala Manila Bay (identified).' },
+  { id: 'pipeline', label: 'Pipeline Sites', value: '3 Active', status: 'info', description: 'SMDC Ice Tower + SMDC Light Mall (Award Notices signed). SM North EDSA identified.' },
   { id: 'fc-target', label: 'Target Food Cost', value: '≤35%', status: 'success', description: 'All 7 SKUs validated below 35% FC. Weighted avg 24.6%.' },
 ];
 
@@ -63,9 +63,39 @@ export const MENU_ITEMS: MenuItem[] = [
 ];
 
 export const PIPELINE_SITES: PipelineSite[] = [
-  { id: 'sm-moa', name: 'SM MOA', location: 'Pasay City', landlord: 'SM Prime', stage: 'evaluated', score: 9.0, sqm: 65, monthlyRent: null, notes: 'Food court location. High foot traffic. Validated pilot site. Score 9.0/10 — STRONG GO.' },
-  { id: 'sm-north', name: 'SM North EDSA', location: 'Quezon City', landlord: 'SM Prime', stage: 'identified', score: null, sqm: 60, monthlyRent: null, notes: 'Large catchment area. Food court expansion wing.' },
-  { id: 'ayala-mb', name: 'Ayala Malls Manila Bay', location: 'Parañaque', landlord: 'Ayala Land', stage: 'identified', score: null, sqm: 70, monthlyRent: null, notes: 'New mall development. Premium positioning opportunity.' },
+  {
+    id: 'smdc-ice',
+    name: 'SMDC Ice Tower',
+    location: 'MOA Complex, Pasay City',
+    landlord: 'SM Development Corporation',
+    stage: 'awarded',
+    score: 7.65, // 45.9/60 normalized
+    sqm: 221.74,
+    monthlyRent: 221740,
+    notes: 'Ramen Yushoken — Award Notice signed Feb 13, 2026. Site score 45.9/60 GO WITH CONDITIONS. Lease May 15, 2026 – Apr 30, 2029.',
+  },
+  {
+    id: 'light-mall',
+    name: 'SMDC Light Mall',
+    location: 'EDSA corner Madison St., Mandaluyong',
+    landlord: 'SM Development Corporation',
+    stage: 'awarded',
+    score: 7.8,
+    sqm: 229.46,
+    monthlyRent: 263879,
+    notes: 'Ramen Yushoken — Award Notice signed Jan 19, 2026. Units 119b/120. Lease May 1, 2026 – Apr 30, 2029. MRT Boni connected.',
+  },
+  {
+    id: 'sm-north',
+    name: 'SM North EDSA',
+    location: 'Quezon City',
+    landlord: 'SM Prime',
+    stage: 'identified',
+    score: null,
+    sqm: 60,
+    monthlyRent: null,
+    notes: 'Large catchment area. Inline dining expansion wing.',
+  },
 ];
 
 export const FINANCIAL_SCENARIOS: FinancialScenario[] = [
@@ -100,7 +130,7 @@ export const FINANCIAL_YEARS = ['Y1 (2027)', 'Y2 (2028)', 'Y3 (2029)', 'Y4 (2030
 export const BD_HIGHLIGHTS: BDHighlight[] = [
   { id: 'bd-1', date: '2026-04-07', title: 'Rock #1 Complete — 7 Core SKUs Locked', content: 'All 7 core SKUs finalized with food cost validated at ≤35%. Aoyama-san signed off on broth specifications. Ready for pilot production.', category: 'milestone' },
   { id: 'bd-2', date: '2026-03-31', title: 'Strategic pivot finalized — single unified concept confirmed', content: 'Board approved single unified concept. 3-tier format (Kaiten/Standard/Express) permanently dropped. Simplifies scaling, franchising, and landlord negotiations.', category: 'brand' },
-  { id: 'bd-3', date: '2026-03-15', title: 'SM MOA site evaluation complete — 9.0/10 STRONG GO', content: 'Site scoring 9.0/10 — STRONG GO. Demographics, traffic, and competition all exceed thresholds. Formal proposal preparation underway.', category: 'expansion' },
+  { id: 'bd-3', date: '2026-02-13', title: 'SMDC Ice Tower — Award Notice Signed', content: 'Ramen Yushoken at SMDC Ice Tower, MOA Complex, Pasay City. 221.74 sqm, site score 45.9/60, lease May 15, 2026 – Apr 30, 2029. Validates NHI as SMDC tenant — entry point for Mottainai placement.', category: 'expansion' },
 ];
 
 export const MILESTONES: Milestone[] = [
@@ -144,7 +174,7 @@ export const APPENDICES = [
 ];
 
 export const RISKS = [
-  { id: 'r-1', risk: 'Cannibalization of Yushoken', severity: 'Medium', mitigation: 'Different price segment (₱150-250 vs ₱350-500). Different positioning. Endorsed model creates halo effect.' },
+  { id: 'r-1', risk: 'Cannibalization of Yushoken', severity: 'Medium', mitigation: 'Different price segment (₱250-450 vs ₱500-700). Different positioning. Endorsed model creates halo effect.' },
   { id: 'r-2', risk: 'Food cost volatility', severity: 'High', mitigation: 'Locked supplier contracts. 35% FC ceiling with ₱70/bowl target. Quarterly price review mechanism.' },
   { id: 'r-3', risk: 'Mall landlord dependency (70% SM Prime)', severity: 'Medium', mitigation: 'Multi-landlord strategy. Ayala 16%, Robinsons 10%. Standalone options for diversification.' },
   { id: 'r-4', risk: 'Execution speed — 50 stores in 7 years', severity: 'Medium', mitigation: 'Phased rollout. Proven unit economics before scaling. Franchise model after Year 3.' },
