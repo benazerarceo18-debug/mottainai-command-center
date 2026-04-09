@@ -50,7 +50,7 @@ function Slide1() {
           <KpiCard value="82%" label="Base ROIC" />
         </div>
         <div className="bg-[#1a1a2e] text-white px-8 py-4 rounded-lg text-center">
-          <p className="text-lg font-semibold">Seeking ₱15–20M initial investment for first 3 stores</p>
+          <p className="text-lg font-semibold">Seeking ₱30–45M initial investment for first 3 stores</p>
         </div>
       </div>
     </div>
@@ -499,12 +499,12 @@ function Slide9() {
           <div className="space-y-6">
             <div className="bg-[#1a1a2e] text-white rounded-lg p-6">
               <div className="text-sm uppercase tracking-wider opacity-70 mb-2">Total Ask</div>
-              <div className="text-4xl font-bold">₱15–20M</div>
+              <div className="text-4xl font-bold">₱30–45M</div>
               <div className="text-sm opacity-70 mt-1">First 3 stores</div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <div className="text-lg font-bold text-[#1a1a2e]">₱3.5–4.5M</div>
+                <div className="text-lg font-bold text-[#1a1a2e]">₱10–15M</div>
                 <div className="text-xs text-gray-500">Per store (inline dining)</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">

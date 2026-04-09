@@ -123,7 +123,7 @@ export default function ExpansionPage() {
             <p className="text-white/50 text-xs mt-0.5">8-10 month payback</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-white">{'\u20B1'}3.5M</p>
+            <p className="text-2xl font-bold text-white">{'\u20B1'}10–15M</p>
             <p className="text-white/50 text-xs mt-0.5">Capex | Lease negotiation phase</p>
           </div>
         </div>

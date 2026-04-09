@@ -264,7 +264,7 @@ function Slide4() {
               </div>
               <div className="bg-[#1a1a2e] border border-white/10 rounded-lg p-4">
                 <p className="text-white/50 text-xs mb-1">Capex</p>
-                <p className="text-[#c9a227] font-bold">₱3.5M</p>
+                <p className="text-[#c9a227] font-bold">₱10–15M</p>
               </div>
               <div className="bg-[#1a1a2e] border border-white/10 rounded-lg p-4">
                 <p className="text-white/50 text-xs mb-1">NOI</p>

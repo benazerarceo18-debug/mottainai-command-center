@@ -348,7 +348,7 @@ export default function RDReportPage() {
                   { label: 'Annual Revenue', value: '₱882M', color: 'text-navy' },
                   { label: 'Annual NOI', value: '₱220.7M', color: 'text-emerald-600' },
                   { label: 'COGS Savings (vs CK Broth)', value: '+₱69.6M/yr', color: 'text-gold' },
-                  { label: 'Investment per Unit', value: '₱3.5M–₱4.5M', color: 'text-text-secondary' },
+                  { label: 'Investment per Unit', value: '₱10–15M', color: 'text-text-secondary' },
                 ].map((row) => (
                   <tr key={row.label}>
                     <td className="px-4 py-2.5 text-text-secondary">{row.label}</td>

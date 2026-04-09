@@ -8,7 +8,7 @@ const unitEconomics = [
   { label: 'Monthly Revenue', value: '₱2.016M' },
   { label: 'Food Cost %', value: '25%' },
   { label: 'Store EBITDA', value: '37% (₱746K/mo)' },
-  { label: 'Capex', value: '₱3.5–4.5M' },
+  { label: 'Capex', value: '₱10–15M' },
 ];
 
 const scenarios = [
@@ -200,7 +200,7 @@ export default function FinancialsPage() {
                   className="text-2xl font-bold text-text-primary mt-1"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
-                  ₱15–20M
+                  ₱30–45M
                 </p>
                 <p className="text-sm text-text-secondary mt-0.5">First 3 stores</p>
               </div>
@@ -212,10 +212,10 @@ export default function FinancialsPage() {
                   className="text-2xl font-bold text-text-primary mt-1"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
-                  ₱3.5–4.5M
+                  ₱10–15M
                 </p>
                 <p className="text-sm text-text-secondary mt-0.5">
-                  Inline dining format | ₱8M standalone
+                  Inline dining format
                 </p>
               </div>
             </div>
