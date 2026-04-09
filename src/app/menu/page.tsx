@@ -1,7 +1,18 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { MENU_ITEMS } from '@/lib/data';
 import CostWaterfallChart from '@/components/CostWaterfallChart';
 import AoyamaTracker from '@/components/AoyamaTracker';
+
+const FOOD_GALLERY = [
+  { src: '/images/food/ramen-tonkotsu.png', label: 'Tonkotsu Ramen' },
+  { src: '/images/food/gyoza-crispy.png', label: 'Crispy Gyoza' },
+  { src: '/images/food/salmon-oshizushi.png', label: 'Salmon Oshizushi' },
+  { src: '/images/food/yakimeshi.png', label: 'Yakimeshi' },
+  { src: '/images/food/chimaki.png', label: 'Chimaki' },
+  { src: '/images/food/ramen-spicy-shoyu.png', label: 'Spicy Shoyu Ramen' },
+  { src: '/images/food/mochi-daifuku.png', label: 'Mochi Daifuku' },
+];
 
 export default function MenuPage() {
   return (
@@ -65,6 +76,21 @@ export default function MenuPage() {
                   </p>
                   <p className="text-[10px] text-gray-400">FC%</p>
                 </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Menu Visual Gallery */}
+      <section>
+        <h2 className="text-xl font-bold text-[#111827] mb-4">Menu Visual Gallery</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {FOOD_GALLERY.map((item) => (
+            <div key={item.src} className="relative rounded-xl overflow-hidden aspect-video bg-gray-100">
+              <Image src={item.src} alt={item.label} fill className="object-cover" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+                <p className="text-white text-sm font-medium">{item.label}</p>
               </div>
             </div>
           ))}
