@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, type ReactNode } from 'react';
 
@@ -544,6 +545,50 @@ export default function BrandGuidelinesPage() {
                 </RevealSection>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Section 7b: Store Environment */}
+        <section className="bg-white py-24">
+          <div className="max-w-5xl mx-auto px-8">
+            <RevealSection>
+              <p className="text-xs text-[#CA8A04] tracking-[0.3em] uppercase font-medium mb-4">
+                07 — STORE ENVIRONMENT
+              </p>
+              <h2
+                className="text-4xl md:text-5xl font-bold text-[#1a1a2e] mb-6 leading-tight"
+                style={{ fontFamily: "'Noto Serif JP', serif" }}
+              >
+                The Counter as Theater
+              </h2>
+              <p className="text-[#555] text-lg leading-relaxed mb-12 max-w-2xl">
+                Every Mottainai location is built around a W-shaped ramen counter — an assembly theater where guests watch the craft, not just the bowl.
+              </p>
+            </RevealSection>
+            <RevealSection>
+              <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+                <Image
+                  src="/images/mottainai-counter-layout.jpg"
+                  alt="Technical Diagram: Mottainai W-Shaped Ramen Counter Layout"
+                  width={1200}
+                  height={630}
+                  className="w-full h-auto"
+                />
+                <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-gray-100 border-t border-gray-100">
+                  {[
+                    { label: 'Counter Surface', value: 'White Corian\n+ Ash Wood' },
+                    { label: 'Eating Depth', value: '600mm\nCorian surface' },
+                    { label: 'Robot Clearance', value: '1.2m\nper channel' },
+                    { label: 'Seating per Pod', value: '4–6\ndiners' },
+                  ].map((spec) => (
+                    <div key={spec.label} className="p-5">
+                      <p className="text-xs text-[#999] uppercase tracking-wider mb-1">{spec.label}</p>
+                      <p className="text-sm font-bold text-[#1a1a2e] whitespace-pre-line leading-snug">{spec.value}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </RevealSection>
           </div>
         </section>
 

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import PipelineTracker from '@/components/PipelineTracker';
 import SiteScoringTool from '@/components/SiteScoringTool';
@@ -52,6 +53,39 @@ export default function ExpansionPage() {
       {/* Site Scoring Tool */}
       <section>
         <SiteScoringTool />
+      </section>
+
+      {/* Store Design */}
+      <section>
+        <h2
+          className="text-xl font-bold text-text-primary mb-4"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+          Store Design — W-Shaped Ramen Counter
+        </h2>
+        <div className="bg-white rounded-xl border border-border overflow-hidden">
+          <Image
+            src="/images/mottainai-counter-layout.jpg"
+            alt="Technical Diagram: Mottainai W-Shaped Ramen Counter Layout — dual counter pods with 1.2m robot/staff clearance channels, White Corian with Ash Wood surfaces, automated assembly theater, conveyor terminus, 4-6 diner seats per pod"
+            width={1200}
+            height={630}
+            className="w-full h-auto"
+            priority
+          />
+          <div className="p-5 grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-border">
+            {[
+              { label: 'Counter Material', value: 'White Corian / Ash Wood' },
+              { label: 'Eating Surface', value: '600mm Deep Corian' },
+              { label: 'Robot Clearance', value: '1.2m per channel' },
+              { label: 'Seating per Pod', value: '4–6 diners' },
+            ].map((spec) => (
+              <div key={spec.label}>
+                <p className="text-xs text-text-muted uppercase tracking-wider">{spec.label}</p>
+                <p className="text-sm font-semibold text-text-primary mt-0.5">{spec.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* SM MOA Case Study */}
