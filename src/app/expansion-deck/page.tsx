@@ -76,7 +76,7 @@ function Slide2() {
     },
     {
       num: '03',
-      text: 'Mottainai targets ₱150–250 price point — underserved income tier',
+      text: 'Mottainai targets ₱250–450 price band — Japanese fast casual white space',
     },
   ];
 

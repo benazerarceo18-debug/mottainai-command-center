@@ -80,11 +80,12 @@ const TONE_DONT = [
   'Cold corporate tone',
   'Compare to or compete with Mendokoro / Yushoken',
   'Use "affordable" as a standalone descriptor',
+  'Intimidating ramen speak (no one should feel wrong for how they order)',
 ];
 
 const NON_NEGOTIABLES = [
   'Single unified concept (no tiers)',
-  'Price band ₱150-250',
+  'Price band ₱250-450',
   '"By the makers of Yushoken" always',
   'No promo, no discount',
   'Inline dining format only',
@@ -154,7 +155,7 @@ export default function BrandGuidelinesPage() {
                 className="text-5xl md:text-6xl font-bold text-[#1C1917] mb-16"
                 style={{ fontFamily: "'Noto Serif JP', serif" }}
               >
-                Zero Waste.<br />Full Flavor.
+                Flavor Without<br />the Fuss.
               </h2>
             </RevealSection>
 
@@ -162,18 +163,18 @@ export default function BrandGuidelinesPage() {
               {[
                 {
                   num: '01',
-                  title: 'Integrity',
-                  body: 'Every bowl tells the truth. Quality ingredients, honest prices, no shortcuts.',
+                  title: 'Value with Integrity',
+                  body: '₱250-450. 80–90% of the premium ramen experience at 50% of the cost. Never cheap — always honest.',
                 },
                 {
                   num: '02',
-                  title: 'Accessibility',
-                  body: "Yushoken's craft at ₱150-250. Premium DNA, democratic pricing.",
+                  title: 'Made For Me',
+                  body: 'Kaiten-inspired customization. Build your bowl, choose your combos. Japanese fast casual designed around you.',
                 },
                 {
                   num: '03',
-                  title: 'Efficiency',
-                  body: 'Nothing wasted. Every ingredient maximized. The mottainai philosophy applied to food.',
+                  title: 'Zero Friction',
+                  body: 'Touchscreen ordering, semi-automation, simplified flow. The mottainai mindset: nothing wasted — not your time, not your money.',
                 },
               ].map((pillar) => (
                 <RevealSection key={pillar.num}>
@@ -268,6 +269,11 @@ export default function BrandGuidelinesPage() {
               </p>
             </RevealSection>
 
+            <div className="mb-8 p-4 rounded-xl border border-amber-200 bg-amber-50">
+              <p className="text-xs text-amber-700 font-semibold uppercase tracking-wider mb-1">Color Palette Note</p>
+              <p className="text-sm text-amber-900">Brand colors TBD — final palette to be defined with brand designer. Per brief: energetic accents (2–3 bold colors) on clean neutrals. Current: NHI corporate palette (navy + gold) as placeholder.</p>
+            </div>
+
             <div className="mb-8">
               <p className="text-xs text-gray-400 uppercase tracking-widest mb-4 font-medium">Primary</p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -344,7 +350,7 @@ export default function BrandGuidelinesPage() {
                   <div>
                     <span className="text-[10px] text-gray-300 uppercase tracking-widest mr-3">h1</span>
                     <span className="text-5xl font-bold text-[#1C1917]" style={{ fontFamily: "'Noto Serif JP', serif" }}>
-                      Zero Waste. Full Flavor.
+                      Flavor Without the Fuss.
                     </span>
                   </div>
                   <div>
@@ -362,7 +368,7 @@ export default function BrandGuidelinesPage() {
                   <div>
                     <span className="text-[10px] text-gray-300 uppercase tracking-widest mr-3">body</span>
                     <span className="text-base text-gray-600" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
-                      Mottainai is NHI's value-segment ramen concept, bringing Yushoken-quality broth to the ₱150–250 price band.
+                      Mottainai is NHI&apos;s Japanese fast casual concept — accessible decadence at ₱250–450. Built for diners who want premium flavor without the premium friction.
                     </span>
                   </div>
                   <div>

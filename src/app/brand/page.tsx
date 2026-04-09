@@ -5,7 +5,7 @@ const PERSONAS = [
   {
     name: 'Value Seekers',
     age: '25-35',
-    description: 'Mall-goers with a ₱150-250 budget seeking quality ramen without the premium price tag.',
+    description: 'Mall-goers with a ₱250-450 budget seeking premium Japanese fast casual without the full-service price.',
   },
   {
     name: 'Japanese Food Enthusiasts',
@@ -20,16 +20,16 @@ const PERSONAS = [
 ];
 
 const COMPETITORS = [
-  { brand: 'Mottainai', segment: 'Value Ramen', price: '₱150-250', format: 'Fast Casual', differentiator: 'Yushoken DNA at accessible price' },
-  { brand: 'Yoshinoya', segment: 'QSR Japanese', price: '₱120-200', format: 'QSR Counter', differentiator: 'Speed, low price' },
-  { brand: 'Pepper Lunch', segment: 'Casual Japanese', price: '₱250-400', format: 'DIY Hot Plate', differentiator: 'Interactive cooking' },
-  { brand: 'Tokyo Tokyo', segment: 'QSR Japanese', price: '₱100-180', format: 'QSR', differentiator: 'Filipino-adapted Japanese' },
-  { brand: 'Ramen Nagi', segment: 'Premium Ramen', price: '₱350-500', format: 'Full Service', differentiator: 'Customization, premium' },
+  { brand: 'Mottainai', segment: 'Value Fast Casual', price: '₱250-450', format: 'Fast Casual', differentiator: 'Kaiten-inspired + touchscreen, "accessible decadence"' },
+  { brand: 'Tokyo Tokyo', segment: 'QSR Japanese', price: '₱120-200', format: 'QSR Counter', differentiator: 'Filipino-adapted Japanese, rice bowls' },
+  { brand: 'Marugame Udon', segment: 'Fast Casual Japanese', price: '₱180-280', format: 'Cafeteria-style', differentiator: 'Udon specialist, self-serve' },
+  { brand: 'Ramen Kuroda', segment: 'Casual Ramen', price: '₱250-380', format: 'Casual dining', differentiator: 'Value ramen chain' },
+  { brand: 'Yoshinoya', segment: 'QSR Japanese', price: '₱120-200', format: 'QSR Counter', differentiator: 'Gyudon-focused, no ramen' },
 ];
 
 const NON_NEGOTIABLES = [
   'Single unified concept (no tiers)',
-  'Price band ₱150-250',
+  'Price band ₱250-450',
   'Friendly, inclusive tone (no chef ego)',
   'Endorsed brand model ("By the makers of Yushoken")',
   'Sustainability = operational only, not branded',
@@ -59,9 +59,9 @@ export default function BrandPage() {
         <div>
           <h1 className="text-3xl font-bold text-text-primary">Brand Identity</h1>
           <p className="text-text-secondary mt-3 max-w-3xl">
-            Mottainai is NHI&apos;s standalone value-segment Japanese ramen concept, delivering
-            authentic ramen crafted with Yushoken&apos;s expertise at an accessible price point of
-            ₱150-250.
+            Mottainai is NHI&apos;s Japanese fast casual concept — accessible decadence at ₱250–450.
+            80–90% of the premium ramen experience at 50% of the cost. Built for diners who want
+            premium flavor without the premium friction.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export default function BrandPage() {
           </div>
           <div className="rounded-lg bg-bg p-4">
             <p className="text-xs text-text-muted uppercase tracking-wider font-medium mb-1">Tagline</p>
-            <p className="text-sm text-text-primary font-semibold">Zero Waste. Full Flavor.</p>
+            <p className="text-sm text-text-primary font-semibold">Flavor Without the Fuss.</p>
           </div>
         </div>
 

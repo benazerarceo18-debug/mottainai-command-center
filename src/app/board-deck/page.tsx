@@ -60,10 +60,9 @@ function Slide1() {
 /* ─── Slide 2: Market Opportunity ─── */
 function Slide2() {
   const competitors = [
-    { name: 'Yoshinoya', segment: 'QSR Japanese', price: '₱150–250', position: 'Rice bowls, no ramen focus' },
-    { name: 'Pepper Lunch', segment: 'QSR Japanese', price: '₱200–350', position: 'Teppan, no ramen' },
-    { name: 'Tokyo Tokyo', segment: 'QSR Japanese', price: '₱120–200', position: 'Mass market, low authenticity' },
-    { name: 'Ramen Nagi', segment: 'Casual Dining', price: '₱350–500', position: 'Premium ramen, limited reach' },
+    { name: 'Tokyo Tokyo', segment: 'QSR Japanese', price: '₱120–200', position: 'Filipino-adapted Japanese, rice-heavy' },
+    { name: 'Marugame Udon', segment: 'Fast Casual Japanese', price: '₱180–280', position: 'Udon specialist, high throughput' },
+    { name: 'Ramen Kuroda', segment: 'Casual Ramen', price: '₱250–380', position: 'Value ramen, growing chain' },
   ];
 
   return (
@@ -110,7 +109,7 @@ function Slide2() {
               <tr className="bg-[#c9a227]/10 font-semibold">
                 <td className="px-4 py-3 text-[#1a1a2e]">Mottainai</td>
                 <td className="px-4 py-3 text-[#1a1a2e]">QSR Ramen</td>
-                <td className="px-4 py-3 text-[#1a1a2e]">₱180–280</td>
+                <td className="px-4 py-3 text-[#1a1a2e]">₱250–450</td>
                 <td className="px-4 py-3 text-[#1a1a2e]">Authentic value ramen — only player</td>
               </tr>
             </tbody>
@@ -161,7 +160,7 @@ function Slide3() {
           <div className="flex flex-col gap-6">
             <div className="bg-[#1a1a2e] text-white rounded-lg p-6">
               <div className="text-sm uppercase tracking-wider opacity-70 mb-2">Price Range</div>
-              <div className="text-3xl font-bold">₱180–280</div>
+              <div className="text-3xl font-bold">₱250–450</div>
             </div>
             <div className="bg-[#1a1a2e] text-white rounded-lg p-6">
               <div className="text-sm uppercase tracking-wider opacity-70 mb-2">Avg Food Cost</div>
@@ -429,7 +428,7 @@ function Slide7() {
 /* ─── Slide 8: Risk Assessment ─── */
 function Slide8() {
   const risks = [
-    { risk: 'Cannibalization of Yushoken', severity: 'Medium', mitigation: 'Different segment (₱150–250 vs ₱350–500), separate locations' },
+    { risk: 'Cannibalization of Yushoken', severity: 'Medium', mitigation: 'Different segment (₱250–450 vs ₱500–700), separate locations' },
     { risk: 'Food cost volatility', severity: 'High', mitigation: 'Centralized commissary, supplier contracts, menu flexibility' },
     { risk: 'Expansion execution', severity: 'Medium', mitigation: 'Standardized playbook, SM partnership, proven format' },
     { risk: 'Brand dilution', severity: 'Low', mitigation: 'Endorsed model (not co-branded), separate identity' },
