@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PipelineTracker from '@/components/PipelineTracker';
 import SiteScoringTool from '@/components/SiteScoringTool';
 import PlaybookAccordion from '@/components/PlaybookAccordion';
@@ -12,16 +13,24 @@ export default function ExpansionPage() {
   return (
     <div className="p-6 max-w-7xl mx-auto space-y-8">
       {/* Header */}
-      <div>
-        <h1
-          className="text-2xl font-bold text-text-primary"
-          style={{ fontFamily: "'Playfair Display', serif" }}
+      <div className="flex items-start justify-between">
+        <div>
+          <h1
+            className="text-2xl font-bold text-text-primary"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Expansion Playbook
+          </h1>
+          <p className="text-sm text-text-secondary mt-1">
+            Rock #2 — On Track | 50-Store Roadmap by 2033
+          </p>
+        </div>
+        <Link
+          href="/expansion-deck"
+          className="bg-gold text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gold-light transition-colors"
         >
-          Expansion Playbook
-        </h1>
-        <p className="text-sm text-text-secondary mt-1">
-          Rock #2 — On Track | 50-Store Roadmap by 2033
-        </p>
+          Board Presentation Mode →
+        </Link>
       </div>
 
       {/* Pipeline Tracker */}
