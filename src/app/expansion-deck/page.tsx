@@ -260,7 +260,7 @@ function Slide4() {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-[#1a1a2e] border border-white/10 rounded-lg p-4">
                 <p className="text-white/50 text-xs mb-1">Location</p>
-                <p className="text-white text-sm">65 sqm food court, SM Prime, Pasay City</p>
+                <p className="text-white text-sm">65 sqm inline dining, SM Prime, Pasay City</p>
               </div>
               <div className="bg-[#1a1a2e] border border-white/10 rounded-lg p-4">
                 <p className="text-white/50 text-xs mb-1">Capex</p>
@@ -463,7 +463,7 @@ function Slide7() {
           </tbody>
         </table>
         <div className="bg-[#1a1a2e] border border-white/10 rounded-lg p-4 text-sm text-white/60">
-          Note: SM Prime preferred partner — food court format target for Phase 1
+          Note: SM Prime preferred partner — inline dining format for Phase 1 sites
         </div>
       </div>
     </div>

@@ -74,7 +74,7 @@ export default function ExpansionPage() {
           </div>
           <div>
             <p className="text-2xl font-bold text-white">65 sqm</p>
-            <p className="text-white/50 text-xs mt-0.5">Food Court, SM Prime, Pasay City</p>
+            <p className="text-white/50 text-xs mt-0.5">SM Prime, Pasay City</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-white">35% NOI</p>

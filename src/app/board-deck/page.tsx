@@ -280,7 +280,7 @@ function Slide5() {
                 <span className="font-semibold">Geographic:</span> Metro Manila first, Cebu/Davao Y3+
               </p>
               <p className="text-sm text-gray-600 mt-1">
-                <span className="font-semibold">Format:</span> 60–80 sqm food court optimized
+                <span className="font-semibold">Format:</span> 60–80 sqm fast casual inline dining
               </p>
             </div>
           </div>
@@ -506,7 +506,7 @@ function Slide9() {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                 <div className="text-lg font-bold text-[#1a1a2e]">₱3.5–4.5M</div>
-                <div className="text-xs text-gray-500">Per store (food court)</div>
+                <div className="text-xs text-gray-500">Per store (inline dining)</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                 <div className="text-lg font-bold text-[#1a1a2e]">₱8M</div>

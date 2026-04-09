@@ -215,7 +215,7 @@ export default function FinancialsPage() {
                   ₱3.5–4.5M
                 </p>
                 <p className="text-sm text-text-secondary mt-0.5">
-                  Food court format | ₱8M standalone
+                  Inline dining format | ₱8M standalone
                 </p>
               </div>
             </div>
