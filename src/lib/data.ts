@@ -182,8 +182,8 @@ export const RISKS = [
 ];
 
 export const LANDLORD_MIX = [
-  { landlord: 'SM Prime', percentage: 70, stores: 35, color: '#1a1a2e' },
-  { landlord: 'Ayala Land', percentage: 16, stores: 8, color: '#c9a227' },
+  { landlord: 'SM Prime', percentage: 70, stores: 35, color: '#111827' },
+  { landlord: 'Ayala Land', percentage: 16, stores: 8, color: '#FB923C' },
   { landlord: 'Robinsons', percentage: 10, stores: 5, color: '#64748b' },
   { landlord: 'Others', percentage: 4, stores: 2, color: '#94a3b8' },
 ];

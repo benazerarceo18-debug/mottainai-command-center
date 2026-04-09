@@ -8,7 +8,7 @@ const TOTAL_SLIDES = 8;
 function SlideHeader({ slideNum, title }: { slideNum: number; title: string }) {
   return (
     <div className="w-full">
-      <div className="bg-[#1a1a2e] text-white px-8 py-4 flex items-center justify-between">
+      <div className="bg-[#111827] text-white px-8 py-4 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/expansion" className="text-white/60 hover:text-white text-sm transition-colors">
             ← Back to Expansion
@@ -19,7 +19,7 @@ function SlideHeader({ slideNum, title }: { slideNum: number; title: string }) {
         </div>
         <span className="text-xs opacity-50">Slide {slideNum} / {TOTAL_SLIDES}</span>
       </div>
-      <div className="h-1 bg-[#c9a227]" />
+      <div className="h-1 bg-[#FB923C]" />
     </div>
   );
 }
@@ -39,7 +39,7 @@ function Slide1() {
           }}
         />
         <div className="relative z-10 text-center max-w-4xl">
-          <div className="h-px w-24 bg-[#c9a227] mx-auto mb-8" />
+          <div className="h-px w-24 bg-[#FB923C] mx-auto mb-8" />
           <h1
             className="text-6xl font-bold text-white mb-4 leading-tight"
             style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
@@ -49,7 +49,7 @@ function Slide1() {
           <p className="text-xl text-white/70 mb-8">
             Mottainai 50-Store Roadmap&ensp;|&ensp;Nippon Hasha Inc.
           </p>
-          <div className="h-px w-32 bg-[#c9a227] mx-auto mb-8" />
+          <div className="h-px w-32 bg-[#FB923C] mx-auto mb-8" />
           <div className="flex items-center justify-center gap-8 text-sm text-white/60">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-400 inline-block" />
@@ -94,25 +94,25 @@ function Slide2() {
           <div className="space-y-6">
             {points.map((p) => (
               <div key={p.num} className="flex gap-5 items-start">
-                <span className="text-[#c9a227] text-2xl font-bold leading-none mt-1">{p.num}</span>
+                <span className="text-[#FB923C] text-2xl font-bold leading-none mt-1">{p.num}</span>
                 <p className="text-white/80 text-lg leading-relaxed">{p.text}</p>
               </div>
             ))}
           </div>
           <div className="space-y-4">
-            <div className="bg-[#1a1a2e] border border-white/10 rounded-xl p-6">
+            <div className="bg-[#111827] border border-white/10 rounded-xl p-6">
               <p className="text-white/50 text-xs uppercase tracking-widest mb-1">Goal</p>
               <p className="text-white text-base leading-relaxed">
                 50 stores by 2033 — Metro Manila first, then Visayas / Mindanao
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[#1a1a2e] border border-white/10 rounded-xl p-6 text-center">
-                <p className="text-[#c9a227] text-3xl font-bold mb-1">₱900M</p>
+              <div className="bg-[#111827] border border-white/10 rounded-xl p-6 text-center">
+                <p className="text-[#FB923C] text-3xl font-bold mb-1">₱900M</p>
                 <p className="text-white/50 text-xs">Target Revenue</p>
               </div>
-              <div className="bg-[#1a1a2e] border border-white/10 rounded-xl p-6 text-center">
-                <p className="text-[#c9a227] text-3xl font-bold mb-1">₱207M</p>
+              <div className="bg-[#111827] border border-white/10 rounded-xl p-6 text-center">
+                <p className="text-[#FB923C] text-3xl font-bold mb-1">₱207M</p>
                 <p className="text-white/50 text-xs">Target NOI</p>
               </div>
             </div>
@@ -144,8 +144,8 @@ function Slide3() {
       name: 'Site Quality',
       weight: '25%',
       desc: 'Visibility, footfall, accessibility, anchor tenants',
-      color: 'border-[#c9a227]',
-      text: 'text-[#c9a227]',
+      color: 'border-[#FB923C]',
+      text: 'text-[#FB923C]',
     },
     {
       name: 'Traffic & Access',
@@ -170,7 +170,7 @@ function Slide3() {
           {criteria.map((c) => (
             <div
               key={c.name}
-              className={`bg-[#1a1a2e] border-l-4 ${c.color} rounded-r-xl p-6 flex items-start justify-between gap-4`}
+              className={`bg-[#111827] border-l-4 ${c.color} rounded-r-xl p-6 flex items-start justify-between gap-4`}
             >
               <div>
                 <p className="text-white font-semibold text-lg mb-1">{c.name}</p>
@@ -222,7 +222,7 @@ function Slide4() {
           <div>
             <table className="w-full text-sm" style={{ borderCollapse: 'collapse' }}>
               <thead>
-                <tr className="bg-[#1a1a2e]">
+                <tr className="bg-[#111827]">
                   <th className="text-left text-white/60 px-4 py-3 font-medium border border-white/10">Criterion</th>
                   <th className="text-center text-white/60 px-4 py-3 font-medium border border-white/10">Score</th>
                   <th className="text-center text-white/60 px-4 py-3 font-medium border border-white/10">Weight</th>
@@ -235,14 +235,14 @@ function Slide4() {
                     <td className="px-4 py-3 border border-white/10 text-white/80">{r.criterion}</td>
                     <td className="px-4 py-3 border border-white/10 text-center text-white">{r.score}</td>
                     <td className="px-4 py-3 border border-white/10 text-center text-white/60">{r.weight}</td>
-                    <td className="px-4 py-3 border border-white/10 text-center text-[#c9a227]">{r.weighted}</td>
+                    <td className="px-4 py-3 border border-white/10 text-center text-[#FB923C]">{r.weighted}</td>
                   </tr>
                 ))}
-                <tr className="bg-[#1a1a2e] font-bold">
+                <tr className="bg-[#111827] font-bold">
                   <td className="px-4 py-3 border border-white/10 text-white">TOTAL</td>
                   <td className="px-4 py-3 border border-white/10" />
                   <td className="px-4 py-3 border border-white/10" />
-                  <td className="px-4 py-3 border border-white/10 text-center text-[#c9a227] text-base">9.10</td>
+                  <td className="px-4 py-3 border border-white/10 text-center text-[#FB923C] text-base">9.10</td>
                 </tr>
               </tbody>
             </table>
@@ -250,7 +250,7 @@ function Slide4() {
           <div className="space-y-5">
             <div className="text-center">
               <p
-                className="text-8xl font-bold text-[#c9a227]"
+                className="text-8xl font-bold text-[#FB923C]"
                 style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
               >
                 9.0
@@ -258,19 +258,19 @@ function Slide4() {
               <p className="text-white/70 text-sm mt-1">Score — STRONG GO</p>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[#1a1a2e] border border-white/10 rounded-lg p-4">
+              <div className="bg-[#111827] border border-white/10 rounded-lg p-4">
                 <p className="text-white/50 text-xs mb-1">Location</p>
                 <p className="text-white text-sm">65 sqm inline dining, SM Prime, Pasay City</p>
               </div>
-              <div className="bg-[#1a1a2e] border border-white/10 rounded-lg p-4">
+              <div className="bg-[#111827] border border-white/10 rounded-lg p-4">
                 <p className="text-white/50 text-xs mb-1">Capex</p>
-                <p className="text-[#c9a227] font-bold">₱10–15M</p>
+                <p className="text-[#FB923C] font-bold">₱10–15M</p>
               </div>
-              <div className="bg-[#1a1a2e] border border-white/10 rounded-lg p-4">
+              <div className="bg-[#111827] border border-white/10 rounded-lg p-4">
                 <p className="text-white/50 text-xs mb-1">NOI</p>
                 <p className="text-white font-bold">35%</p>
               </div>
-              <div className="bg-[#1a1a2e] border border-white/10 rounded-lg p-4">
+              <div className="bg-[#111827] border border-white/10 rounded-lg p-4">
                 <p className="text-white/50 text-xs mb-1">Payback</p>
                 <p className="text-white font-bold">8–10 months</p>
               </div>
@@ -304,7 +304,7 @@ function Slide5() {
         </h2>
         <table className="w-full text-sm mb-8" style={{ borderCollapse: 'collapse' }}>
           <thead>
-            <tr className="bg-[#1a1a2e]">
+            <tr className="bg-[#111827]">
               <th className="text-left text-white/60 px-5 py-3 font-medium border border-white/10">Site</th>
               <th className="text-left text-white/60 px-5 py-3 font-medium border border-white/10">Location</th>
               <th className="text-left text-white/60 px-5 py-3 font-medium border border-white/10">Landlord</th>
@@ -321,7 +321,7 @@ function Slide5() {
                 <td className="px-5 py-4 border border-white/10">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${s.stageColor}`}>{s.stage}</span>
                 </td>
-                <td className="px-5 py-4 border border-white/10 text-center text-[#c9a227] font-bold">{s.score}</td>
+                <td className="px-5 py-4 border border-white/10 text-center text-[#FB923C] font-bold">{s.score}</td>
               </tr>
             ))}
           </tbody>
@@ -333,7 +333,7 @@ function Slide5() {
               <div key={s} className="flex items-center flex-1">
                 <div
                   className={`flex-1 px-3 py-2 text-xs text-center font-medium ${
-                    i < 2 ? 'bg-[#c9a227]/20 text-[#c9a227]' : 'bg-[#1a1a2e] text-white/40'
+                    i < 2 ? 'bg-[#FB923C]/20 text-[#FB923C]' : 'bg-[#111827] text-white/40'
                   }`}
                   style={{
                     clipPath: i < stages.length - 1 ? 'polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%)' : 'none',
@@ -359,8 +359,8 @@ function Slide6() {
       share: '70%',
       stores: '40 stores',
       note: 'Master agreement preferred',
-      color: 'border-[#c9a227]',
-      text: 'text-[#c9a227]',
+      color: 'border-[#FB923C]',
+      text: 'text-[#FB923C]',
     },
     {
       name: 'Ayala Land',
@@ -394,7 +394,7 @@ function Slide6() {
           {landlords.map((l) => (
             <div
               key={l.name}
-              className={`bg-[#1a1a2e] border-t-4 ${l.color} rounded-b-xl p-8 text-center`}
+              className={`bg-[#111827] border-t-4 ${l.color} rounded-b-xl p-8 text-center`}
             >
               <p className="text-white/60 text-sm mb-2">{l.name}</p>
               <p
@@ -408,7 +408,7 @@ function Slide6() {
             </div>
           ))}
         </div>
-        <div className="bg-[#1a1a2e] border border-white/10 rounded-xl p-6 grid grid-cols-2 gap-6">
+        <div className="bg-[#111827] border border-white/10 rounded-xl p-6 grid grid-cols-2 gap-6">
           <div>
             <p className="text-white/50 text-xs uppercase tracking-widest mb-2">Geographic Sequencing</p>
             <p className="text-white text-sm">Metro Manila first → Cebu / Davao Y3 → International Y5+</p>
@@ -446,7 +446,7 @@ function Slide7() {
         </h2>
         <table className="w-full text-sm mb-6" style={{ borderCollapse: 'collapse' }}>
           <thead>
-            <tr className="bg-[#1a1a2e]">
+            <tr className="bg-[#111827]">
               <th className="text-left text-white/60 px-5 py-3 font-medium border border-white/10">Parameter</th>
               <th className="text-left text-white/60 px-5 py-3 font-medium border border-white/10">Target</th>
               <th className="text-left text-white/60 px-5 py-3 font-medium border border-white/10">Walk-Away</th>
@@ -462,7 +462,7 @@ function Slide7() {
             ))}
           </tbody>
         </table>
-        <div className="bg-[#1a1a2e] border border-white/10 rounded-lg p-4 text-sm text-white/60">
+        <div className="bg-[#111827] border border-white/10 rounded-lg p-4 text-sm text-white/60">
           Note: SM Prime preferred partner — inline dining format for Phase 1 sites
         </div>
       </div>
@@ -508,10 +508,10 @@ function Slide8() {
                   <span className="text-white/60 text-sm w-24 shrink-0">{y.label}</span>
                   <div className="flex-1 bg-white/10 rounded-full h-5 overflow-hidden">
                     <div
-                      className="h-full bg-[#1a1a2e] rounded-full flex items-center px-2"
+                      className="h-full bg-[#111827] rounded-full flex items-center px-2"
                       style={{ width: `${(y.count / y.max) * 100}%`, minWidth: '2rem' }}
                     >
-                      <span className="text-[#c9a227] text-xs font-bold">{y.count}</span>
+                      <span className="text-[#FB923C] text-xs font-bold">{y.count}</span>
                     </div>
                   </div>
                 </div>
@@ -523,17 +523,17 @@ function Slide8() {
             <div className="space-y-3 mb-6">
               {milestones.map((m) => (
                 <div key={m.date} className="flex gap-4 items-start">
-                  <span className="text-[#c9a227] text-xs font-bold w-20 shrink-0 mt-0.5">{m.date}</span>
+                  <span className="text-[#FB923C] text-xs font-bold w-20 shrink-0 mt-0.5">{m.date}</span>
                   <span className="text-white/70 text-sm">{m.event}</span>
                 </div>
               ))}
             </div>
-            <div className="bg-[#1a1a2e] border border-white/10 rounded-lg p-4 text-sm text-white/60 mb-3">
+            <div className="bg-[#111827] border border-white/10 rounded-lg p-4 text-sm text-white/60 mb-3">
               Full financial model available in Financial Projections
             </div>
             <Link
               href="/expansion"
-              className="text-[#c9a227] text-sm hover:text-white transition-colors"
+              className="text-[#FB923C] text-sm hover:text-white transition-colors"
             >
               Back to Expansion Playbook →
             </Link>
@@ -571,11 +571,11 @@ function SlideThumbnail({
       onClick={onClick}
       className={`rounded-lg border-2 p-4 text-left transition-all ${
         index === current
-          ? 'border-[#c9a227] bg-[#1a1a2e]'
+          ? 'border-[#FB923C] bg-[#111827]'
           : 'border-white/10 bg-[#111118] hover:border-white/30'
       }`}
     >
-      <div className="text-[#c9a227] text-xs font-bold mb-1">0{index + 1}</div>
+      <div className="text-[#FB923C] text-xs font-bold mb-1">0{index + 1}</div>
       <div className="text-white text-sm font-medium">{labels[index]}</div>
     </button>
   );
@@ -614,7 +614,7 @@ export default function ExpansionDeckPage() {
   if (isOverview) {
     return (
       <div className="fixed inset-0 z-50 bg-[#0a0a0f] flex flex-col">
-        <div className="bg-[#1a1a2e] px-8 py-4 flex items-center justify-between">
+        <div className="bg-[#111827] px-8 py-4 flex items-center justify-between">
           <span className="text-white text-sm tracking-widest uppercase opacity-80">
             Expansion Playbook — Overview
           </span>
@@ -625,7 +625,7 @@ export default function ExpansionDeckPage() {
             ESC to close
           </button>
         </div>
-        <div className="h-1 bg-[#c9a227]" />
+        <div className="h-1 bg-[#FB923C]" />
         <div className="flex-1 overflow-auto p-10">
           <div className="grid grid-cols-4 gap-5 max-w-5xl mx-auto">
             {SLIDES.map((_, i) => (
@@ -653,7 +653,7 @@ export default function ExpansionDeckPage() {
       </div>
 
       {/* Bottom bar: overview + slide counter */}
-      <div className="bg-[#1a1a2e] border-t border-white/10 px-8 py-2 flex items-center justify-between text-xs text-white/40">
+      <div className="bg-[#111827] border-t border-white/10 px-8 py-2 flex items-center justify-between text-xs text-white/40">
         <button
           onClick={() => setIsOverview(true)}
           className="hover:text-white/70 transition-colors"

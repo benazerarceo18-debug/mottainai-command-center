@@ -57,7 +57,7 @@ const NAV_CARDS = [
 const PROGRESS_CARDS = [
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#CA8A04" strokeWidth={2}>
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#F97316" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
@@ -69,7 +69,7 @@ const PROGRESS_CARDS = [
   },
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#CA8A04" strokeWidth={2}>
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#F97316" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
@@ -82,7 +82,7 @@ const PROGRESS_CARDS = [
   },
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#CA8A04" strokeWidth={2}>
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#F97316" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
@@ -161,7 +161,7 @@ export default function LandingPage() {
         }
 
         .gold-text {
-          background: linear-gradient(135deg, #CA8A04, #F59E0B, #FBBF24, #CA8A04);
+          background: linear-gradient(135deg, #F97316, #F59E0B, #FBBF24, #F97316);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -272,7 +272,7 @@ export default function LandingPage() {
                   height: sizes[i],
                   left: `${lefts[i]}%`,
                   top: `${tops[i]}%`,
-                  background: i % 3 === 0 ? '#CA8A04' : i % 3 === 1 ? '#F59E0B' : 'rgba(255,255,255,0.4)',
+                  background: i % 3 === 0 ? '#F97316' : i % 3 === 1 ? '#F59E0B' : 'rgba(255,255,255,0.4)',
                   animation: `particle-drift ${dur[i]}s ease-in-out infinite ${del[i]}s`,
                 }}
               />
@@ -284,7 +284,7 @@ export default function LandingPage() {
             {/* Confidential pill */}
             <div
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs tracking-widest font-medium mb-10"
-              style={{ borderColor: 'rgba(202,138,4,0.5)', color: '#CA8A04', backgroundColor: 'rgba(202,138,4,0.08)' }}
+              style={{ borderColor: 'rgba(202,138,4,0.5)', color: '#F97316', backgroundColor: 'rgba(202,138,4,0.08)' }}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block" style={{ animation: 'pulse-glow 2s ease-in-out infinite' }} />
               CONFIDENTIAL — BOARD PORTAL
@@ -325,7 +325,7 @@ export default function LandingPage() {
               <Link
                 href="/dashboard"
                 className="group relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 overflow-hidden"
-                style={{ backgroundColor: '#CA8A04', color: '#0a0a0f' }}
+                style={{ backgroundColor: '#F97316', color: '#0a0a0f' }}
               >
                 <span className="relative z-10">Enter Dashboard</span>
                 <svg className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -397,7 +397,7 @@ export default function LandingPage() {
                     style={{
                       fontFamily: "'Playfair Display', serif",
                       fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
-                      background: 'linear-gradient(135deg, #CA8A04, #F59E0B)',
+                      background: 'linear-gradient(135deg, #F97316, #F59E0B)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
@@ -470,14 +470,14 @@ export default function LandingPage() {
                   <div className="space-y-2">
                     <div className="flex justify-between text-xs">
                       <span style={{ color: 'rgba(255,255,255,0.4)' }}>Progress</span>
-                      <span style={{ color: '#CA8A04' }}>{card.pct}%</span>
+                      <span style={{ color: '#F97316' }}>{card.pct}%</span>
                     </div>
                     <div className="h-1.5 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.08)' }}>
                       <div
                         ref={el => { progressBarsRef.current[i] = el; }}
                         className="progress-bar-fill h-full rounded-full"
                         style={{
-                          background: 'linear-gradient(90deg, #CA8A04, #F59E0B)',
+                          background: 'linear-gradient(90deg, #F97316, #F59E0B)',
                           ['--target-width' as string]: `${card.pct}%`,
                         }}
                       />
@@ -530,7 +530,7 @@ export default function LandingPage() {
                       className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110"
                       style={{ background: 'rgba(202,138,4,0.15)', border: '1px solid rgba(202,138,4,0.2)' }}
                     >
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#CA8A04">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#F97316">
                         {card.icon}
                       </svg>
                     </div>

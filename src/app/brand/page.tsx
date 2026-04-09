@@ -46,7 +46,7 @@ export default function BrandPage() {
       <div className="flex justify-end">
         <Link
           href="/brand-guidelines"
-          className="border border-[#CA8A04] text-[#CA8A04] px-4 py-2 rounded-lg text-sm hover:bg-[#CA8A04]/10 transition-colors flex items-center gap-2"
+          className="border border-[#F97316] text-[#F97316] px-4 py-2 rounded-lg text-sm hover:bg-[#F97316]/10 transition-colors flex items-center gap-2"
         >
           Brand Guidelines
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

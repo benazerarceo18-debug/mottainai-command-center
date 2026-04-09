@@ -25,14 +25,14 @@ export default function TopBar() {
         </h1>
       </div>
       <div className="flex items-center gap-3">
-        <span className="px-3 py-1 rounded-full bg-[#CA8A04] text-white text-xs font-semibold">
+        <span className="px-3 py-1 rounded-full bg-[#F97316] text-white text-xs font-semibold">
           In Development
         </span>
         <div className="w-8 h-8 rounded-full bg-[#1C1917] flex items-center justify-center text-white text-sm font-medium">
           B
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-[#CA8A04]/80 via-[#CA8A04]/40 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-[#F97316]/80 via-[#F97316]/40 to-transparent" />
     </header>
   );
 }

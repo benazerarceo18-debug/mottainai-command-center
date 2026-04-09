@@ -6,8 +6,8 @@ const categoryColors: Record<BDHighlight['category'], string> = {
   deal: '#3b82f6',
   brand: '#8b5cf6',
   expansion: '#22c55e',
-  financial: '#c9a227',
-  milestone: '#1a1a2e',
+  financial: '#FB923C',
+  milestone: '#111827',
 };
 
 const categoryLabels: Record<BDHighlight['category'], string> = {
@@ -26,7 +26,7 @@ export default function BDHighlights({ highlights }: { highlights: BDHighlight[]
       {/* Gold connecting line */}
       <div
         className="absolute left-[7px] top-2 bottom-2 w-0.5"
-        style={{ backgroundColor: '#c9a227' }}
+        style={{ backgroundColor: '#FB923C' }}
       />
 
       <div className="space-y-6">

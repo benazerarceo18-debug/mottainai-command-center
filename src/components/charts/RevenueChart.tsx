@@ -30,7 +30,7 @@ const data = {
     {
       label: 'Base',
       data: [72, 145, 290, 435, 580],
-      borderColor: '#c9a227',
+      borderColor: '#FB923C',
       backgroundColor: 'rgba(201,162,39,0.1)',
       fill: true,
       tension: 0.3,
@@ -39,7 +39,7 @@ const data = {
     {
       label: 'Aggressive',
       data: [97, 218, 435, 629, 847],
-      borderColor: '#1a1a2e',
+      borderColor: '#111827',
       backgroundColor: 'rgba(26,26,46,0.1)',
       fill: true,
       tension: 0.3,

@@ -9,14 +9,14 @@ export default function MenuPage() {
       {/* Header */}
       <div className="flex items-start justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-[#1a1a2e]">Menu Development</h1>
+          <h1 className="text-3xl font-bold text-[#111827]">Menu Development</h1>
           <p className="text-sm text-gray-500 mt-1">
             Rock #1 — Complete ✓ | 7 Core SKUs Locked &amp; FC-Validated
           </p>
         </div>
         <Link
           href="/rd-report"
-          className="bg-[#1a1a2e] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#CA8A04] transition-colors"
+          className="bg-[#111827] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#F97316] transition-colors"
         >
           Full R&amp;D Report →
         </Link>
@@ -29,7 +29,7 @@ export default function MenuPage() {
 
       {/* SKU Registry */}
       <section>
-        <h2 className="text-xl font-bold text-[#1a1a2e] mb-4">SKU Registry</h2>
+        <h2 className="text-xl font-bold text-[#111827] mb-4">SKU Registry</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {MENU_ITEMS.map((item) => (
             <div
@@ -38,7 +38,7 @@ export default function MenuPage() {
             >
               <div className="flex items-start justify-between mb-2">
                 <div>
-                  <h3 className="text-base font-bold text-[#1a1a2e]">{item.name}</h3>
+                  <h3 className="text-base font-bold text-[#111827]">{item.name}</h3>
                   <p className="text-xs text-gray-400">{item.nameJp}</p>
                 </div>
                 <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-semibold uppercase tracking-wide">
@@ -48,11 +48,11 @@ export default function MenuPage() {
               <p className="text-xs text-gray-500 mb-4 line-clamp-2">{item.description}</p>
               <div className="grid grid-cols-3 gap-2 pt-3 border-t border-gray-100">
                 <div className="text-center">
-                  <p className="text-lg font-bold text-[#1a1a2e]">₱{item.price}</p>
+                  <p className="text-lg font-bold text-[#111827]">₱{item.price}</p>
                   <p className="text-[10px] text-gray-400">Price</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-lg font-bold text-[#1a1a2e]">₱{item.actualCost}</p>
+                  <p className="text-lg font-bold text-[#111827]">₱{item.actualCost}</p>
                   <p className="text-[10px] text-gray-400">Food Cost</p>
                 </div>
                 <div className="text-center">
@@ -73,7 +73,7 @@ export default function MenuPage() {
 
       {/* Cost Waterfall */}
       <section>
-        <h2 className="text-xl font-bold text-[#1a1a2e] mb-4">Cost Waterfall</h2>
+        <h2 className="text-xl font-bold text-[#111827] mb-4">Cost Waterfall</h2>
         <div className="bg-white rounded-xl border border-gray-200 p-6">
           <CostWaterfallChart />
         </div>
@@ -81,7 +81,7 @@ export default function MenuPage() {
 
       {/* Aoyama Workback */}
       <section>
-        <h2 className="text-xl font-bold text-[#1a1a2e] mb-4">Aoyama Workback</h2>
+        <h2 className="text-xl font-bold text-[#111827] mb-4">Aoyama Workback</h2>
         <div className="bg-white rounded-xl border border-gray-200 p-6">
           <AoyamaTracker />
         </div>
@@ -89,18 +89,18 @@ export default function MenuPage() {
 
       {/* Key Metrics */}
       <section>
-        <h2 className="text-xl font-bold text-[#1a1a2e] mb-4">Key Metrics</h2>
+        <h2 className="text-xl font-bold text-[#111827] mb-4">Key Metrics</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-white rounded-xl border border-gray-200 p-5 text-center">
-            <p className="text-2xl font-bold text-[#1a1a2e]">₱60</p>
+            <p className="text-2xl font-bold text-[#111827]">₱60</p>
             <p className="text-xs text-gray-500 mt-1">Avg Food Cost / bowl</p>
           </div>
           <div className="bg-white rounded-xl border border-gray-200 p-5 text-center">
-            <p className="text-2xl font-bold text-[#1a1a2e]">24.6%</p>
+            <p className="text-2xl font-bold text-[#111827]">24.6%</p>
             <p className="text-xs text-gray-500 mt-1">Avg FC%</p>
           </div>
           <div className="bg-white rounded-xl border border-gray-200 p-5 text-center">
-            <p className="text-2xl font-bold text-[#1a1a2e]">₱180–280</p>
+            <p className="text-2xl font-bold text-[#111827]">₱180–280</p>
             <p className="text-xs text-gray-500 mt-1">Price Range</p>
           </div>
           <div className="bg-white rounded-xl border border-gray-200 p-5 text-center">

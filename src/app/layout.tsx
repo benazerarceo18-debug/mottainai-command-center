@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      <body className="min-h-screen flex bg-[#F8F8F6]">
+      <body className="min-h-screen flex bg-white">
         <SidebarProvider>
           <Sidebar />
           <div className="flex-1 flex flex-col min-h-screen ml-0 lg:ml-64">

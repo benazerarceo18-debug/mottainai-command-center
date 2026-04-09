@@ -16,7 +16,7 @@ const phases: Phase[] = [
 
 const statusConfig = {
   complete: { bg: 'bg-emerald-500', text: 'text-white', label: 'COMPLETE' },
-  'in-progress': { bg: 'bg-[#c9a227]', text: 'text-white', label: 'IN PROGRESS' },
+  'in-progress': { bg: 'bg-[#FB923C]', text: 'text-white', label: 'IN PROGRESS' },
   upcoming: { bg: 'bg-gray-300', text: 'text-gray-600', label: 'UPCOMING' },
 };
 
@@ -66,7 +66,7 @@ export default function AoyamaTracker() {
         </p>
         <p className="text-gray-700 font-medium">
           Target completion:{' '}
-          <span className="font-bold text-[#1a1a2e]">Sep 30, 2026</span>
+          <span className="font-bold text-[#111827]">Sep 30, 2026</span>
         </p>
       </div>
     </div>

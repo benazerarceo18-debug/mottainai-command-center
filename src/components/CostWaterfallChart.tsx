@@ -24,7 +24,7 @@ const data = {
       label: 'Cost (₱)',
       data: values,
       backgroundColor: [
-        '#c9a227',
+        '#FB923C',
         '#b8911f',
         '#a78018',
         '#d4b44a',
@@ -46,7 +46,7 @@ const options = {
       display: true,
       text: `Food Cost Waterfall — Average Bowl (₱${total} total)`,
       font: { size: 14, weight: 'bold' as const },
-      color: '#1a1a2e',
+      color: '#111827',
     },
     tooltip: {
       callbacks: {
@@ -63,7 +63,7 @@ const options = {
       grid: { color: '#f1f5f9' },
     },
     y: {
-      ticks: { color: '#1a1a2e', font: { weight: 'bold' as const } },
+      ticks: { color: '#111827', font: { weight: 'bold' as const } },
       grid: { display: false },
     },
   },
@@ -73,7 +73,7 @@ export default function CostWaterfallChart() {
   return (
     <div className="relative" style={{ height: 320 }}>
       <Bar data={data} options={options} />
-      <div className="absolute top-2 right-4 bg-[#1a1a2e] text-white text-sm font-bold px-3 py-1 rounded-lg">
+      <div className="absolute top-2 right-4 bg-[#111827] text-white text-sm font-bold px-3 py-1 rounded-lg">
         Total: ₱{total}
       </div>
     </div>

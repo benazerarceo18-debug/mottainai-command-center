@@ -9,10 +9,10 @@ export default function SitesPage() {
       {/* Header */}
       <div className="flex items-start justify-between mb-6">
         <div>
-          <h1 style={playfairStyle} className="text-2xl font-bold text-[#1a1a2e]">Tested Locations</h1>
+          <h1 style={playfairStyle} className="text-2xl font-bold text-[#111827]">Tested Locations</h1>
           <p className="text-sm text-gray-500 mt-1">SMDC Site Pipeline — 2 Award Notices Signed</p>
         </div>
-        <Link href="/expansion" className="text-sm text-gray-400 hover:text-[#CA8A04] transition-colors">
+        <Link href="/expansion" className="text-sm text-gray-400 hover:text-[#F97316] transition-colors">
           ← Expansion Playbook
         </Link>
       </div>
@@ -25,7 +25,7 @@ export default function SitesPage() {
           { value: 'SMDC', label: 'Primary Landlord' },
         ].map((tile) => (
           <div key={tile.label} className="bg-white rounded-xl border border-gray-200 p-5 text-center">
-            <div className="text-2xl font-bold text-[#1a1a2e]" style={playfairStyle}>{tile.value}</div>
+            <div className="text-2xl font-bold text-[#111827]" style={playfairStyle}>{tile.value}</div>
             <div className="text-xs text-gray-500 mt-1">{tile.label}</div>
           </div>
         ))}
@@ -40,8 +40,8 @@ export default function SitesPage() {
         <div className="flex items-start justify-between">
           <div>
             <div className="flex items-center gap-3 mb-1">
-              <h2 style={playfairStyle} className="text-xl font-bold text-[#1a1a2e]">SMDC Ice Tower</h2>
-              <span className="bg-[#1a1a2e] text-[#CA8A04] text-xs font-semibold px-3 py-1 rounded-full tracking-wide">NHI ENTRY POINT</span>
+              <h2 style={playfairStyle} className="text-xl font-bold text-[#111827]">SMDC Ice Tower</h2>
+              <span className="bg-[#111827] text-[#F97316] text-xs font-semibold px-3 py-1 rounded-full tracking-wide">NHI ENTRY POINT</span>
             </div>
             <p className="text-sm text-gray-500">SM MOA Complex, Pasay City</p>
           </div>
@@ -50,7 +50,7 @@ export default function SitesPage() {
 
         {/* Site Overview */}
         <div>
-          <h3 className="text-sm font-semibold text-[#1a1a2e] uppercase tracking-wider mb-3">Site Overview</h3>
+          <h3 className="text-sm font-semibold text-[#111827] uppercase tracking-wider mb-3">Site Overview</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <tbody>
@@ -74,11 +74,11 @@ export default function SitesPage() {
 
         {/* Field Evaluation Scores */}
         <div>
-          <h3 className="text-sm font-semibold text-[#1a1a2e] uppercase tracking-wider mb-3">Field Evaluation Scores</h3>
+          <h3 className="text-sm font-semibold text-[#111827] uppercase tracking-wider mb-3">Field Evaluation Scores</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-[#1a1a2e] text-white">
+                <tr className="bg-[#111827] text-white">
                   <th className="py-2 px-4 text-left font-medium">Assessment Area</th>
                   <th className="py-2 px-4 text-left font-medium w-24">Score</th>
                   <th className="py-2 px-4 text-left font-medium">Key Findings</th>
@@ -95,11 +95,11 @@ export default function SitesPage() {
                 ].map(([area, score, findings], i) => (
                   <tr key={area} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                     <td className="py-2 px-4 text-gray-700">{area}</td>
-                    <td className="py-2 px-4 font-semibold text-[#1a1a2e]">{score}</td>
+                    <td className="py-2 px-4 font-semibold text-[#111827]">{score}</td>
                     <td className="py-2 px-4 text-gray-600 text-xs">{findings}</td>
                   </tr>
                 ))}
-                <tr className="bg-[#1a1a2e] text-white font-bold">
+                <tr className="bg-[#111827] text-white font-bold">
                   <td className="py-2 px-4">TOTAL</td>
                   <td className="py-2 px-4">45.9/60</td>
                   <td className="py-2 px-4">
@@ -114,7 +114,7 @@ export default function SitesPage() {
         {/* Lease Terms */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h3 className="text-sm font-semibold text-[#1a1a2e] uppercase tracking-wider mb-3">Lease Terms</h3>
+            <h3 className="text-sm font-semibold text-[#111827] uppercase tracking-wider mb-3">Lease Terms</h3>
             <div className="space-y-1.5 text-sm">
               {[
                 ['Basic Rent', '₱800/sqm Y1 → ₱880/sqm Y2 → ₱970/sqm Y3'],
@@ -136,7 +136,7 @@ export default function SitesPage() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-[#1a1a2e] uppercase tracking-wider mb-3">Occupancy Cost Test</h3>
+            <h3 className="text-sm font-semibold text-[#111827] uppercase tracking-wider mb-3">Occupancy Cost Test</h3>
             <div className="bg-gray-50 rounded-lg p-4 space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-gray-500">Rent</span>
@@ -149,7 +149,7 @@ export default function SitesPage() {
               <div className="text-xs text-gray-400">160–200 covers/day × ₱480 × 26 days</div>
               <div className="border-t border-gray-200 pt-2 flex justify-between items-center">
                 <span className="text-gray-500">Occupancy Ratio</span>
-                <span className="font-bold text-[#1a1a2e]">8.9%–11.1%</span>
+                <span className="font-bold text-[#111827]">8.9%–11.1%</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-gray-500">Threshold</span>
@@ -164,8 +164,8 @@ export default function SitesPage() {
         </div>
 
         {/* Strategic Role */}
-        <div className="bg-[#CA8A04]/10 border border-[#CA8A04]/30 rounded-lg p-4">
-          <div className="text-xs font-semibold text-[#CA8A04] uppercase tracking-wider mb-1">Strategic Role</div>
+        <div className="bg-[#F97316]/10 border border-[#F97316]/30 rounded-lg p-4">
+          <div className="text-xs font-semibold text-[#F97316] uppercase tracking-wider mb-1">Strategic Role</div>
           <p className="text-sm text-gray-700">
             SMDC Ice Tower is NHI&apos;s entry point into the SMDC/SM Prime ecosystem. Yushoken&apos;s performance here directly supports Mottainai placement negotiations at SM Megamall, SM Fairview, and SM Bacoor.
           </p>
@@ -181,7 +181,7 @@ export default function SitesPage() {
         <div className="flex items-start justify-between">
           <div>
             <div className="flex items-center gap-3 mb-1">
-              <h2 style={playfairStyle} className="text-xl font-bold text-[#1a1a2e]">SMDC Light Mall</h2>
+              <h2 style={playfairStyle} className="text-xl font-bold text-[#111827]">SMDC Light Mall</h2>
               <span className="bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full tracking-wide">ACTIVE NEGOTIATION</span>
             </div>
             <p className="text-sm text-gray-500">EDSA corner Madison St., Mandaluyong City</p>
@@ -191,7 +191,7 @@ export default function SitesPage() {
 
         {/* Site Overview */}
         <div>
-          <h3 className="text-sm font-semibold text-[#1a1a2e] uppercase tracking-wider mb-3">Site Overview</h3>
+          <h3 className="text-sm font-semibold text-[#111827] uppercase tracking-wider mb-3">Site Overview</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <tbody>
@@ -217,7 +217,7 @@ export default function SitesPage() {
 
         {/* Site Assessment */}
         <div>
-          <h3 className="text-sm font-semibold text-[#1a1a2e] uppercase tracking-wider mb-3">Site Assessment</h3>
+          <h3 className="text-sm font-semibold text-[#111827] uppercase tracking-wider mb-3">Site Assessment</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {[
               {
@@ -269,7 +269,7 @@ export default function SitesPage() {
         {/* Lease Terms + Occupancy */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h3 className="text-sm font-semibold text-[#1a1a2e] uppercase tracking-wider mb-3">Lease Terms (Units 119b/120)</h3>
+            <h3 className="text-sm font-semibold text-[#111827] uppercase tracking-wider mb-3">Lease Terms (Units 119b/120)</h3>
             <div className="space-y-1.5 text-sm">
               {[
                 ['Basic Rent', '₱950/sqm Y1 → ₱1,045/sqm Y2 → ₱1,150/sqm Y3'],
@@ -292,7 +292,7 @@ export default function SitesPage() {
 
           <div className="space-y-4">
             <div>
-              <h3 className="text-sm font-semibold text-[#1a1a2e] uppercase tracking-wider mb-3">Occupancy Cost Test</h3>
+              <h3 className="text-sm font-semibold text-[#111827] uppercase tracking-wider mb-3">Occupancy Cost Test</h3>
               <div className="bg-gray-50 rounded-lg p-4 space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-gray-500">Rent</span>
@@ -309,7 +309,7 @@ export default function SitesPage() {
                 <div className="text-xs text-gray-400">200 covers × ₱480 × 26 days</div>
                 <div className="border-t border-gray-200 pt-2 flex justify-between items-center">
                   <span className="text-gray-500">Occupancy Ratio</span>
-                  <span className="font-bold text-[#1a1a2e]">10.6%</span>
+                  <span className="font-bold text-[#111827]">10.6%</span>
                 </div>
                 <div className="bg-green-50 border border-green-200 rounded px-3 py-2 flex items-center justify-between mt-1">
                   <span className="text-green-800 font-semibold text-xs">ACCEPTABLE</span>
@@ -319,7 +319,7 @@ export default function SitesPage() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-[#1a1a2e] uppercase tracking-wider mb-3">Competitor Check</h3>
+              <h3 className="text-sm font-semibold text-[#111827] uppercase tracking-wider mb-3">Competitor Check</h3>
               <div className="bg-gray-50 rounded-lg p-3 text-sm space-y-1">
                 <div className="font-medium text-gray-700">Kenshin Japanese Restaurant</div>
                 <div className="text-xs text-gray-500">Izakaya · ₱200–800 · {'>'}100m away</div>
@@ -331,7 +331,7 @@ export default function SitesPage() {
 
         {/* Catchment Data */}
         <div>
-          <h3 className="text-sm font-semibold text-[#1a1a2e] uppercase tracking-wider mb-3">Catchment Data</h3>
+          <h3 className="text-sm font-semibold text-[#111827] uppercase tracking-wider mb-3">Catchment Data</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
               { value: '104,199', label: 'Residents within 800m' },
@@ -340,7 +340,7 @@ export default function SitesPage() {
               { value: '4,190', label: 'Light 2 units (target 2027)' },
             ].map((item) => (
               <div key={item.label} className="bg-gray-50 rounded-lg p-3 text-center">
-                <div className="text-lg font-bold text-[#1a1a2e]">{item.value}</div>
+                <div className="text-lg font-bold text-[#111827]">{item.value}</div>
                 <div className="text-xs text-gray-500 mt-0.5">{item.label}</div>
               </div>
             ))}
@@ -356,11 +356,11 @@ export default function SitesPage() {
           Comparison Table
       ─────────────────────────────────────── */}
       <div className="bg-white rounded-xl border border-gray-200 p-6">
-        <h2 style={playfairStyle} className="text-lg font-bold text-[#1a1a2e] mb-4">Side-by-Side Comparison</h2>
+        <h2 style={playfairStyle} className="text-lg font-bold text-[#111827] mb-4">Side-by-Side Comparison</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
-              <tr className="bg-[#1a1a2e] text-white">
+              <tr className="bg-[#111827] text-white">
                 <th className="py-2 px-4 text-left font-medium">Metric</th>
                 <th className="py-2 px-4 text-left font-medium">SMDC Ice Tower</th>
                 <th className="py-2 px-4 text-left font-medium">SMDC Light Mall</th>
@@ -393,18 +393,18 @@ export default function SitesPage() {
       {/* ───────────────────────────────────────
           Strategic Implications
       ─────────────────────────────────────── */}
-      <div className="bg-[#1a1a2e] rounded-xl p-6">
+      <div className="bg-[#111827] rounded-xl p-6">
         <h2 style={playfairStyle} className="text-lg font-bold text-white mb-4">Strategic Implications</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <div className="text-[#CA8A04] text-xs font-semibold uppercase tracking-wider mb-2">Mottainai Pathway</div>
+            <div className="text-[#F97316] text-xs font-semibold uppercase tracking-wider mb-2">Mottainai Pathway</div>
             <p className="text-gray-300 text-sm leading-relaxed">
               These two Yushoken locations build NHI&apos;s track record as a reliable, high-performing SMDC/SM Prime tenant.
               Each successful store opens doors for Mottainai placement negotiations in adjacent properties within the SM Prime network.
             </p>
           </div>
           <div>
-            <div className="text-[#CA8A04] text-xs font-semibold uppercase tracking-wider mb-2">Next Site Targets</div>
+            <div className="text-[#F97316] text-xs font-semibold uppercase tracking-wider mb-2">Next Site Targets</div>
             <div className="space-y-2">
               {[
                 { name: 'SM Megamall', location: 'Mandaluyong' },

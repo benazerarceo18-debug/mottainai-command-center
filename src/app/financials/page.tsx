@@ -23,7 +23,7 @@ const scenarios = [
   },
   {
     name: 'Base',
-    color: 'text-[#c9a227]',
+    color: 'text-[#FB923C]',
     stores: [3, 6, 12, 18, 24],
     revenue: ['₱72M', '₱145M', '₱290M', '₱435M', '₱580M'],
     y5Ebitda: '₱215M',
@@ -32,7 +32,7 @@ const scenarios = [
   },
   {
     name: 'Aggressive',
-    color: 'text-[#1a1a2e]',
+    color: 'text-[#111827]',
     stores: [4, 9, 18, 26, 35],
     revenue: ['₱97M', '₱218M', '₱435M', '₱629M', '₱847M'],
     y5Ebitda: '₱313M',
@@ -142,7 +142,7 @@ export default function FinancialsPage() {
                 <tr
                   key={s.name}
                   className={`border-b border-border/50 ${
-                    s.name === 'Base' ? 'bg-[#c9a227]/5' : ''
+                    s.name === 'Base' ? 'bg-[#FB923C]/5' : ''
                   }`}
                 >
                   <td className={`py-3 px-3 font-semibold ${s.color}`}>{s.name}</td>
@@ -159,7 +159,7 @@ export default function FinancialsPage() {
                   <td className="py-3 px-3 text-center font-medium text-green-600">
                     {s.y5Ebitda}
                   </td>
-                  <td className="py-3 px-3 text-center font-bold text-[#c9a227]">{s.roic}</td>
+                  <td className="py-3 px-3 text-center font-bold text-[#FB923C]">{s.roic}</td>
                   <td className="py-3 px-3 text-center text-text-muted">{s.payback}</td>
                 </tr>
               ))}

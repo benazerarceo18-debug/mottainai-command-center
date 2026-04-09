@@ -27,13 +27,13 @@ const data = {
     {
       label: 'Base',
       data: [3, 6, 12, 18, 24],
-      backgroundColor: '#c9a227',
+      backgroundColor: '#FB923C',
       borderRadius: 4,
     },
     {
       label: 'Aggressive',
       data: [4, 9, 18, 26, 35],
-      backgroundColor: '#1a1a2e',
+      backgroundColor: '#111827',
       borderRadius: 4,
     },
   ],

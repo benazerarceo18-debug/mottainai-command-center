@@ -103,7 +103,7 @@ export default function BrandGuidelinesPage() {
           100% { background-position: 0% 50%; }
         }
         .shimmer-text {
-          background: linear-gradient(135deg, #CA8A04, #F59E0B, #FBBF24, #CA8A04);
+          background: linear-gradient(135deg, #F97316, #F59E0B, #FBBF24, #F97316);
           background-size: 200% 200%;
           animation: shimmer 4s linear infinite;
           -webkit-background-clip: text;
@@ -116,22 +116,22 @@ export default function BrandGuidelinesPage() {
       <div className="min-h-screen" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
 
         {/* Section 1: Cover */}
-        <section className="h-screen bg-[#0f0f1a] flex flex-col items-center justify-center relative overflow-hidden">
+        <section className="h-screen bg-[#0D1117] flex flex-col items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 opacity-5"
-            style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, #CA8A04, transparent 60%), radial-gradient(circle at 70% 50%, #1a1a2e, transparent 60%)' }}
+            style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, #F97316, transparent 60%), radial-gradient(circle at 70% 50%, #111827, transparent 60%)' }}
           />
           <div className="relative z-10 flex flex-col items-center text-center px-8">
-            <div className="text-4xl text-[#CA8A04] mb-4" style={{ fontFamily: "'Noto Serif JP', serif" }}>
+            <div className="text-4xl text-[#F97316] mb-4" style={{ fontFamily: "'Noto Serif JP', serif" }}>
               勿
             </div>
-            <div className="w-24 h-px bg-[#CA8A04]/40 mb-8" />
+            <div className="w-24 h-px bg-[#F97316]/40 mb-8" />
             <h1
               className="shimmer-text text-8xl md:text-[120px] font-bold tracking-widest leading-none"
               style={{ fontFamily: "'Noto Serif JP', serif" }}
             >
               MOTTAINAI
             </h1>
-            <div className="w-24 h-px bg-[#CA8A04]/40 my-8" />
+            <div className="w-24 h-px bg-[#F97316]/40 my-8" />
             <p className="text-white/60 text-xl tracking-[0.3em] uppercase">Brand Guidelines</p>
             <p className="text-white/30 text-sm mt-3">Nippon Hasha Inc. — 2026</p>
           </div>
@@ -149,7 +149,7 @@ export default function BrandGuidelinesPage() {
         <section className="bg-white py-24">
           <div className="max-w-5xl mx-auto px-8">
             <RevealSection>
-              <p className="text-xs text-[#CA8A04] tracking-[0.3em] uppercase font-medium mb-6">
+              <p className="text-xs text-[#F97316] tracking-[0.3em] uppercase font-medium mb-6">
                 01 — BRAND ESSENCE
               </p>
               <h2
@@ -180,7 +180,7 @@ export default function BrandGuidelinesPage() {
               ].map((pillar) => (
                 <RevealSection key={pillar.num}>
                   <div>
-                    <p className="text-3xl font-bold text-[#CA8A04]/30 mb-3" style={{ fontFamily: "'Noto Serif JP', serif" }}>
+                    <p className="text-3xl font-bold text-[#F97316]/30 mb-3" style={{ fontFamily: "'Noto Serif JP', serif" }}>
                       {pillar.num}
                     </p>
                     <h3 className="text-lg font-bold text-[#1C1917] mb-2">{pillar.title}</h3>
@@ -190,7 +190,7 @@ export default function BrandGuidelinesPage() {
               ))}
             </div>
 
-            <div className="h-px bg-gradient-to-r from-[#CA8A04] via-[#CA8A04]/30 to-transparent" />
+            <div className="h-px bg-gradient-to-r from-[#F97316] via-[#F97316]/30 to-transparent" />
           </div>
         </section>
 
@@ -198,36 +198,36 @@ export default function BrandGuidelinesPage() {
         <section className="py-24" style={{ backgroundColor: '#F5F4F2' }}>
           <div className="max-w-5xl mx-auto px-8">
             <RevealSection>
-              <p className="text-xs text-[#CA8A04] tracking-[0.3em] uppercase font-medium mb-12">
+              <p className="text-xs text-[#F97316] tracking-[0.3em] uppercase font-medium mb-12">
                 02 — IDENTITY SYSTEM
               </p>
             </RevealSection>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
               <RevealSection slideLeft>
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-48 h-48 rounded-full bg-[#1a1a2e] flex items-center justify-center mb-6 shadow-xl">
-                    <span className="text-[#CA8A04] text-8xl" style={{ fontFamily: "'Noto Serif JP', serif" }}>
+                  <div className="w-48 h-48 rounded-full bg-[#111827] flex items-center justify-center mb-6 shadow-xl">
+                    <span className="text-[#F97316] text-8xl" style={{ fontFamily: "'Noto Serif JP', serif" }}>
                       勿
                     </span>
                   </div>
-                  <p className="text-[#1a1a2e] text-2xl font-bold tracking-[0.3em]" style={{ fontFamily: "'Noto Serif JP', serif" }}>
+                  <p className="text-[#111827] text-2xl font-bold tracking-[0.3em]" style={{ fontFamily: "'Noto Serif JP', serif" }}>
                     MOTTAINAI
                   </p>
-                  <p className="text-[#CA8A04]/80 text-xs tracking-wide mt-2">By the makers of Yushoken</p>
+                  <p className="text-[#F97316]/80 text-xs tracking-wide mt-2">By the makers of Yushoken</p>
 
                   <div className="flex gap-3 mt-8">
                     {[
-                      { bg: '#1a1a2e', label: 'Full Color' },
-                      { bg: '#1a1a2e', label: 'Navy' },
-                      { bg: '#CA8A04', label: 'Gold' },
-                      { bg: '#0f0f1a', border: true, label: 'Reversed' },
+                      { bg: '#111827', label: 'Full Color' },
+                      { bg: '#111827', label: 'Navy' },
+                      { bg: '#F97316', label: 'Gold' },
+                      { bg: '#0D1117', border: true, label: 'Reversed' },
                     ].map((v) => (
                       <div key={v.label} className="flex flex-col items-center gap-1">
                         <div
-                          className={`w-10 h-10 rounded-lg flex items-center justify-center text-xs font-bold ${v.border ? 'border-2 border-[#1a1a2e]' : ''}`}
+                          className={`w-10 h-10 rounded-lg flex items-center justify-center text-xs font-bold ${v.border ? 'border-2 border-[#111827]' : ''}`}
                           style={{ backgroundColor: v.bg }}
                         >
-                          <span style={{ color: v.label === 'Gold' ? '#fff' : '#CA8A04', fontFamily: "'Noto Serif JP', serif", fontSize: '16px' }}>勿</span>
+                          <span style={{ color: v.label === 'Gold' ? '#fff' : '#F97316', fontFamily: "'Noto Serif JP', serif", fontSize: '16px' }}>勿</span>
                         </div>
                         <span className="text-[10px] text-gray-400">{v.label}</span>
                       </div>
@@ -239,15 +239,15 @@ export default function BrandGuidelinesPage() {
               <RevealSection>
                 <div className="space-y-6">
                   <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                    <p className="text-xs text-[#CA8A04] font-semibold uppercase tracking-wider mb-2">Clear Space</p>
+                    <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-2">Clear Space</p>
                     <p className="text-sm text-gray-600">Minimum clear space = height of 勿 character on all sides</p>
                   </div>
                   <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                    <p className="text-xs text-[#CA8A04] font-semibold uppercase tracking-wider mb-2">Endorsed Model</p>
+                    <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-2">Endorsed Model</p>
                     <p className="text-sm text-gray-600">Always appears with NHI or Yushoken attribution</p>
                   </div>
                   <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                    <p className="text-xs text-[#CA8A04] font-semibold uppercase tracking-wider mb-2">Usage Variants</p>
+                    <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-2">Usage Variants</p>
                     <ul className="text-sm text-gray-600 space-y-1 mt-1">
                       <li>Full color (navy + gold)</li>
                       <li>Single color navy</li>
@@ -265,7 +265,7 @@ export default function BrandGuidelinesPage() {
         <section className="bg-white py-24">
           <div className="max-w-5xl mx-auto px-8">
             <RevealSection>
-              <p className="text-xs text-[#CA8A04] tracking-[0.3em] uppercase font-medium mb-12">
+              <p className="text-xs text-[#F97316] tracking-[0.3em] uppercase font-medium mb-12">
                 03 — COLOR PALETTE
               </p>
             </RevealSection>
@@ -278,8 +278,8 @@ export default function BrandGuidelinesPage() {
             <div className="mb-8">
               <p className="text-xs text-gray-400 uppercase tracking-widest mb-4 font-medium">Primary</p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <ColorSwatch name="Mottainai Navy" hex="#1a1a2e" usage="Primary bg, navigation, headers" />
-                <ColorSwatch name="Mottainai Gold" hex="#CA8A04" usage="CTAs, accents, highlights" />
+                <ColorSwatch name="Mottainai Navy" hex="#111827" usage="Primary bg, navigation, headers" />
+                <ColorSwatch name="Mottainai Gold" hex="#F97316" usage="CTAs, accents, highlights" />
                 <ColorSwatch name="Deep Amber" hex="#F59E0B" usage="Hover states, energy, warmth" />
               </div>
             </div>
@@ -299,7 +299,7 @@ export default function BrandGuidelinesPage() {
         <section className="py-24" style={{ backgroundColor: '#F5F4F2' }}>
           <div className="max-w-5xl mx-auto px-8">
             <RevealSection>
-              <p className="text-xs text-[#CA8A04] tracking-[0.3em] uppercase font-medium mb-12">
+              <p className="text-xs text-[#F97316] tracking-[0.3em] uppercase font-medium mb-12">
                 04 — TYPOGRAPHY
               </p>
             </RevealSection>
@@ -307,7 +307,7 @@ export default function BrandGuidelinesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
               <RevealSection slideLeft>
                 <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
-                  <p className="text-xs text-[#CA8A04] font-semibold uppercase tracking-wider mb-4">Noto Serif JP — Primary</p>
+                  <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-4">Noto Serif JP — Primary</p>
                   <p className="text-6xl font-bold text-[#1C1917] mb-6 leading-tight" style={{ fontFamily: "'Noto Serif JP', serif" }}>
                     あいうえお<br />ABCDEFG
                   </p>
@@ -326,7 +326,7 @@ export default function BrandGuidelinesPage() {
 
               <RevealSection>
                 <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
-                  <p className="text-xs text-[#CA8A04] font-semibold uppercase tracking-wider mb-4">Noto Sans JP — Secondary</p>
+                  <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-4">Noto Sans JP — Secondary</p>
                   <p className="text-2xl text-[#1C1917] mb-6 leading-relaxed" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
                     Mottainai serves authentic Japanese ramen
                   </p>
@@ -346,7 +346,7 @@ export default function BrandGuidelinesPage() {
 
             <RevealSection>
               <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
-                <p className="text-xs text-[#CA8A04] font-semibold uppercase tracking-wider mb-8">Type Hierarchy</p>
+                <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-8">Type Hierarchy</p>
                 <div className="space-y-6">
                   <div>
                     <span className="text-[10px] text-gray-300 uppercase tracking-widest mr-3">h1</span>
@@ -374,7 +374,7 @@ export default function BrandGuidelinesPage() {
                   </div>
                   <div>
                     <span className="text-[10px] text-gray-300 uppercase tracking-widest mr-3">label</span>
-                    <span className="text-xs tracking-[0.3em] uppercase font-medium text-[#CA8A04]" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
+                    <span className="text-xs tracking-[0.3em] uppercase font-medium text-[#F97316]" style={{ fontFamily: "'Noto Sans JP', sans-serif" }}>
                       BRAND ESSENCE
                     </span>
                   </div>
@@ -388,7 +388,7 @@ export default function BrandGuidelinesPage() {
         <section className="bg-white py-24">
           <div className="max-w-5xl mx-auto px-8">
             <RevealSection>
-              <p className="text-xs text-[#CA8A04] tracking-[0.3em] uppercase font-medium mb-6">
+              <p className="text-xs text-[#F97316] tracking-[0.3em] uppercase font-medium mb-6">
                 05 — VOICE &amp; TONE
               </p>
               <h2
@@ -465,8 +465,8 @@ export default function BrandGuidelinesPage() {
                       <span className="text-red-400 text-xs font-bold shrink-0">✕</span>
                       <p className="text-sm text-gray-400 line-through">{ex.wrong}</p>
                     </div>
-                    <div className="rounded-xl bg-[#CA8A04]/5 border border-[#CA8A04]/20 p-4 flex items-center gap-3">
-                      <span className="text-[#CA8A04] text-xs font-bold shrink-0">✓</span>
+                    <div className="rounded-xl bg-[#F97316]/5 border border-[#F97316]/20 p-4 flex items-center gap-3">
+                      <span className="text-[#F97316] text-xs font-bold shrink-0">✓</span>
                       <p className="text-sm text-[#1C1917] font-medium">{ex.right}</p>
                     </div>
                   </div>
@@ -477,10 +477,10 @@ export default function BrandGuidelinesPage() {
         </section>
 
         {/* Section 7: Applications */}
-        <section className="bg-[#0f0f1a] py-24">
+        <section className="bg-[#0D1117] py-24">
           <div className="max-w-5xl mx-auto px-8">
             <RevealSection>
-              <p className="text-xs text-[#CA8A04] tracking-[0.3em] uppercase font-medium mb-12">
+              <p className="text-xs text-[#F97316] tracking-[0.3em] uppercase font-medium mb-12">
                 06 — APPLICATIONS
               </p>
             </RevealSection>
@@ -489,8 +489,8 @@ export default function BrandGuidelinesPage() {
                 {
                   label: 'Store Signage',
                   content: (
-                    <div className="bg-[#1a1a2e] border border-[#CA8A04]/30 rounded-lg px-6 py-4 text-center">
-                      <p className="text-[#CA8A04] font-bold tracking-[0.3em]" style={{ fontFamily: "'Noto Serif JP', serif" }}>
+                    <div className="bg-[#111827] border border-[#F97316]/30 rounded-lg px-6 py-4 text-center">
+                      <p className="text-[#F97316] font-bold tracking-[0.3em]" style={{ fontFamily: "'Noto Serif JP', serif" }}>
                         MOTTAINAI
                       </p>
                       <p className="text-white/40 text-[10px] tracking-wide mt-1">By the makers of Yushoken</p>
@@ -500,8 +500,8 @@ export default function BrandGuidelinesPage() {
                 {
                   label: 'Packaging',
                   content: (
-                    <div className="w-20 h-20 rounded-full bg-[#1a1a2e] border-2 border-[#CA8A04]/40 flex items-center justify-center">
-                      <span className="text-[#CA8A04] text-3xl" style={{ fontFamily: "'Noto Serif JP', serif" }}>勿</span>
+                    <div className="w-20 h-20 rounded-full bg-[#111827] border-2 border-[#F97316]/40 flex items-center justify-center">
+                      <span className="text-[#F97316] text-3xl" style={{ fontFamily: "'Noto Serif JP', serif" }}>勿</span>
                     </div>
                   ),
                 },
@@ -509,14 +509,14 @@ export default function BrandGuidelinesPage() {
                   label: 'Digital Menu',
                   content: (
                     <div className="w-24 border border-white/20 rounded-xl overflow-hidden">
-                      <div className="bg-[#1a1a2e] px-2 py-1 text-center">
-                        <p className="text-[#CA8A04] text-[8px] tracking-widest">MOTTAINAI</p>
+                      <div className="bg-[#111827] px-2 py-1 text-center">
+                        <p className="text-[#F97316] text-[8px] tracking-widest">MOTTAINAI</p>
                       </div>
                       <div className="bg-white/5 p-2 space-y-1.5">
                         {['Tonkotsu', 'Shoyu', 'Shio'].map((r) => (
                           <div key={r} className="flex justify-between">
                             <span className="text-white/60 text-[8px]">{r}</span>
-                            <span className="text-[#CA8A04] text-[8px]">₱250</span>
+                            <span className="text-[#F97316] text-[8px]">₱250</span>
                           </div>
                         ))}
                       </div>
@@ -527,11 +527,11 @@ export default function BrandGuidelinesPage() {
                   label: 'Uniform / Apron',
                   content: (
                     <div className="flex flex-col items-center gap-2">
-                      <div className="w-12 h-12 rounded-full bg-[#1a1a2e] border border-[#CA8A04]/30 flex items-center justify-center">
-                        <span className="text-[#CA8A04] text-xl" style={{ fontFamily: "'Noto Serif JP', serif" }}>勿</span>
+                      <div className="w-12 h-12 rounded-full bg-[#111827] border border-[#F97316]/30 flex items-center justify-center">
+                        <span className="text-[#F97316] text-xl" style={{ fontFamily: "'Noto Serif JP', serif" }}>勿</span>
                       </div>
-                      <div className="w-16 h-20 rounded-sm bg-[#1a1a2e] border border-white/10 flex items-center justify-center">
-                        <span className="text-[#CA8A04]/60 text-[8px] tracking-widest" style={{ fontFamily: "'Noto Serif JP', serif" }}>MTN</span>
+                      <div className="w-16 h-20 rounded-sm bg-[#111827] border border-white/10 flex items-center justify-center">
+                        <span className="text-[#F97316]/60 text-[8px] tracking-widest" style={{ fontFamily: "'Noto Serif JP', serif" }}>MTN</span>
                       </div>
                     </div>
                   ),
@@ -552,11 +552,11 @@ export default function BrandGuidelinesPage() {
         <section className="bg-white py-24">
           <div className="max-w-5xl mx-auto px-8">
             <RevealSection>
-              <p className="text-xs text-[#CA8A04] tracking-[0.3em] uppercase font-medium mb-4">
+              <p className="text-xs text-[#F97316] tracking-[0.3em] uppercase font-medium mb-4">
                 07 — STORE ENVIRONMENT
               </p>
               <h2
-                className="text-4xl md:text-5xl font-bold text-[#1a1a2e] mb-6 leading-tight"
+                className="text-4xl md:text-5xl font-bold text-[#111827] mb-6 leading-tight"
                 style={{ fontFamily: "'Noto Serif JP', serif" }}
               >
                 The Counter as Theater
@@ -583,7 +583,7 @@ export default function BrandGuidelinesPage() {
                   ].map((spec) => (
                     <div key={spec.label} className="p-5">
                       <p className="text-xs text-[#999] uppercase tracking-wider mb-1">{spec.label}</p>
-                      <p className="text-sm font-bold text-[#1a1a2e] whitespace-pre-line leading-snug">{spec.value}</p>
+                      <p className="text-sm font-bold text-[#111827] whitespace-pre-line leading-snug">{spec.value}</p>
                     </div>
                   ))}
                 </div>
@@ -593,14 +593,14 @@ export default function BrandGuidelinesPage() {
         </section>
 
         {/* Section 8: Non-Negotiables */}
-        <section className="bg-[#CA8A04] py-16">
+        <section className="bg-[#F97316] py-16">
           <div className="max-w-5xl mx-auto px-8">
             <RevealSection>
               <p className="text-xs text-white/60 tracking-[0.3em] uppercase font-medium mb-4">
                 07 — NON-NEGOTIABLES
               </p>
               <h2
-                className="text-4xl font-bold text-[#1a1a2e] mb-12"
+                className="text-4xl font-bold text-[#111827] mb-12"
                 style={{ fontFamily: "'Noto Serif JP', serif" }}
               >
                 These rules are permanent.
@@ -611,7 +611,7 @@ export default function BrandGuidelinesPage() {
                 {NON_NEGOTIABLES.map((rule) => (
                   <span
                     key={rule}
-                    className="bg-white text-[#1a1a2e] text-sm font-semibold px-5 py-3 rounded-full shadow-sm"
+                    className="bg-white text-[#111827] text-sm font-semibold px-5 py-3 rounded-full shadow-sm"
                   >
                     {rule}
                   </span>
@@ -622,7 +622,7 @@ export default function BrandGuidelinesPage() {
         </section>
 
         {/* Section 9: Footer */}
-        <section className="bg-[#1a1a2e] py-16">
+        <section className="bg-[#111827] py-16">
           <div className="max-w-5xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <p className="text-white/60 text-sm">
@@ -632,7 +632,7 @@ export default function BrandGuidelinesPage() {
             </div>
             <Link
               href="/brand"
-              className="text-[#CA8A04] text-sm hover:text-[#F59E0B] transition-colors flex items-center gap-2"
+              className="text-[#F97316] text-sm hover:text-[#F59E0B] transition-colors flex items-center gap-2"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />

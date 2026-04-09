@@ -129,13 +129,13 @@ export default function Sidebar() {
         />
       )}
       <aside
-        className={`fixed top-0 left-0 z-50 h-full w-64 bg-gradient-to-b from-[#1a1a2e] to-[#0f0f1a] bg-[#0f0f1a]/95 backdrop-blur-xl flex flex-col transition-transform duration-300 lg:translate-x-0 lg:static lg:z-auto ${
+        className={`fixed top-0 left-0 z-50 h-full w-64 bg-gradient-to-b from-[#111827] to-[#0D1117] bg-[#0D1117]/95 backdrop-blur-xl flex flex-col transition-transform duration-300 lg:translate-x-0 lg:static lg:z-auto ${
           open ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <div className="p-5 pb-4">
           <div
-            className="text-[#CA8A04] font-bold text-xl tracking-wide"
+            className="text-[#F97316] font-bold text-xl tracking-wide"
             style={{ fontFamily: "'Noto Serif JP', serif" }}
           >
             NHI
@@ -144,7 +144,7 @@ export default function Sidebar() {
             Mottainai
           </div>
           <div className="text-white/40 text-xs mt-0.5">Command Center</div>
-          <div className="mt-3 h-px bg-gradient-to-r from-[#CA8A04]/60 via-[#CA8A04]/20 to-transparent" />
+          <div className="mt-3 h-px bg-gradient-to-r from-[#F97316]/60 via-[#F97316]/20 to-transparent" />
         </div>
         <nav className="flex-1 py-2 overflow-y-auto scrollbar-thin">
           {NAV.map((item) => {
@@ -158,7 +158,7 @@ export default function Sidebar() {
                 onClick={() => open && toggle()}
                 className={`flex items-center gap-3 px-5 py-2.5 text-sm transition-all duration-300 ${
                   active
-                    ? 'text-[#CA8A04] border-l-4 border-[#CA8A04] bg-white/5 font-medium shadow-[inset_0_0_20px_rgba(202,138,4,0.1)]'
+                    ? 'text-[#F97316] border-l-4 border-[#F97316] bg-white/5 font-medium shadow-[inset_0_0_20px_rgba(202,138,4,0.1)]'
                     : 'text-white/70 border-l-4 border-transparent hover:bg-white/5 hover:text-white'
                 }`}
               >

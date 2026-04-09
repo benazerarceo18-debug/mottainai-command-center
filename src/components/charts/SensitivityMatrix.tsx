@@ -45,7 +45,7 @@ export default function SensitivityMatrix() {
                   <td
                     key={cover}
                     className={`py-2 px-3 text-center font-medium rounded ${cellColor(revenue)} ${
-                      isBase ? 'ring-2 ring-[#c9a227] ring-offset-1' : ''
+                      isBase ? 'ring-2 ring-[#FB923C] ring-offset-1' : ''
                     }`}
                   >
                     {format(revenue)}
