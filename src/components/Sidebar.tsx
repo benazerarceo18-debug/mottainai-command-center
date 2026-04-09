@@ -102,15 +102,24 @@ export default function Sidebar() {
         />
       )}
       <aside
-        className={`fixed top-0 left-0 z-50 h-full w-64 bg-navy flex flex-col transition-transform duration-200 lg:translate-x-0 lg:static lg:z-auto ${
+        className={`fixed top-0 left-0 z-50 h-full w-64 bg-gradient-to-b from-[#1a1a2e] to-[#0f0f1a] bg-[#0f0f1a]/95 backdrop-blur-xl flex flex-col transition-transform duration-300 lg:translate-x-0 lg:static lg:z-auto ${
           open ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="p-5 border-b border-white/10">
-          <div className="text-gold font-bold text-xl tracking-wide">NHI</div>
-          <div className="text-white text-xs mt-0.5 opacity-70">Mottainai</div>
+        <div className="p-5 pb-4">
+          <div
+            className="text-[#CA8A04] font-bold text-xl tracking-wide"
+            style={{ fontFamily: "'Noto Serif JP', serif" }}
+          >
+            NHI
+          </div>
+          <div className="text-white/60 text-sm mt-0.5" style={{ fontFamily: "'Noto Serif JP', serif" }}>
+            Mottainai
+          </div>
+          <div className="text-white/40 text-xs mt-0.5">Command Center</div>
+          <div className="mt-3 h-px bg-gradient-to-r from-[#CA8A04]/60 via-[#CA8A04]/20 to-transparent" />
         </div>
-        <nav className="flex-1 py-4 overflow-y-auto scrollbar-thin">
+        <nav className="flex-1 py-2 overflow-y-auto scrollbar-thin">
           {NAV.map((item) => {
             const active =
               pathname === item.href ||
@@ -120,10 +129,10 @@ export default function Sidebar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => open && toggle()}
-                className={`flex items-center gap-3 px-5 py-2.5 text-sm transition-colors ${
+                className={`flex items-center gap-3 px-5 py-2.5 text-sm transition-all duration-300 ${
                   active
-                    ? 'text-gold border-l-[3px] border-gold bg-white/5 font-medium'
-                    : 'text-white border-l-[3px] border-transparent hover:bg-navy-hover'
+                    ? 'text-[#CA8A04] border-l-4 border-[#CA8A04] bg-white/5 font-medium shadow-[inset_0_0_20px_rgba(202,138,4,0.1)]'
+                    : 'text-white/70 border-l-4 border-transparent hover:bg-white/5 hover:text-white'
                 }`}
               >
                 {item.icon}
@@ -132,8 +141,9 @@ export default function Sidebar() {
             );
           })}
         </nav>
-        <div className="p-4 border-t border-white/10 text-white/30 text-xs text-center">
-          Nippon Hasha Inc. &copy; 2026
+        <div className="p-4 border-t border-white/10 flex flex-col gap-1 items-center">
+          <div className="text-white/30 text-xs">Nippon Hasha Inc. &copy; 2026</div>
+          <div className="text-white/30 text-xs tracking-widest uppercase">Confidential</div>
         </div>
       </aside>
     </>

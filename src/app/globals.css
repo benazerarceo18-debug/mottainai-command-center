@@ -1,14 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 :root {
   --navy: #1a1a2e;
   --navy-light: #232342;
   --navy-hover: #2d2d52;
-  --gold: #c9a227;
-  --gold-light: #d4b44a;
-  --gold-muted: rgba(201, 162, 39, 0.1);
-  --bg: #f8f9fc;
+  --gold: #CA8A04;
+  --gold-light: #F59E0B;
+  --gold-muted: rgba(202, 138, 4, 0.1);
+  --bg: #FAFAF9;
   --card: #ffffff;
   --border: #e5e7eb;
   --text-primary: #1a1a2e;
@@ -42,11 +42,11 @@
 body {
   background: var(--bg);
   color: var(--text-primary);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Noto Sans JP', system-ui, sans-serif;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Noto Serif JP', serif;
 }
 
 .scrollbar-thin::-webkit-scrollbar {
