@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ImageGallery from '@/components/ImageGallery';
 
 const PERSONAS = [
@@ -42,6 +43,17 @@ const TONE_DONT = ['Elitist', 'Exclusive', 'Chef-ego', 'Premium-only messaging']
 export default function BrandPage() {
   return (
     <div className="max-w-7xl mx-auto space-y-8">
+      <div className="flex justify-end">
+        <Link
+          href="/brand-guidelines"
+          className="border border-[#CA8A04] text-[#CA8A04] px-4 py-2 rounded-lg text-sm hover:bg-[#CA8A04]/10 transition-colors flex items-center gap-2"
+        >
+          Brand Guidelines
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </Link>
+      </div>
       {/* Section 1: Brand Positioning */}
       <section className="bg-white rounded-xl shadow-sm border border-border p-6 space-y-6">
         <div>
