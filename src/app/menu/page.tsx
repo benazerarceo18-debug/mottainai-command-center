@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { MENU_ITEMS } from '@/lib/data';
 import CostWaterfallChart from '@/components/CostWaterfallChart';
 import AoyamaTracker from '@/components/AoyamaTracker';
@@ -6,11 +7,19 @@ export default function MenuPage() {
   return (
     <div className="p-6 max-w-7xl mx-auto space-y-8">
       {/* Header */}
-      <div>
-        <h1 className="text-3xl font-bold text-[#1a1a2e]">Menu Development</h1>
-        <p className="text-sm text-gray-500 mt-1">
-          Rock #1 — Complete ✓ | 7 Core SKUs Locked &amp; FC-Validated
-        </p>
+      <div className="flex items-start justify-between">
+        <div>
+          <h1 className="text-3xl font-bold text-[#1a1a2e]">Menu Development</h1>
+          <p className="text-sm text-gray-500 mt-1">
+            Rock #1 — Complete ✓ | 7 Core SKUs Locked &amp; FC-Validated
+          </p>
+        </div>
+        <Link
+          href="/rd-report"
+          className="bg-[#1a1a2e] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#CA8A04] transition-colors"
+        >
+          Full R&amp;D Report →
+        </Link>
       </div>
 
       {/* Status banner */}
