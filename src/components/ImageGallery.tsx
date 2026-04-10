@@ -18,7 +18,7 @@ const CONCEPT_IMAGES: ConceptImage[] = [
   { id: 9,  label: 'Kitchen Workflow',       src: '/concepts/kitchen-workflow.jpg'       },
   { id: 10, label: 'Customer Journey',       src: '/concepts/customer-journey.jpg'       },
   { id: 11, label: 'Dining Automation',      src: '/concepts/dining-automation.jpg'      },
-  { id: 1,  label: 'Store Facade',           pending: true },
+  { id: 1,  label: 'Store Facade',             src: '/concepts/store-facade.png'            },
 ];
 
 export default function ImageGallery() {
