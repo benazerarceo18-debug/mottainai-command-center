@@ -1,14 +1,14 @@
 'use client';
 
-const checks = [240, 260, 280, 300, 320];
-const covers = [180, 210, 240, 270, 300];
-const BASE_CHECK = 280;
-const BASE_COVERS = 240;
+const checks = [250, 300, 350, 400, 450];
+const covers = [200, 250, 300, 350, 400, 450];
 
 function cellColor(revenue: number) {
-  if (revenue < 1_500_000) return 'bg-red-100 text-red-800';
-  if (revenue <= 2_000_000) return 'bg-yellow-100 text-yellow-800';
-  return 'bg-green-100 text-green-800';
+  if (revenue < 2_000_000)  return 'bg-red-100 text-red-800';
+  if (revenue < 3_500_000)  return 'bg-yellow-100 text-yellow-800';
+  if (revenue < 5_000_000)  return 'bg-green-100 text-green-800';
+  if (revenue <= 6_000_000) return 'bg-emerald-200 text-emerald-900 font-bold';
+  return 'bg-emerald-300 text-emerald-900 font-bold';
 }
 
 function format(revenue: number) {
@@ -40,12 +40,12 @@ export default function SensitivityMatrix() {
               <td className="py-2 px-3 font-semibold text-text-primary">₱{check}</td>
               {covers.map((cover) => {
                 const revenue = check * cover * 30;
-                const isBase = check === BASE_CHECK && cover === BASE_COVERS;
+                const isTarget = revenue >= 5_000_000 && revenue <= 6_000_000;
                 return (
                   <td
                     key={cover}
-                    className={`py-2 px-3 text-center font-medium rounded ${cellColor(revenue)} ${
-                      isBase ? 'ring-2 ring-[#FB923C] ring-offset-1' : ''
+                    className={`py-2 px-3 text-center rounded ${cellColor(revenue)} ${
+                      isTarget ? 'ring-2 ring-emerald-500 ring-offset-1' : ''
                     }`}
                   >
                     {format(revenue)}
@@ -56,9 +56,12 @@ export default function SensitivityMatrix() {
           ))}
         </tbody>
       </table>
-      <p className="text-xs text-text-muted mt-2">
-        Base case highlighted: ₱280 × 240 covers × 30 days = ₱2.016M/mo
-      </p>
+      <div className="flex flex-wrap gap-4 mt-3 text-xs text-text-muted">
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-red-100 inline-block" />{'<'}₱2M</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-yellow-100 inline-block" />₱2M–₱3.5M</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-green-100 inline-block" />₱3.5M–₱5M</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-emerald-200 inline-block" />₱5M–₱6M · Target Zone</span>
+      </div>
     </div>
   );
 }
