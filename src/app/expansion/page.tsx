@@ -4,6 +4,40 @@ import PipelineTracker from '@/components/PipelineTracker';
 import SiteScoringTool from '@/components/SiteScoringTool';
 import PlaybookAccordion from '@/components/PlaybookAccordion';
 
+const PIPELINE_METRICS = [
+  { value: '10+', label: 'Sites Target', color: 'bg-[#111827] text-white' },
+  { value: '4',   label: 'Site Visits',  color: 'bg-emerald-600 text-white' },
+  { value: '1',   label: 'Lesson Form',  color: 'bg-amber-500 text-white' },
+  { value: '5',   label: 'Prospects',    color: 'bg-blue-600 text-white' },
+];
+
+const EVALUATED_SITES = [
+  {
+    name: 'SM Mega Mall',
+    location: 'Mandaluyong City',
+    siteClass: 'Premium — Class A',
+    notes: 'Evaluated: Inline mall units across multiple levels. High foot traffic corridor identified. Strong profile.',
+  },
+  {
+    name: 'SM North EDSA',
+    location: 'Quezon City',
+    siteClass: 'Premium — Class A',
+    notes: 'Key North Metro anchor. Assessed GFA availability and proximity to new anchor dining corridor.',
+  },
+  {
+    name: 'SM Fairview',
+    location: 'Quezon City',
+    siteClass: 'Suburban — High Traffic',
+    notes: 'North QC catchment area. Strong alignment with Mottainai target mass-market profile.',
+  },
+  {
+    name: 'Robinsons Ermita',
+    location: 'Manila',
+    siteClass: 'Mid-Tier — Urban Core',
+    notes: 'Urban-core viability. Evaluated for accessibility and inline unit positioning.',
+  },
+];
+
 const LANDLORD_CARDS = [
   { name: 'SM Prime', share: '70%', stores: '40 stores', color: 'bg-navy text-white' },
   { name: 'Ayala Land', share: '16%', stores: '8 stores', color: 'bg-gold/10 text-gold' },
@@ -23,7 +57,7 @@ export default function ExpansionPage() {
             Expansion Playbook
           </h1>
           <p className="text-sm text-text-secondary mt-1">
-            Rock #2 — On Track | 50-Store Roadmap by 2033
+            Rock #2 — Complete | 50-Store Roadmap by 2033
           </p>
         </div>
         <div className="flex gap-2">
@@ -41,6 +75,39 @@ export default function ExpansionPage() {
           </Link>
         </div>
       </div>
+
+      {/* Pipeline Metrics */}
+      <section>
+        <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Pipeline Metrics</p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+          {PIPELINE_METRICS.map((m) => (
+            <div key={m.label} className={`rounded-xl p-5 flex flex-col items-center justify-center text-center ${m.color}`}>
+              <span className="text-3xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>{m.value}</span>
+              <span className="text-xs font-medium mt-1 opacity-80 uppercase tracking-wider">{m.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Evaluated Sites */}
+      <section>
+        <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Evaluated Locations</p>
+        <p className="text-xs text-text-muted mb-4">All sites evaluated specifically as candidate locations for the Mottainai Project Store</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          {EVALUATED_SITES.map((site) => (
+            <div key={site.name} className="bg-white rounded-xl border border-border p-5">
+              <div className="flex items-start justify-between mb-2">
+                <div>
+                  <p className="font-semibold text-text-primary">{site.name}</p>
+                  <p className="text-xs text-text-muted">{site.location}</p>
+                </div>
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 shrink-0 ml-2">{site.siteClass}</span>
+              </div>
+              <p className="text-xs text-text-secondary leading-relaxed">{site.notes}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Pipeline Tracker */}
       <section>

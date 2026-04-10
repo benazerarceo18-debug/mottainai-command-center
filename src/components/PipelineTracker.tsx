@@ -65,35 +65,42 @@ export default function PipelineTracker() {
           <thead>
             <tr className="border-b border-border">
               <th className="text-left py-2 px-3 text-text-muted font-medium">Site</th>
-              <th className="text-left py-2 px-3 text-text-muted font-medium">Location</th>
-              <th className="text-left py-2 px-3 text-text-muted font-medium">Landlord</th>
+              <th className="text-left py-2 px-3 text-text-muted font-medium">Class</th>
+              <th className="text-center py-2 px-3 text-text-muted font-medium">Visit</th>
+              <th className="text-center py-2 px-3 text-text-muted font-medium">Form</th>
               <th className="text-left py-2 px-3 text-text-muted font-medium">Stage</th>
               <th className="text-left py-2 px-3 text-text-muted font-medium">Score</th>
-              <th className="text-left py-2 px-3 text-text-muted font-medium">Size</th>
             </tr>
           </thead>
           <tbody>
             {PIPELINE_SITES.map((site) => {
               const colors = STAGE_COLORS[site.stage.toLowerCase()] ?? STAGE_COLORS.identified;
+              const stageLabel = site.stage === 'mock-awarded' ? 'Form Done' : site.stage.charAt(0).toUpperCase() + site.stage.slice(1);
               return (
-                <tr
-                  key={site.id}
-                  className="border-b border-border/50 hover:bg-bg transition-colors"
-                >
-                  <td className="py-3 px-3 font-medium text-text-primary">{site.name}</td>
-                  <td className="py-3 px-3 text-text-secondary">{site.location}</td>
-                  <td className="py-3 px-3 text-text-secondary">{site.landlord}</td>
+                <tr key={site.id} className="border-b border-border/50 hover:bg-bg transition-colors">
                   <td className="py-3 px-3">
-                    <span
-                      className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium capitalize ${colors.badge}`}
-                    >
-                      {site.stage}
+                    <div className="font-medium text-text-primary">{site.name}</div>
+                    <div className="text-xs text-text-muted">{site.location}</div>
+                  </td>
+                  <td className="py-3 px-3 text-xs text-text-secondary">{site.siteClass}</td>
+                  <td className="py-3 px-3 text-center">
+                    {site.visited
+                      ? <span className="text-emerald-600 font-bold">✓</span>
+                      : <span className="text-text-muted">—</span>}
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    {site.formDone
+                      ? <span className="text-emerald-600 font-bold">✓</span>
+                      : <span className="text-text-muted text-xs">Pending</span>}
+                  </td>
+                  <td className="py-3 px-3">
+                    <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium ${colors.badge}`}>
+                      {stageLabel}
                     </span>
                   </td>
                   <td className="py-3 px-3 font-medium text-text-primary">
-                    {site.score !== null ? `${site.score}/10` : '\u2014'}
+                    {site.score !== null ? `${site.score}/10` : '—'}
                   </td>
-                  <td className="py-3 px-3 text-text-secondary">{site.sqm != null ? `${site.sqm} sqm` : '—'}</td>
                 </tr>
               );
             })}

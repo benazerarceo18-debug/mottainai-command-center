@@ -46,9 +46,12 @@ export interface PipelineSite {
   location: string;
   landlord: string;
   stage: string;
+  siteClass: string;
   score: number | null;
   sqm: number | null;
   monthlyRent: number | null;
+  visited: boolean;
+  formDone: boolean;
   notes: string;
 }
 
