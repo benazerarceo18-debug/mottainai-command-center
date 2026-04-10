@@ -143,7 +143,7 @@ function Slide3() {
           <div>
             <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 mb-6">
               <h3 className="text-lg font-semibold text-[#111827] mb-2">Positioning</h3>
-              <p className="text-gray-600">&ldquo;By the makers of Yushoken&rdquo; endorsed model — leverages premium credibility at accessible price points</p>
+              <p className="text-gray-600">Standalone brand under NHI Group — accessible price points anchored on proprietary ramen expertise</p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
               <h3 className="text-lg font-semibold text-[#111827] mb-3">7 Core SKUs</h3>
@@ -201,11 +201,11 @@ function Slide4() {
             <div className="text-sm text-gray-500">Covers/Day</div>
           </div>
           <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 text-center">
-            <div className="text-2xl font-bold text-[#111827]">₱280</div>
+            <div className="text-2xl font-bold text-[#111827]">₱250–450</div>
             <div className="text-sm text-gray-500">Avg Check</div>
           </div>
           <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 text-center">
-            <div className="text-2xl font-bold text-[#111827]">₱2.016M</div>
+            <div className="text-2xl font-bold text-[#111827]">₱5M–₱6M</div>
             <div className="text-sm text-gray-500">Monthly Revenue</div>
           </div>
         </div>
@@ -374,9 +374,9 @@ function Slide7() {
     { period: 'Q4 2025', item: 'Concept finalization', status: 'done' },
     { period: 'Q1–Q2 2026', item: 'Menu development', status: 'done' },
     { period: 'Q1–Q2 2026', item: 'Expansion playbook', status: 'progress' },
-    { period: 'Q3 2026', item: 'SM MOA lease, build-out begins', status: 'upcoming' },
-    { period: 'Q4 2026', item: 'Soft launch', status: 'upcoming' },
-    { period: 'Q1 2027', item: 'Grand opening + scale', status: 'upcoming' },
+    { period: 'Q3–Q4 2026', item: 'SM MOA lease, build-out begins', status: 'upcoming' },
+    { period: 'Q2–Q3 2027', item: 'Soft launch (1 store)', status: 'upcoming' },
+    { period: 'Q4 2027', item: 'Grand opening + scale', status: 'upcoming' },
   ];
 
   const statusColors: Record<string, string> = {
