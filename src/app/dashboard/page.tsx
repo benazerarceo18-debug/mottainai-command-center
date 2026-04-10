@@ -1,113 +1,213 @@
 import Link from 'next/link';
-import KPICard from '@/components/KPICard';
-import BDHighlights from '@/components/BDHighlights';
-import { BRAND, PIPELINE_SITES, MILESTONES } from '@/lib/data';
-import type { KPICardData, BDHighlight } from '@/lib/types';
+import { PIPELINE_SITES, MILESTONES, MENU_ITEMS } from '@/lib/data';
 
-const kpis: KPICardData[] = [
-  {
-    label: 'Rock #1 — Menu Dev',
-    value: 'Complete',
-    status: 'success',
-    description: '7/7 SKUs locked, FC ≤35%',
-  },
-  {
-    label: 'Rock #2 — Expansion',
-    value: 'On Track',
-    status: 'warning',
-    description: 'Playbook V1 in progress',
-  },
-  {
-    label: 'Pipeline Sites',
-    value: String(PIPELINE_SITES.length),
-    status: 'info',
-    description: '1 evaluated, 2 identified',
-  },
-  {
-    label: 'Target FC%',
-    value: '≤35%',
-    status: 'success',
-    description: '₱70/bowl avg cost',
-  },
+const QUICK_LINKS = [
+  { href: '/brand',      title: 'Brand Identity',     emoji: '🎯', color: 'from-violet-500/20 to-violet-500/5',  border: 'border-violet-200',  desc: 'Positioning & visual direction' },
+  { href: '/menu',       title: 'Core Menu',           emoji: '🍜', color: 'from-orange-500/20 to-orange-500/5',  border: 'border-orange-200',  desc: '7 SKUs — all locked' },
+  { href: '/expansion',  title: 'Expansion Playbook',  emoji: '📍', color: 'from-blue-500/20 to-blue-500/5',     border: 'border-blue-200',    desc: 'Site pipeline & scoring' },
+  { href: '/financials', title: 'Financial Model',     emoji: '📊', color: 'from-emerald-500/20 to-emerald-500/5', border: 'border-emerald-200', desc: '5-year · 3 scenarios' },
+  { href: '/roadmap',    title: 'Roadmap',             emoji: '🗺️', color: 'from-amber-500/20 to-amber-500/5',   border: 'border-amber-200',   desc: 'Q4 2025 → Q4 2027' },
+  { href: '/board-deck', title: 'Board Deck',          emoji: '🎬', color: 'from-rose-500/20 to-rose-500/5',     border: 'border-rose-200',    desc: 'Board-ready slides' },
 ];
 
-const highlights: BDHighlight[] = [
-  { id: '1', date: '2026-04-07', title: 'Rock #1 Complete — Core Menu Locked', content: 'All 7 core SKUs finalized with food cost validated at ≤35%. Aoyama-san signed off on broth specifications.', category: 'milestone' },
-  { id: '2', date: '2026-03-31', title: 'Strategy Pivot Finalized', content: 'Board approved single unified concept. 3-tier format permanently dropped. Simplifies scaling and franchising.', category: 'brand' },
-  { id: '3', date: '2026-03-15', title: 'SM MOA Site Validated', content: 'Site scoring 9.0/10 — STRONG GO. Demographics, traffic, and competition all exceed thresholds.', category: 'expansion' },
-  { id: '4', date: '2026-03-01', title: 'Unit Economics Model Approved', content: 'Base scenario: 24 stores by Y5, ₱580M revenue, 37% EBITDA margin. Board sign-off secured.', category: 'financial' },
-  { id: '5', date: '2026-02-15', title: 'Aoyama Phase 1 Complete', content: 'Foundation recipes for Shoyu, Shio, and Miso broths delivered. Noodle specs locked.', category: 'deal' },
+const HIGHLIGHTS = [
+  { date: 'Apr 7',  label: 'Rock #1 Complete',          detail: '7 SKUs locked · FC 24.6% avg',     color: 'bg-emerald-500', pill: 'bg-emerald-50 text-emerald-700' },
+  { date: 'Mar 31', label: 'Strategy Pivot Finalized',  detail: 'Single unified concept confirmed',  color: 'bg-blue-500',    pill: 'bg-blue-50 text-blue-700' },
+  { date: 'Mar 15', label: 'SM MOA Site — 9.0/10',      detail: 'Strong GO · demographics pass',     color: 'bg-amber-500',   pill: 'bg-amber-50 text-amber-700' },
+  { date: 'Mar 1',  label: 'Unit Economics Approved',   detail: '37% EBITDA · ₱580M Y5 revenue',    color: 'bg-violet-500',  pill: 'bg-violet-50 text-violet-700' },
 ];
 
-const quickLinks = [
-  { href: '/brand', title: 'Brand Identity', description: 'Positioning, personas, and competitive frame', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' },
-  { href: '/menu', title: 'Core Menu', description: '7 SKUs with food cost analysis', icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2' },
-  { href: '/expansion', title: 'Expansion Playbook', description: 'Pipeline sites and site scoring', icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' },
-  { href: '/financials', title: 'Financial Model', description: '5-year scenarios and unit economics', icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' },
-  { href: '/roadmap', title: 'Roadmap', description: 'Milestones and Aoyama phases', icon: 'M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7' },
-  { href: '/board-deck', title: 'Board Deck', description: 'Presentation-ready slides for BoD', icon: 'M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z' },
-];
+const STAGE_META: Record<string, { label: string; color: string; bg: string }> = {
+  'mock-awarded': { label: 'Mock Awarded', color: 'text-orange-700', bg: 'bg-orange-100' },
+  awarded:        { label: 'Awarded',      color: 'text-emerald-700', bg: 'bg-emerald-100' },
+  identified:     { label: 'Identified',   color: 'text-gray-600',   bg: 'bg-gray-100' },
+  evaluated:      { label: 'Evaluated',    color: 'text-blue-700',   bg: 'bg-blue-100' },
+  negotiating:    { label: 'Negotiating',  color: 'text-yellow-700', bg: 'bg-yellow-100' },
+};
 
 export default function Dashboard() {
-  const completedMilestones = MILESTONES.filter((m) => m.status === 'completed').length;
-  const totalMilestones = MILESTONES.length;
+  const completedCount = MILESTONES.filter(m => m.status === 'completed').length;
+  const progressPct = Math.round((completedCount / MILESTONES.length) * 100);
+  const avgFC = MENU_ITEMS.reduce((s, m) => s + m.fcPercent, 0) / MENU_ITEMS.length;
 
   return (
     <div className="p-6 max-w-7xl mx-auto space-y-8">
-      {/* Header */}
-      <div>
-        <h1 className="text-3xl font-bold text-text-primary" style={{ fontFamily: "'Playfair Display', serif" }}>
-          Dashboard
-        </h1>
-        <p className="text-text-secondary mt-1">Mottainai brand development at a glance</p>
+
+      {/* ── HERO HEADER ── */}
+      <div className="relative rounded-2xl overflow-hidden bg-[#111827] p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div className="absolute inset-0 bg-[url('/images/ramen-hero.png')] bg-cover bg-center opacity-10 pointer-events-none" />
+        <div className="relative z-10">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-emerald-400 text-xs font-semibold tracking-widest uppercase">In Development · 2026</span>
+          </div>
+          <h1 className="text-4xl font-bold text-white leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Mottainai
+          </h1>
+          <p className="text-white/50 text-sm mt-1 tracking-wider">Command Center · Nippon Hasha Inc.</p>
+        </div>
+        <div className="relative z-10 flex flex-wrap gap-4">
+          {[
+            { value: '7/7', label: 'SKUs Locked', color: 'text-emerald-400' },
+            { value: `${avgFC.toFixed(1)}%`, label: 'Avg Food Cost', color: 'text-amber-400' },
+            { value: String(PIPELINE_SITES.length), label: 'Pipeline Sites', color: 'text-blue-400' },
+            { value: 'Q3–Q4', label: 'Pilot Launch', color: 'text-violet-400' },
+          ].map(s => (
+            <div key={s.label} className="text-center min-w-[72px]">
+              <div className={`text-2xl font-bold ${s.color}`} style={{ fontFamily: "'Playfair Display', serif" }}>{s.value}</div>
+              <div className="text-white/40 text-[10px] uppercase tracking-wider mt-0.5">{s.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* KPI Cards — 2x2 desktop, 1 col mobile */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {kpis.map((kpi) => (
-          <KPICard key={kpi.label} {...kpi} />
-        ))}
-      </div>
-
-      {/* BD Highlights */}
+      {/* ── ROCKS PROGRESS ── */}
       <section>
-        <h2 className="text-xl font-bold text-text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-          BD Highlights
-        </h2>
-        <div className="bg-white rounded-xl shadow-sm border border-border p-6">
-          <BDHighlights highlights={highlights} />
+        <h2 className="text-base font-bold text-gray-800 mb-3 uppercase tracking-wider text-xs">EOS Rocks</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Rock 1 */}
+          <div className="bg-white rounded-xl border border-emerald-200 p-5 flex items-center gap-4">
+            <div className="relative w-14 h-14 shrink-0">
+              <svg className="w-14 h-14 -rotate-90" viewBox="0 0 56 56">
+                <circle cx="28" cy="28" r="22" fill="none" stroke="#d1fae5" strokeWidth="6" />
+                <circle cx="28" cy="28" r="22" fill="none" stroke="#10b981" strokeWidth="6"
+                  strokeDasharray={`${2 * Math.PI * 22}`} strokeDashoffset="0" strokeLinecap="round" />
+              </svg>
+              <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-emerald-600">100%</span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-sm font-semibold text-gray-800">Rock #1 — Menu Dev</span>
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">COMPLETE</span>
+              </div>
+              <p className="text-xs text-gray-500">7/7 SKUs locked · FC ≤35% · Aoyama sign-off</p>
+              <div className="mt-2 h-1.5 rounded-full bg-emerald-100">
+                <div className="h-full rounded-full bg-emerald-500 w-full" />
+              </div>
+            </div>
+          </div>
+
+          {/* Rock 2 */}
+          <div className="bg-white rounded-xl border border-amber-200 p-5 flex items-center gap-4">
+            <div className="relative w-14 h-14 shrink-0">
+              <svg className="w-14 h-14 -rotate-90" viewBox="0 0 56 56">
+                <circle cx="28" cy="28" r="22" fill="none" stroke="#fef3c7" strokeWidth="6" />
+                <circle cx="28" cy="28" r="22" fill="none" stroke="#f59e0b" strokeWidth="6"
+                  strokeDasharray={`${2 * Math.PI * 22}`}
+                  strokeDashoffset={`${2 * Math.PI * 22 * (1 - 0.65)}`}
+                  strokeLinecap="round" />
+              </svg>
+              <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-amber-600">65%</span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-sm font-semibold text-gray-800">Rock #2 — Expansion</span>
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">ON TRACK</span>
+              </div>
+              <p className="text-xs text-gray-500">Playbook V1 · SM MOA lease in progress</p>
+              <div className="mt-2 h-1.5 rounded-full bg-amber-100">
+                <div className="h-full rounded-full bg-amber-400 w-[65%]" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Quick Links */}
+      {/* ── PIPELINE SITES ── */}
       <section>
-        <h2 className="text-xl font-bold text-text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-          Quick Links
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {quickLinks.map((link) => (
+        <h2 className="text-xs font-bold text-gray-800 mb-3 uppercase tracking-wider">Site Pipeline</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {PIPELINE_SITES.map((site) => {
+            const meta = STAGE_META[site.stage] ?? STAGE_META.identified;
+            return (
+              <div key={site.id} className="bg-white rounded-xl border border-gray-200 p-4">
+                <div className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wide mb-3 ${meta.bg} ${meta.color}`}>
+                  {meta.label}
+                </div>
+                <div className="text-sm font-bold text-gray-800 leading-tight">{site.name}</div>
+                <div className="text-xs text-gray-400 mt-0.5">{site.location}</div>
+                {site.sqm && <div className="text-xs text-gray-500 mt-2">{site.sqm} sqm</div>}
+                {site.score && (
+                  <div className="flex items-center gap-1.5 mt-2">
+                    <div className="flex-1 h-1 rounded-full bg-gray-100">
+                      <div className="h-full rounded-full bg-amber-400" style={{ width: `${(site.score / 10) * 100}%` }} />
+                    </div>
+                    <span className="text-[10px] font-semibold text-gray-600">{site.score}/10</span>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ── MILESTONE PROGRESS + HIGHLIGHTS ── */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        {/* Milestone tracker */}
+        <section>
+          <h2 className="text-xs font-bold text-gray-800 mb-3 uppercase tracking-wider">Milestones</h2>
+          <div className="bg-white rounded-xl border border-gray-200 p-5 space-y-3">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-xs text-gray-500">{completedCount} of {MILESTONES.length} complete</span>
+              <span className="text-xs font-semibold text-gray-700">{progressPct}%</span>
+            </div>
+            <div className="h-2 rounded-full bg-gray-100 mb-4">
+              <div className="h-full rounded-full bg-[#F97316] transition-all" style={{ width: `${progressPct}%` }} />
+            </div>
+            {MILESTONES.slice(0, 5).map((m) => (
+              <div key={m.id} className="flex items-center gap-3">
+                <div className={`w-2 h-2 rounded-full shrink-0 ${
+                  m.status === 'completed' ? 'bg-emerald-500' :
+                  m.status === 'on-track'  ? 'bg-amber-400' : 'bg-gray-300'
+                }`} />
+                <span className={`text-sm flex-1 ${m.status === 'completed' ? 'line-through text-gray-400' : 'text-gray-700'}`}>
+                  {m.title}
+                </span>
+                <span className="text-[10px] text-gray-400 shrink-0">{m.endDate?.slice(0, 7)}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* BD Highlights */}
+        <section>
+          <h2 className="text-xs font-bold text-gray-800 mb-3 uppercase tracking-wider">BD Highlights</h2>
+          <div className="bg-white rounded-xl border border-gray-200 p-5 space-y-4">
+            {HIGHLIGHTS.map((h) => (
+              <div key={h.label} className="flex items-start gap-3">
+                <div className={`w-1.5 rounded-full shrink-0 self-stretch ${h.color}`} />
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <span className="text-sm font-semibold text-gray-800">{h.label}</span>
+                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${h.pill}`}>{h.date}</span>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-0.5">{h.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      {/* ── QUICK LINKS ── */}
+      <section>
+        <h2 className="text-xs font-bold text-gray-800 mb-3 uppercase tracking-wider">Explore</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          {QUICK_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="bg-white rounded-xl border border-border p-5 transition-shadow hover:shadow-md group"
+              className={`group rounded-xl border ${link.border} bg-gradient-to-b ${link.color} p-4 flex flex-col items-center text-center gap-2 hover:shadow-md transition-shadow`}
             >
-              <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-lg bg-gold-muted flex items-center justify-center shrink-0 text-gold">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={link.icon} />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold text-text-primary group-hover:text-gold transition-colors">
-                    {link.title}
-                  </h3>
-                  <p className="text-xs text-text-muted mt-1">{link.description}</p>
-                </div>
-              </div>
+              <span className="text-2xl">{link.emoji}</span>
+              <span className="text-xs font-semibold text-gray-800 group-hover:text-[#F97316] transition-colors leading-tight">{link.title}</span>
+              <span className="text-[10px] text-gray-400 leading-tight hidden sm:block">{link.desc}</span>
             </Link>
           ))}
         </div>
       </section>
+
     </div>
   );
 }
