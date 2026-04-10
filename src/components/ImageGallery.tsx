@@ -8,17 +8,17 @@ type ConceptImage =
   | { id: number; label: string; src?: undefined; pending: true };
 
 const CONCEPT_IMAGES: ConceptImage[] = [
-  { id: 3,  label: 'Floor Plan',             src: '/concepts/floor-plan.jpg'   },
-  { id: 7,  label: 'Entry Kiosks',           src: '/concepts/entry-kiosks.jpg' },
+  { id: 2,  label: 'Interior Visualization', src: '/concepts/interior-visualization.jpg' },
+  { id: 3,  label: 'Floor Plan',             src: '/concepts/floor-plan.jpg'             },
+  { id: 4,  label: 'Floor Plan (Alt)',        src: '/concepts/floor-plan-alt.jpg'         },
+  { id: 5,  label: 'Mezzanine View',         src: '/concepts/mezzanine-view.jpg'         },
+  { id: 6,  label: 'Bar Detail',             src: '/concepts/bar-detail.jpg'             },
+  { id: 7,  label: 'Entry Kiosks',           src: '/concepts/entry-kiosks.jpg'           },
+  { id: 8,  label: 'Assembly Theater',       src: '/concepts/assembly-theater.jpg'       },
+  { id: 9,  label: 'Kitchen Workflow',       src: '/concepts/kitchen-workflow.jpg'       },
+  { id: 10, label: 'Customer Journey',       src: '/concepts/customer-journey.jpg'       },
+  { id: 11, label: 'Dining Automation',      src: '/concepts/dining-automation.jpg'      },
   { id: 1,  label: 'Store Facade',           pending: true },
-  { id: 2,  label: 'Interior Visualization', pending: true },
-  { id: 4,  label: 'Floor Plan (Alt)',        pending: true },
-  { id: 5,  label: 'Mezzanine View',         pending: true },
-  { id: 6,  label: 'Bar Detail',             pending: true },
-  { id: 8,  label: 'Assembly Theater',       pending: true },
-  { id: 9,  label: 'Kitchen Workflow',       pending: true },
-  { id: 10, label: 'Customer Journey',       pending: true },
-  { id: 11, label: 'Dining Automation',      pending: true },
 ];
 
 export default function ImageGallery() {
