@@ -300,9 +300,9 @@ export default function RDReportPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           {[
-            { label: 'Monthly Revenue / Store', value: '₱1,500,000', note: '₱250 ASP × 180 covers × 30 days' },
-            { label: 'Gross Profit / Store', value: '₱1,030,500', note: 'After 31.3% COGS' },
-            { label: 'Annual System Revenue (50 stores)', value: '₱882M', note: '2033 target — 50 locations' },
+            { label: 'Monthly Revenue / Store', value: '₱5M–₱6M', note: '₱250–450 PPA · target 370–500 covers/day' },
+            { label: 'Gross Profit / Store', value: '₱3.75M–₱4.5M', note: 'After ~25% COGS' },
+            { label: 'Annual System Revenue (50 stores)', value: '₱3B–₱3.6B', note: '2033 target — 50 locations' },
           ].map((m) => (
             <div key={m.label} className="bg-white border border-border rounded-xl p-5">
               <p className="text-xs text-text-muted mb-1">{m.label}</p>
@@ -317,16 +317,16 @@ export default function RDReportPage() {
           <div className="bg-white border border-border rounded-xl overflow-hidden">
             <div className="px-4 py-3 bg-navy">
               <p className="text-sm font-semibold text-white">Per Store Monthly P&L</p>
-              <p className="text-xs text-slate-400">₱250 ASP · 180 covers/day</p>
+              <p className="text-xs text-slate-400">₱250–450 PPA · 370–500 covers/day</p>
             </div>
             <table className="w-full text-sm">
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { label: 'Revenue', value: '₱1,500,000', color: 'text-navy' },
-                  { label: 'COGS (31.3% avg FC)', value: '−₱469,500', color: 'text-red-600' },
-                  { label: 'Gross Profit', value: '₱1,030,500', color: 'text-emerald-600', bold: true },
-                  { label: 'Operating Costs (est.)', value: '−₱684,000', color: 'text-red-600' },
-                  { label: 'NOI (target 23–26%)', value: '₱345K–₱390K', color: 'text-gold', bold: true },
+                  { label: 'Revenue', value: '₱5M–₱6M', color: 'text-navy' },
+                  { label: 'COGS (~25% avg FC)', value: '−₱1.25M–₱1.5M', color: 'text-red-600' },
+                  { label: 'Gross Profit (~75%)', value: '₱3.75M–₱4.5M', color: 'text-emerald-600', bold: true },
+                  { label: 'Operating Costs (est. ~38%)', value: '−₱1.9M–₱2.28M', color: 'text-red-600' },
+                  { label: 'Store EBITDA (37%)', value: '~₱1.85M–₱2.22M', color: 'text-gold', bold: true },
                 ].map((row) => (
                   <tr key={row.label} className={row.bold ? 'bg-gray-50' : ''}>
                     <td className="px-4 py-2.5 text-text-secondary">{row.label}</td>
@@ -345,8 +345,8 @@ export default function RDReportPage() {
             <table className="w-full text-sm">
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { label: 'Annual Revenue', value: '₱882M', color: 'text-navy' },
-                  { label: 'Annual NOI', value: '₱220.7M', color: 'text-emerald-600' },
+                  { label: 'Annual Revenue', value: '₱3B–₱3.6B', color: 'text-navy' },
+                  { label: 'Annual EBITDA', value: '₱1.11B–₱1.33B', color: 'text-emerald-600' },
                   { label: 'COGS Savings (vs CK Broth)', value: '+₱69.6M/yr', color: 'text-gold' },
                   { label: 'Investment per Unit', value: '₱10–15M', color: 'text-text-secondary' },
                 ].map((row) => (
