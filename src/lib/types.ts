@@ -79,7 +79,7 @@ export interface Milestone {
   description: string;
   startDate: string;
   endDate: string;
-  status: 'completed' | 'on-track' | 'at-risk' | 'blocked';
+  status: 'completed' | 'on-track' | 'at-risk' | 'blocked' | 'upcoming';
   category: string;
 }
 
