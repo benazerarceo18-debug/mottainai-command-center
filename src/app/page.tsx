@@ -7,9 +7,9 @@ const FOOD_ITEMS = [
   { emoji: '🍜', label: 'Konbu Sui' },
   { emoji: '🌶️', label: 'Sanratanmen' },
   { emoji: '🍣', label: 'Tori Sushi' },
-  { emoji: '🍳', label: 'Chahan' },
-  { emoji: '🥟', label: 'Chimaki' },
-  { emoji: '🥡', label: 'Gyoza' },
+  { emoji: '🍚', label: 'Chahan' },
+  { emoji: '🍙', label: 'Chimaki' },
+  { emoji: '🥟', label: 'Gyoza' },
   { emoji: '🍡', label: 'Daifuku' },
   { emoji: '🍤', label: 'Ebi Fry' },
 ];
