@@ -5,6 +5,7 @@ import { PIPELINE_SITES } from '@/lib/data';
 const STAGES = ['Identified', 'Evaluated', 'Negotiating', 'Signed', 'Build-out', 'Open'] as const;
 
 const STAGE_COLORS: Record<string, { dot: string; badge: string }> = {
+  'mock-awarded': { dot: 'bg-orange-400', badge: 'bg-orange-50 text-orange-700' },
   identified: { dot: 'bg-gray-400', badge: 'bg-gray-100 text-gray-600' },
   evaluated: { dot: 'bg-blue-500', badge: 'bg-blue-50 text-blue-700' },
   negotiating: { dot: 'bg-yellow-500', badge: 'bg-yellow-50 text-yellow-700' },

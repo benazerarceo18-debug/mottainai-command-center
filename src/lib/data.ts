@@ -68,7 +68,7 @@ export const PIPELINE_SITES: PipelineSite[] = [
     name: 'SMDC Ice Tower',
     location: 'MOA Complex, Pasay City',
     landlord: 'SM Development Corporation',
-    stage: 'awarded',
+    stage: 'mock-awarded',
     score: 7.65, // 45.9/60 normalized
     sqm: 221.74,
     monthlyRent: 221740,
@@ -79,7 +79,7 @@ export const PIPELINE_SITES: PipelineSite[] = [
     name: 'SMDC Light Mall',
     location: 'EDSA corner Madison St., Mandaluyong',
     landlord: 'SM Development Corporation',
-    stage: 'awarded',
+    stage: 'mock-awarded',
     score: 7.8,
     sqm: 229.46,
     monthlyRent: 263879,
