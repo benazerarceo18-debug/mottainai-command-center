@@ -4,7 +4,7 @@ export const BRAND = {
   name: 'Mottainai',
   tagline: 'Japanese Ramen, Reimagined for Everyone',
   positioning: 'Value-segment fast-casual Japanese ramen concept by the makers of Yushoken',
-  architecture: 'Endorsed brand — "By the makers of Yushoken"',
+  architecture: 'Standalone brand — NHI Group',
   tone: 'Friendly, inclusive, approachable — no chef ego',
   priceRange: '₱250–450',
   status: 'Under Development',
@@ -23,7 +23,7 @@ export const BRAND = {
     'Price band ₱250–450',
     'Food cost ₱70/bowl (≤35% FC%)',
     'Friendly, inclusive tone',
-    'Endorsed brand model (By the makers of Yushoken)',
+    'Standalone brand — no Yushoken endorsement',
     'Aoyama-san is a consultant, not an employee',
     'Delivery = 30–40% of revenue',
     'No delivery platform exclusivity',
@@ -90,7 +90,7 @@ export const PIPELINE_SITES: PipelineSite[] = [
     name: 'SM North EDSA',
     location: 'Quezon City',
     landlord: 'SM Prime',
-    stage: 'identified',
+    stage: 'awarded',
     score: null,
     sqm: 60,
     monthlyRent: null,
@@ -138,7 +138,7 @@ export const MILESTONES: Milestone[] = [
   { id: 'ms-2', title: 'Expansion Playbook V1', description: 'All 8 appendices finalized. Board-ready document.', startDate: '2026-02-01', endDate: '2026-06-30', status: 'on-track', category: 'expansion' },
   { id: 'ms-3', title: 'SM MOA Lease Negotiation', description: 'Formal lease proposal to SM Prime for pilot food court location.', startDate: '2026-04-01', endDate: '2026-07-31', status: 'on-track', category: 'expansion' },
   { id: 'ms-4', title: 'Pilot Store Build-out', description: 'Construction and fit-out of first SM MOA location.', startDate: '2026-07-01', endDate: '2026-10-31', status: 'on-track', category: 'operations' },
-  { id: 'ms-5', title: 'Soft Launch', description: 'Controlled opening at SM MOA with limited marketing.', startDate: '2026-10-01', endDate: '2026-11-30', status: 'on-track', category: 'operations' },
+  { id: 'ms-5', title: 'Soft Launch', description: 'Controlled opening at first SMDC location with limited marketing.', startDate: '2027-04-01', endDate: '2027-09-30', status: 'on-track', category: 'operations' },
 ];
 
 export const ROCKS: RockStatus[] = [
