@@ -4,7 +4,7 @@ import SensitivityMatrix from '@/components/charts/SensitivityMatrix';
 
 const unitEconomics = [
   { label: 'Covers/Day', value: '240' },
-  { label: 'Avg Check', value: '₱280' },
+  { label: 'Avg Check', value: '₱250–450' },
   { label: 'Monthly Revenue', value: '₱2.016M' },
   { label: 'Food Cost %', value: '25%' },
   { label: 'Store EBITDA', value: '37% (₱746K/mo)' },
