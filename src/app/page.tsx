@@ -402,7 +402,7 @@ export default function LandingPage() {
           }}>
             Warmth in every bowl
           </p>
-          <Link href="/menu" style={{
+          <Link href="/dashboard" style={{
             display: 'inline-block',
             padding: '14px 42px',
             background: 'transparent',
@@ -435,7 +435,7 @@ export default function LandingPage() {
             el.style.boxShadow = 'none';
           }}
           >
-            Explore Menu
+            Enter Dashboard
           </Link>
         </div>
 
