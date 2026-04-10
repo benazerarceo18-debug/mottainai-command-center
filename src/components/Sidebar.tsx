@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { createContext, useContext, useState, type ReactNode } from 'react';
+import type React from 'react';
 
 const SidebarContext = createContext<{ open: boolean; toggle: () => void }>({
   open: false,
@@ -22,7 +23,7 @@ export function SidebarProvider({ children }: { children: ReactNode }) {
   );
 }
 
-const NAV = [
+const NAV: { href: string; label: string; icon: React.ReactNode; locked?: boolean }[] = [
   {
     href: '/',
     label: 'Dashboard',
@@ -114,6 +115,16 @@ const NAV = [
       </svg>
     ),
   },
+  {
+    href: '/business-plan',
+    label: 'Business Plan',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
+    locked: true,
+  },
 ];
 
 export default function Sidebar() {
@@ -151,6 +162,20 @@ export default function Sidebar() {
             const active =
               pathname === item.href ||
               (item.href !== '/' && pathname?.startsWith(item.href));
+            if (item.locked) {
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => open && toggle()}
+                  className="flex items-center gap-3 px-5 py-2.5 text-sm text-white/30 border-l-4 border-transparent"
+                >
+                  {item.icon}
+                  <span className="flex-1">{item.label}</span>
+                  <span className="text-[9px] font-bold tracking-wider px-1.5 py-0.5 rounded bg-white/10 text-white/40 uppercase">Soon</span>
+                </Link>
+              );
+            }
             return (
               <Link
                 key={item.href}

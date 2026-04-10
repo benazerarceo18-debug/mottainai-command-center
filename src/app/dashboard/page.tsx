@@ -7,7 +7,8 @@ const QUICK_LINKS = [
   { href: '/expansion',  title: 'Expansion Playbook',  emoji: '📍', color: 'from-blue-500/20 to-blue-500/5',     border: 'border-blue-200',    desc: 'Site pipeline & scoring' },
   { href: '/financials', title: 'Financial Model',     emoji: '📊', color: 'from-emerald-500/20 to-emerald-500/5', border: 'border-emerald-200', desc: '5-year · 3 scenarios' },
   { href: '/roadmap',    title: 'Roadmap',             emoji: '🗺️', color: 'from-amber-500/20 to-amber-500/5',   border: 'border-amber-200',   desc: 'Q4 2025 → Q4 2027' },
-  { href: '/board-deck', title: 'Board Deck',          emoji: '🎬', color: 'from-rose-500/20 to-rose-500/5',     border: 'border-rose-200',    desc: 'Board-ready slides' },
+  { href: '/board-deck',     title: 'Board Deck',      emoji: '🎬', color: 'from-rose-500/20 to-rose-500/5',     border: 'border-rose-200',    desc: 'Board-ready slides' },
+  { href: '/business-plan', title: 'Business Plan',   emoji: '📋', color: 'from-gray-500/10 to-gray-500/5',     border: 'border-gray-200',    desc: 'Full plan · Dec 2026', locked: true },
 ];
 
 const HIGHLIGHTS = [
@@ -192,16 +193,17 @@ export default function Dashboard() {
       {/* ── QUICK LINKS ── */}
       <section>
         <h2 className="text-xs font-bold text-gray-800 mb-3 uppercase tracking-wider">Explore</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
           {QUICK_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`group rounded-xl border ${link.border} bg-gradient-to-b ${link.color} p-4 flex flex-col items-center text-center gap-2 hover:shadow-md transition-shadow`}
+              className={`group rounded-xl border ${link.border} bg-gradient-to-b ${link.color} p-4 flex flex-col items-center text-center gap-2 transition-shadow ${link.locked ? 'opacity-50 cursor-default pointer-events-none' : 'hover:shadow-md'}`}
             >
               <span className="text-2xl">{link.emoji}</span>
               <span className="text-xs font-semibold text-gray-800 group-hover:text-[#F97316] transition-colors leading-tight">{link.title}</span>
               <span className="text-[10px] text-gray-400 leading-tight hidden sm:block">{link.desc}</span>
+              {link.locked && <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-gray-200 text-gray-500 uppercase tracking-wider">Soon</span>}
             </Link>
           ))}
         </div>
