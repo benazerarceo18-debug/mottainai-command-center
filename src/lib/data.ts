@@ -90,11 +90,22 @@ export const PIPELINE_SITES: PipelineSite[] = [
     name: 'SM North EDSA',
     location: 'Quezon City',
     landlord: 'SM Prime',
-    stage: 'awarded',
+    stage: 'identified',
     score: null,
     sqm: 60,
     monthlyRent: null,
     notes: 'Large catchment area. Inline dining expansion wing.',
+  },
+  {
+    id: 'sm-moa',
+    name: 'SM Mall of Asia',
+    location: 'Pasay City',
+    landlord: 'SM Prime',
+    stage: 'identified',
+    score: null,
+    sqm: null,
+    monthlyRent: null,
+    notes: 'High-traffic destination mall. Under consideration as Mottainai pilot location.',
   },
 ];
 

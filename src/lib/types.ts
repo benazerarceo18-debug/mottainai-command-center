@@ -47,7 +47,7 @@ export interface PipelineSite {
   landlord: string;
   stage: string;
   score: number | null;
-  sqm: number;
+  sqm: number | null;
   monthlyRent: number | null;
   notes: string;
 }

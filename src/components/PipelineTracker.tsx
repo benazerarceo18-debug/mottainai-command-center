@@ -92,7 +92,7 @@ export default function PipelineTracker() {
                   <td className="py-3 px-3 font-medium text-text-primary">
                     {site.score !== null ? `${site.score}/10` : '\u2014'}
                   </td>
-                  <td className="py-3 px-3 text-text-secondary">{site.sqm} sqm</td>
+                  <td className="py-3 px-3 text-text-secondary">{site.sqm != null ? `${site.sqm} sqm` : '—'}</td>
                 </tr>
               );
             })}
