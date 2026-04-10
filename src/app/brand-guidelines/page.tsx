@@ -87,7 +87,7 @@ const TONE_DONT = [
 const NON_NEGOTIABLES = [
   'Single unified concept (no tiers)',
   'Price band ₱250-450',
-  '"By the makers of Yushoken" always',
+  'Standalone brand — no Yushoken endorsement',
   'No promo, no discount',
   'Inline dining format only',
   'Sustainability = operational, never branded',
@@ -213,7 +213,7 @@ export default function BrandGuidelinesPage() {
                   <p className="text-[#111827] text-2xl font-bold tracking-[0.3em]" style={{ fontFamily: "'Noto Serif JP', serif" }}>
                     MOTTAINAI
                   </p>
-                  <p className="text-[#F97316]/80 text-xs tracking-wide mt-2">By the makers of Yushoken</p>
+                  <p className="text-[#F97316]/80 text-xs tracking-wide mt-2">NHI Group</p>
 
                   <div className="flex gap-3 mt-8">
                     {[
@@ -243,8 +243,8 @@ export default function BrandGuidelinesPage() {
                     <p className="text-sm text-gray-600">Minimum clear space = height of 勿 character on all sides</p>
                   </div>
                   <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                    <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-2">Endorsed Model</p>
-                    <p className="text-sm text-gray-600">Always appears with NHI or Yushoken attribution</p>
+                    <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-2">Independent Brand</p>
+                    <p className="text-sm text-gray-600">Standalone identity — not affiliated with NHI or Yushoken branding</p>
                   </div>
                   <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                     <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-2">Usage Variants</p>
@@ -493,7 +493,7 @@ export default function BrandGuidelinesPage() {
                       <p className="text-[#F97316] font-bold tracking-[0.3em]" style={{ fontFamily: "'Noto Serif JP', serif" }}>
                         MOTTAINAI
                       </p>
-                      <p className="text-white/40 text-[10px] tracking-wide mt-1">By the makers of Yushoken</p>
+                      <p className="text-white/40 text-[10px] tracking-wide mt-1">NHI Group</p>
                     </div>
                   ),
                 },
