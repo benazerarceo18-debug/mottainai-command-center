@@ -242,10 +242,7 @@ export default function BrandGuidelinesPage() {
                     <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-2">Clear Space</p>
                     <p className="text-sm text-gray-600">Minimum clear space = height of 勿 character on all sides</p>
                   </div>
-                  <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                    <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-2">Independent Brand</p>
-                    <p className="text-sm text-gray-600">Standalone identity — not affiliated with NHI or Yushoken branding</p>
-                  </div>
+
                   <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                     <p className="text-xs text-[#F97316] font-semibold uppercase tracking-wider mb-2">Usage Variants</p>
                     <ul className="text-sm text-gray-600 space-y-1 mt-1">
