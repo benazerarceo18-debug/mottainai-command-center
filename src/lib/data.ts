@@ -145,7 +145,7 @@ export const BD_HIGHLIGHTS: BDHighlight[] = [
 ];
 
 export const MILESTONES: Milestone[] = [
-  { id: 'ms-0', title: 'Business Plan Approved by Board', description: 'Full business plan presented to and approved by Owners and Board of Directors.', startDate: '2026-04-10', endDate: '2026-04-10', status: 'completed', category: 'strategy' },
+  { id: 'ms-0', title: 'Business Plan Approved by Board', description: 'Full business plan presented to and approved by Owners and Board of Directors.', startDate: '2026-12-01', endDate: '2026-12-31', status: 'upcoming', category: 'strategy' },
   { id: 'ms-1', title: 'Menu Development Complete', description: '7 core SKUs locked with FC ≤35%. Aoyama-san signed off.', startDate: '2026-01-01', endDate: '2026-04-07', status: 'completed', category: 'menu' },
   { id: 'ms-2', title: 'Expansion Playbook V1', description: 'All 8 appendices finalized. Board-ready document.', startDate: '2026-02-01', endDate: '2026-04-10', status: 'completed', category: 'expansion' },
   { id: 'ms-3', title: 'SM MOA Lease Negotiation', description: 'Formal lease proposal to SM Prime for pilot food court location.', startDate: '2026-04-01', endDate: '2026-07-31', status: 'on-track', category: 'expansion' },

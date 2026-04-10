@@ -11,7 +11,7 @@ const QUICK_LINKS = [
 ];
 
 const HIGHLIGHTS = [
-  { date: 'Apr 10', label: 'Business Plan Approved',     detail: 'Presented to & approved by Owners and Board of Directors', color: 'bg-emerald-600', pill: 'bg-emerald-50 text-emerald-700' },
+  { date: 'Dec 2026', label: 'Business Plan Approved',   detail: 'Presented to & approved by Owners and Board of Directors', color: 'bg-emerald-600', pill: 'bg-emerald-50 text-emerald-700' },
   { date: 'Apr 7',  label: 'Rock #1 Complete',          detail: '7 SKUs locked · FC 24.6% avg',     color: 'bg-emerald-500', pill: 'bg-emerald-50 text-emerald-700' },
   { date: 'Mar 31', label: 'Strategy Pivot Finalized',  detail: 'Single unified concept confirmed',  color: 'bg-blue-500',    pill: 'bg-blue-50 text-blue-700' },
   { date: 'Mar 15', label: 'SM MOA Site — 9.0/10',      detail: 'Strong GO · demographics pass',     color: 'bg-amber-500',   pill: 'bg-amber-50 text-amber-700' },
