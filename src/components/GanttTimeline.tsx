@@ -28,7 +28,7 @@ interface Milestone {
 
 const MILESTONES: Milestone[] = [
   { name: 'Menu Development',        start: new Date('2026-01-01'), end: new Date('2026-04-30'), status: 'complete'  },
-  { name: 'Expansion Playbook V1',   start: new Date('2026-02-01'), end: new Date('2026-06-30'), status: 'on-track'  },
+  { name: 'Expansion Playbook V1',   start: new Date('2026-02-01'), end: new Date('2026-04-10'), status: 'complete'  },
   { name: 'SM MOA Lease Negotiation',start: new Date('2026-04-01'), end: new Date('2026-07-31'), status: 'on-track'  },
   { name: 'Consumer Testing',        start: new Date('2026-07-01'), end: new Date('2026-12-31'), status: 'upcoming'  },
   { name: 'Pilot Store Build-out',   start: new Date('2027-01-01'), end: new Date('2027-06-30'), status: 'upcoming'  },

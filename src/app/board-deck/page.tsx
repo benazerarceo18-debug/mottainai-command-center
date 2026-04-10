@@ -373,7 +373,7 @@ function Slide7() {
   const milestones = [
     { period: 'Q4 2025', item: 'Concept finalization', status: 'done' },
     { period: 'Q1–Q2 2026', item: 'Menu development', status: 'done' },
-    { period: 'Q1–Q2 2026', item: 'Expansion playbook', status: 'progress' },
+    { period: 'Q1–Q2 2026', item: 'Expansion playbook', status: 'done' },
     { period: 'Q3–Q4 2026', item: 'SM MOA lease, build-out begins', status: 'upcoming' },
     { period: 'Q2–Q3 2027', item: 'Soft launch (1 store)', status: 'upcoming' },
     { period: 'Q4 2027', item: 'Grand opening + scale', status: 'upcoming' },

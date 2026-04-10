@@ -47,7 +47,7 @@ export const UNIT_ECONOMICS = {
 
 export const KPIS: KPI[] = [
   { id: 'rock-1', label: 'Rock #1 Menu Development', value: 'Complete', status: 'success', description: '7 core SKUs locked with FC ≤35%. Aoyama-san signed off.' },
-  { id: 'rock-2', label: 'Rock #2 Expansion Playbook', value: 'On Track', status: 'warning', description: '65% complete. 8 appendices in progress, target Jun 2026.' },
+  { id: 'rock-2', label: 'Rock #2 Expansion Playbook', value: 'Complete', status: 'success', description: 'Playbook V1 finalized. All 8 appendices board-ready. Consumer testing next (Q3 2026).' },
   { id: 'pipeline', label: 'Pipeline Sites', value: '3 Active', status: 'info', description: 'SMDC Ice Tower + SMDC Light Mall (Award Notices signed). SM North EDSA identified.' },
   { id: 'fc-target', label: 'Target Food Cost', value: '≤35%', status: 'success', description: 'All 7 SKUs validated below 35% FC. Weighted avg 24.6%.' },
 ];
@@ -146,7 +146,7 @@ export const BD_HIGHLIGHTS: BDHighlight[] = [
 
 export const MILESTONES: Milestone[] = [
   { id: 'ms-1', title: 'Menu Development Complete', description: '7 core SKUs locked with FC ≤35%. Aoyama-san signed off.', startDate: '2026-01-01', endDate: '2026-04-07', status: 'completed', category: 'menu' },
-  { id: 'ms-2', title: 'Expansion Playbook V1', description: 'All 8 appendices finalized. Board-ready document.', startDate: '2026-02-01', endDate: '2026-06-30', status: 'on-track', category: 'expansion' },
+  { id: 'ms-2', title: 'Expansion Playbook V1', description: 'All 8 appendices finalized. Board-ready document.', startDate: '2026-02-01', endDate: '2026-04-10', status: 'completed', category: 'expansion' },
   { id: 'ms-3', title: 'SM MOA Lease Negotiation', description: 'Formal lease proposal to SM Prime for pilot food court location.', startDate: '2026-04-01', endDate: '2026-07-31', status: 'on-track', category: 'expansion' },
   { id: 'ms-4', title: 'Pilot Store Build-out', description: 'Construction and fit-out of first SM MOA location.', startDate: '2026-07-01', endDate: '2026-10-31', status: 'on-track', category: 'operations' },
   { id: 'ms-5', title: 'Soft Launch', description: 'Controlled opening at first SMDC location with limited marketing.', startDate: '2027-04-01', endDate: '2027-09-30', status: 'on-track', category: 'operations' },
@@ -167,9 +167,9 @@ export const ROCKS: RockStatus[] = [
     name: 'Rock #2 — Expansion Playbook V1',
     owner: 'Benz + BDSP Team',
     target: 'Jun 2026',
-    progress: 65,
-    status: 'on-track',
-    milestones: ['Appendices A-F drafted', 'SM MOA site scored', 'Financial model built', 'Lease intel in progress'],
+    progress: 100,
+    status: 'complete',
+    milestones: ['All 8 appendices finalized', 'SM MOA site scored', 'Financial model built', 'Board-ready document'],
   },
 ];
 

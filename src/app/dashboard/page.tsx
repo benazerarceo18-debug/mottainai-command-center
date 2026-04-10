@@ -88,25 +88,23 @@ export default function Dashboard() {
           </div>
 
           {/* Rock 2 */}
-          <div className="bg-white rounded-xl border border-amber-200 p-5 flex items-center gap-4">
+          <div className="bg-white rounded-xl border border-emerald-200 p-5 flex items-center gap-4">
             <div className="relative w-14 h-14 shrink-0">
               <svg className="w-14 h-14 -rotate-90" viewBox="0 0 56 56">
-                <circle cx="28" cy="28" r="22" fill="none" stroke="#fef3c7" strokeWidth="6" />
-                <circle cx="28" cy="28" r="22" fill="none" stroke="#f59e0b" strokeWidth="6"
-                  strokeDasharray={`${2 * Math.PI * 22}`}
-                  strokeDashoffset={`${2 * Math.PI * 22 * (1 - 0.65)}`}
-                  strokeLinecap="round" />
+                <circle cx="28" cy="28" r="22" fill="none" stroke="#d1fae5" strokeWidth="6" />
+                <circle cx="28" cy="28" r="22" fill="none" stroke="#10b981" strokeWidth="6"
+                  strokeDasharray={`${2 * Math.PI * 22}`} strokeDashoffset="0" strokeLinecap="round" />
               </svg>
-              <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-amber-600">65%</span>
+              <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-emerald-600">100%</span>
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between mb-1">
                 <span className="text-sm font-semibold text-gray-800">Rock #2 — Expansion</span>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">ON TRACK</span>
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">COMPLETE</span>
               </div>
-              <p className="text-xs text-gray-500">Playbook V1 · SM MOA lease in progress</p>
-              <div className="mt-2 h-1.5 rounded-full bg-amber-100">
-                <div className="h-full rounded-full bg-amber-400 w-[65%]" />
+              <p className="text-xs text-gray-500">Playbook V1 done · Consumer testing next (Q3 2026)</p>
+              <div className="mt-2 h-1.5 rounded-full bg-emerald-100">
+                <div className="h-full rounded-full bg-emerald-500 w-full" />
               </div>
             </div>
           </div>
