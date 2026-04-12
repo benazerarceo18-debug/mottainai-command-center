@@ -28,9 +28,9 @@ export default function RDReportPage() {
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { value: '9', label: 'Total SKUs Assessed', note: '≤35% FC target' },
+            { value: '11', label: 'Total SKUs Assessed', note: '≤35% FC target' },
             { value: '0', label: 'Open Flags', note: 'Ebi Fry removed from core' },
-            { value: '31.4%', label: 'Avg Food Cost', note: '3.6pp buffer vs ceiling' },
+            { value: '31.0%', label: 'Avg Food Cost', note: '4.0pp buffer vs ceiling' },
             { value: '100%', label: 'Rock #1 Complete', note: 'Delivered Apr 7, 2026' },
           ].map((kpi) => (
             <div key={kpi.label} className="bg-white/10 rounded-xl p-4">
