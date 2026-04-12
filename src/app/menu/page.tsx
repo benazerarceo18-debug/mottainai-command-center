@@ -52,29 +52,33 @@ export default function MenuPage() {
                   <h3 className="text-base font-bold text-[#111827]">{item.name}</h3>
                   <p className="text-xs text-gray-400">{item.nameJp}</p>
                 </div>
-                <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-semibold uppercase tracking-wide">
-                  {item.status === 'locked' ? 'Locked' : item.status}
+                <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wide ${
+                  item.status === 'excluded'
+                    ? 'bg-red-100 text-red-700'
+                    : 'bg-emerald-100 text-emerald-700'
+                }`}>
+                  {item.status === 'locked' ? 'Locked' : item.status === 'excluded' ? 'Excluded' : item.status}
                 </span>
               </div>
               <p className="text-xs text-gray-500 mb-4 line-clamp-2">{item.description}</p>
-              <div className="grid grid-cols-3 gap-2 pt-3 border-t border-gray-100">
+              <div className="grid grid-cols-3 gap-3 pt-3 border-t border-gray-100">
                 <div className="text-center">
-                  <p className="text-lg font-bold text-[#111827]">₱{item.price}</p>
-                  <p className="text-[10px] text-gray-400">Price</p>
+                  <p className="text-sm font-bold text-[#111827]">₱{item.price}</p>
+                  <p className="text-[10px] text-gray-400 mt-0.5">Price</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-lg font-bold text-[#111827]">₱{item.actualCost}</p>
-                  <p className="text-[10px] text-gray-400">Food Cost</p>
+                  <p className="text-sm font-bold text-[#111827]">₱{item.actualCost}</p>
+                  <p className="text-[10px] text-gray-400 mt-0.5">Food Cost</p>
                 </div>
                 <div className="text-center">
                   <p
-                    className={`text-lg font-bold ${
+                    className={`text-sm font-bold ${
                       item.fcPercent <= 30 ? 'text-emerald-600' : 'text-amber-500'
                     }`}
                   >
                     {item.fcPercent}%
                   </p>
-                  <p className="text-[10px] text-gray-400">FC%</p>
+                  <p className="text-[10px] text-gray-400 mt-0.5">FC%</p>
                 </div>
               </div>
             </div>
@@ -118,15 +122,15 @@ export default function MenuPage() {
         <h2 className="text-xl font-bold text-[#111827] mb-4">Key Metrics</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-white rounded-xl border border-gray-200 p-5 text-center">
-            <p className="text-2xl font-bold text-[#111827]">₱60</p>
+            <p className="text-2xl font-bold text-[#111827]">₱70</p>
             <p className="text-xs text-gray-500 mt-1">Avg Food Cost / bowl</p>
           </div>
           <div className="bg-white rounded-xl border border-gray-200 p-5 text-center">
-            <p className="text-2xl font-bold text-[#111827]">24.6%</p>
+            <p className="text-2xl font-bold text-[#111827]">31.5%</p>
             <p className="text-xs text-gray-500 mt-1">Avg FC%</p>
           </div>
           <div className="bg-white rounded-xl border border-gray-200 p-5 text-center">
-            <p className="text-2xl font-bold text-[#111827]">₱180–280</p>
+            <p className="text-2xl font-bold text-[#111827]">₱120–480</p>
             <p className="text-xs text-gray-500 mt-1">Price Range</p>
           </div>
           <div className="bg-white rounded-xl border border-gray-200 p-5 text-center">
