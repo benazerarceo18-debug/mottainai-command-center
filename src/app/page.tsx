@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useRef, useCallback } from 'react';
-import Link from 'next/link';
+import { useEffect, useRef, useCallback, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const FOOD_ITEMS = [
   { emoji: '🍜', label: 'Konbu Sui' },
@@ -11,7 +11,6 @@ const FOOD_ITEMS = [
   { emoji: '🍙', label: 'Chimaki' },
   { emoji: '🥟', label: 'Gyoza' },
   { emoji: '🍡', label: 'Daifuku' },
-  { emoji: '🍤', label: 'Ebi Fry' },
 ];
 
 class SteamParticle {
@@ -69,6 +68,27 @@ export default function LandingPage() {
   const orbitItemsRef = useRef<(HTMLDivElement | null)[]>([]);
   const orbitAngleRef = useRef(0);
   const lastTimeRef = useRef(0);
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setError('');
+    setLoading(true);
+    const res = await fetch('/api/auth', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password }),
+    });
+    if (res.ok) {
+      router.push('/dashboard');
+    } else {
+      setError('Incorrect password');
+      setLoading(false);
+    }
+  }
 
   // Steam particle system
   useEffect(() => {
@@ -402,41 +422,66 @@ export default function LandingPage() {
           }}>
             Warmth in every bowl
           </p>
-          <Link href="/dashboard" style={{
-            display: 'inline-block',
-            padding: '14px 42px',
-            background: 'transparent',
-            color: '#7b8fc7',
-            border: '1.5px solid rgba(123, 143, 199, 0.4)',
-            borderRadius: 50,
-            fontFamily: "'Space Grotesk', sans-serif",
-            fontSize: '0.85rem',
-            fontWeight: 600,
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase' as const,
-            cursor: 'pointer',
-            transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-            textDecoration: 'none',
-            position: 'relative' as const,
-            overflow: 'hidden' as const,
-          }}
-          onMouseEnter={e => {
-            const el = e.currentTarget as HTMLElement;
-            el.style.borderColor = 'rgba(123, 143, 199, 0.8)';
-            el.style.color = '#fff';
-            el.style.transform = 'translateY(-2px)';
-            el.style.boxShadow = '0 8px 30px rgba(123, 143, 199, 0.2)';
-          }}
-          onMouseLeave={e => {
-            const el = e.currentTarget as HTMLElement;
-            el.style.borderColor = 'rgba(123, 143, 199, 0.4)';
-            el.style.color = '#7b8fc7';
-            el.style.transform = 'translateY(0)';
-            el.style.boxShadow = 'none';
-          }}
-          >
-            Enter Dashboard
-          </Link>
+          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <input
+                type="password"
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+                placeholder="Access code"
+                autoFocus
+                style={{
+                  padding: '12px 20px',
+                  background: 'rgba(255,255,255,0.06)',
+                  color: '#fff',
+                  border: '1.5px solid rgba(123, 143, 199, 0.3)',
+                  borderRadius: 50,
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: '0.85rem',
+                  letterSpacing: '0.1em',
+                  outline: 'none',
+                  width: 200,
+                  transition: 'border-color 0.3s ease',
+                }}
+                onFocus={e => { e.currentTarget.style.borderColor = 'rgba(123, 143, 199, 0.7)'; }}
+                onBlur={e => { e.currentTarget.style.borderColor = 'rgba(123, 143, 199, 0.3)'; }}
+              />
+              <button
+                type="submit"
+                disabled={loading || !password}
+                style={{
+                  padding: '12px 32px',
+                  background: 'transparent',
+                  color: '#7b8fc7',
+                  border: '1.5px solid rgba(123, 143, 199, 0.4)',
+                  borderRadius: 50,
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: '0.85rem',
+                  fontWeight: 600,
+                  letterSpacing: '0.2em',
+                  textTransform: 'uppercase' as const,
+                  cursor: loading ? 'wait' : 'pointer',
+                  transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                  opacity: !password ? 0.4 : 1,
+                }}
+                onMouseEnter={e => {
+                  const el = e.currentTarget as HTMLElement;
+                  el.style.borderColor = 'rgba(123, 143, 199, 0.8)';
+                  el.style.color = '#fff';
+                  el.style.boxShadow = '0 8px 30px rgba(123, 143, 199, 0.2)';
+                }}
+                onMouseLeave={e => {
+                  const el = e.currentTarget as HTMLElement;
+                  el.style.borderColor = 'rgba(123, 143, 199, 0.4)';
+                  el.style.color = '#7b8fc7';
+                  el.style.boxShadow = 'none';
+                }}
+              >
+                {loading ? '...' : 'Enter'}
+              </button>
+            </div>
+            {error && <p style={{ color: '#ef4444', fontSize: '0.75rem', letterSpacing: '0.1em' }}>{error}</p>}
+          </form>
         </div>
 
         {/* Scroll hint */}
