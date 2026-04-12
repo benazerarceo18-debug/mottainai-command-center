@@ -24,7 +24,7 @@ export default function RDReportPage() {
           Mottainai Core Menu Finalization
         </h1>
         <p className="text-slate-300 text-base mb-8 max-w-2xl">
-          All 7 core SKUs documented, food-cost validated, and operationally locked. Paitan Hybrid broth confirmed. Ebi Fry removed from core lineup pending repricing alignment.
+          All 10 core SKUs documented, food-cost validated, and operationally locked. Paitan Hybrid broth confirmed. Shoyu, Shio, and Tantanmen added using Hybrid broth base. Ebi Fry removed from core lineup pending repricing alignment.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
@@ -57,8 +57,8 @@ export default function RDReportPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           {[
-            { value: '7 / 7', label: 'Core SKUs Locked', color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-200' },
-            { value: '31.4%', label: 'Avg FC (7 SKUs)', color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-200' },
+            { value: '10 / 10', label: 'Core SKUs Locked', color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-200' },
+            { value: '31.0%', label: 'Avg FC (10 SKUs)', color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-200' },
             { value: '3.6pp', label: 'Buffer vs 35% Ceiling', color: 'text-gold', bg: 'bg-amber-50', border: 'border-amber-200' },
             { value: '0', label: 'SKUs Above Threshold', color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-200' },
           ].map((card) => (
@@ -85,7 +85,7 @@ export default function RDReportPage() {
       {/* ─── 3. 7 CORE SKUs ─── */}
       <section>
         <h2 className="text-2xl font-bold text-navy mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
-          7 Core SKUs
+          10 Core SKUs
         </h2>
 
         {/* Category counters */}
@@ -123,11 +123,14 @@ export default function RDReportPage() {
                 {[
                   { num: '01', name: 'Konbu Sui Ramen', sub: 'clear kelp soup', cat: 'Ramen/Soup', catColor: 'bg-blue-100 text-blue-700', srp: '₱250', vatex: '₱223.21', fc: '₱70.30', pct: '31.5' },
                   { num: '02', name: 'Sanratanmen', sub: 'sour-spicy soup', cat: 'Ramen/Soup', catColor: 'bg-blue-100 text-blue-700', srp: '₱300', vatex: '₱267.86', fc: '₱83.28', pct: '31.1' },
-                  { num: '03', name: 'Tori Sushi Noko', sub: '', cat: 'Agemono', catColor: 'bg-orange-100 text-orange-700', srp: '₱210', vatex: '₱187.50', fc: '₱59.11', pct: '31.5' },
-                  { num: '04', name: 'Chahan', sub: 'fried rice', cat: 'Sides', catColor: 'bg-green-100 text-green-700', srp: '₱210', vatex: '₱187.50', fc: '₱59.14', pct: '31.5' },
-                  { num: '05', name: 'Chimaki 3pcs', sub: 'sticky rice dumpling', cat: 'Sub/Side', catColor: 'bg-green-100 text-green-700', srp: '₱480', vatex: '₱428.57', fc: '₱137.49', pct: '32.1' },
-                  { num: '06', name: 'Gyoza', sub: 'Chef Popoy spec', cat: 'Sub/Side', catColor: 'bg-green-100 text-green-700', srp: '₱210', vatex: '₱187.50', fc: '₱59.10', pct: '31.5' },
-                  { num: '07', name: 'Daifuku', sub: 'per piece', cat: 'Dessert', catColor: 'bg-purple-100 text-purple-700', srp: '₱120', vatex: '₱107.14', fc: '₱33.64', pct: '31.4' },
+                  { num: '03', name: 'Shoyu Ramen', sub: 'soy-based tare · Paitan Hybrid', cat: 'Ramen/Soup', catColor: 'bg-blue-100 text-blue-700', srp: '₱250', vatex: '₱223.21', fc: '₱68.50', pct: '30.7' },
+                  { num: '04', name: 'Shio Ramen', sub: 'salt-based tare · Paitan Hybrid', cat: 'Ramen/Soup', catColor: 'bg-blue-100 text-blue-700', srp: '₱250', vatex: '₱223.21', fc: '₱65.80', pct: '29.5' },
+                  { num: '05', name: 'Tantanmen', sub: 'sesame-chili tare · Paitan Hybrid', cat: 'Ramen/Soup', catColor: 'bg-blue-100 text-blue-700', srp: '₱280', vatex: '₱250.00', fc: '₱78.50', pct: '31.4' },
+                  { num: '06', name: 'Tori Sushi Noko', sub: '', cat: 'Agemono', catColor: 'bg-orange-100 text-orange-700', srp: '₱210', vatex: '₱187.50', fc: '₱59.11', pct: '31.5' },
+                  { num: '07', name: 'Chahan', sub: 'fried rice', cat: 'Sides', catColor: 'bg-green-100 text-green-700', srp: '₱210', vatex: '₱187.50', fc: '₱59.14', pct: '31.5' },
+                  { num: '08', name: 'Chimaki 3pcs', sub: 'sticky rice dumpling', cat: 'Sub/Side', catColor: 'bg-green-100 text-green-700', srp: '₱480', vatex: '₱428.57', fc: '₱137.49', pct: '32.1' },
+                  { num: '09', name: 'Gyoza', sub: 'Chef Popoy spec', cat: 'Sub/Side', catColor: 'bg-green-100 text-green-700', srp: '₱210', vatex: '₱187.50', fc: '₱59.10', pct: '31.5' },
+                  { num: '10', name: 'Daifuku', sub: 'per piece', cat: 'Dessert', catColor: 'bg-purple-100 text-purple-700', srp: '₱120', vatex: '₱107.14', fc: '₱33.64', pct: '31.4' },
                 ].map((row) => (
                   <tr key={row.num} className="hover:bg-gray-50">
                     <td className="px-4 py-3 text-text-muted font-mono text-xs">{row.num}</td>
@@ -472,7 +475,7 @@ export default function RDReportPage() {
 
           <div className="space-y-3">
             {[
-              { label: '7 SKUs fully documented', date: 'Done Apr 7' },
+              { label: '10 SKUs fully documented', date: 'Done Apr 12' },
               { label: 'Food cost validated ≤35% for every SKU', date: 'Done Apr 7' },
               { label: 'Operational specifications locked', date: 'Done Mar 28' },
               { label: 'Internal tasting panel completed', date: 'Done Mar 2026' },

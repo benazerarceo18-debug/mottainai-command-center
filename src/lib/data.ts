@@ -50,15 +50,18 @@ export const UNIT_ECONOMICS = {
 };
 
 export const KPIS: KPI[] = [
-  { id: 'rock-1', label: 'Rock #1 Menu Development', value: 'Complete', status: 'success', description: '7 core SKUs locked with FC ≤35%. Aoyama-san signed off.' },
+  { id: 'rock-1', label: 'Rock #1 Menu Development', value: 'Complete', status: 'success', description: '10 core SKUs locked with FC ≤35%. Aoyama-san signed off.' },
   { id: 'rock-2', label: 'Rock #2 Expansion Playbook', value: 'Complete', status: 'success', description: 'Playbook V1 finalized. All 8 appendices board-ready. Consumer testing next (Q3 2026).' },
   { id: 'pipeline', label: 'Pipeline Sites', value: '3 Active', status: 'info', description: 'SMDC Ice Tower + SMDC Light Mall (Award Notices signed). SM North EDSA identified.' },
-  { id: 'fc-target', label: 'Target Food Cost', value: '≤35%', status: 'success', description: 'All 7 SKUs validated below 35% FC. Weighted avg 31.4%.' },
+  { id: 'fc-target', label: 'Target Food Cost', value: '≤35%', status: 'success', description: 'All 10 SKUs validated below 35% FC. Weighted avg 31.0%.' },
 ];
 
 export const MENU_ITEMS: MenuItem[] = [
   { id: 'konbu-sui', name: 'Konbu Sui Ramen', nameJp: '昆布水ラーメン', description: 'Kelp-infused clear broth ramen with delicate umami depth', targetCost: 70.30, actualCost: 70.30, fcPercent: 31.5, price: 250, status: 'locked' },
   { id: 'sanratanmen', name: 'Sanratanmen', nameJp: '酸辣湯麺', description: 'Hot and sour ramen with rich chili-vinegar broth', targetCost: 83.28, actualCost: 83.28, fcPercent: 31.1, price: 300, status: 'locked' },
+  { id: 'shoyu', name: 'Shoyu Ramen', nameJp: '醤油ラーメン', description: 'Soy-based tare with Paitan Hybrid broth, chashu, ajitama, nori, green onions', targetCost: 68.50, actualCost: 68.50, fcPercent: 30.7, price: 250, status: 'locked' },
+  { id: 'shio', name: 'Shio Ramen', nameJp: '塩ラーメン', description: 'Salt-based tare with Paitan Hybrid broth, chicken, bamboo shoots, yuzu zest', targetCost: 65.80, actualCost: 65.80, fcPercent: 29.5, price: 250, status: 'locked' },
+  { id: 'tantanmen', name: 'Tantanmen', nameJp: '担々麺', description: 'Sesame-chili tare with Paitan Hybrid broth, ground pork, bok choy, chili oil', targetCost: 78.50, actualCost: 78.50, fcPercent: 31.4, price: 280, status: 'locked' },
   { id: 'tori-sushi-noko', name: 'Tori Sushi Noko (Agemono)', nameJp: '鶏すしノコ', description: 'Crispy chicken agemono with seasoned rice', targetCost: 59.11, actualCost: 59.11, fcPercent: 31.5, price: 210, status: 'locked' },
   { id: 'chahan', name: 'Chahan', nameJp: 'チャーハン', description: 'Japanese-style fried rice with savory garlic and egg', targetCost: 59.14, actualCost: 59.14, fcPercent: 31.5, price: 210, status: 'locked' },
   { id: 'chimaki', name: 'Chimaki (3pcs)', nameJp: 'ちまき', description: 'Steamed sticky rice dumplings wrapped in bamboo leaf', targetCost: 137.49, actualCost: 137.49, fcPercent: 32.1, price: 480, status: 'locked' },
@@ -198,7 +201,7 @@ export const FINANCIAL_SCENARIOS: FinancialScenario[] = [
 export const FINANCIAL_YEARS = ['Y1 (2027)', 'Y2 (2028)', 'Y3 (2029)', 'Y4 (2030)', 'Y5 (2031)'];
 
 export const BD_HIGHLIGHTS: BDHighlight[] = [
-  { id: 'bd-1', date: '2026-04-07', title: 'Rock #1 Complete — 7 Core SKUs Locked', content: 'All 7 core SKUs finalized with food cost validated at ≤35%. Aoyama-san signed off on broth specifications. Ready for pilot production.', category: 'milestone' },
+  { id: 'bd-1', date: '2026-04-07', title: 'Rock #1 Complete — 10 Core SKUs Locked', content: 'All 10 core SKUs finalized with food cost validated at ≤35%. Aoyama-san signed off on broth specifications. Ready for pilot production.', category: 'milestone' },
   { id: 'bd-2', date: '2026-03-31', title: 'Strategic pivot finalized — single unified concept confirmed', content: 'Board approved single unified concept. 3-tier format (Kaiten/Standard/Express) permanently dropped. Simplifies scaling, franchising, and landlord negotiations.', category: 'brand' },
   { id: 'bd-3', date: '2026-02-13', title: 'SMDC Ice Tower — Award Notice Signed', content: 'Ramen Yushoken at SMDC Ice Tower, MOA Complex, Pasay City. 221.74 sqm, site score 45.9/60, lease May 15, 2026 – Apr 30, 2029. Validates NHI as SMDC tenant — entry point for Mottainai placement.', category: 'expansion' },
 ];
@@ -226,7 +229,7 @@ export const SERVICE_FORMATS: ServiceFormat[] = [
 
 export const MILESTONES: Milestone[] = [
   { id: 'ms-0', title: 'Business Plan Approved by Board', description: 'Full business plan presented to and approved by Owners and Board of Directors.', startDate: '2026-10-01', endDate: '2026-12-31', status: 'upcoming', category: 'strategy' },
-  { id: 'ms-1', title: 'Menu Development Complete', description: '7 core SKUs locked with FC ≤35%. Aoyama-san signed off.', startDate: '2026-01-01', endDate: '2026-04-07', status: 'completed', category: 'menu' },
+  { id: 'ms-1', title: 'Menu Development Complete', description: '10 core SKUs locked with FC ≤35%. Aoyama-san signed off.', startDate: '2026-01-01', endDate: '2026-04-07', status: 'completed', category: 'menu' },
   { id: 'ms-2', title: 'Expansion Playbook V1', description: 'All 8 appendices finalized. Board-ready document.', startDate: '2026-02-01', endDate: '2026-04-10', status: 'completed', category: 'expansion' },
   { id: 'ms-gz', title: 'Guangzhou & Shenzhen — Concept Refinement', description: 'Canton Fair visit. Equipment sourcing, supplier meetings, and fast-casual ramen concept benchmarking in GZ and SZ.', startDate: '2026-04-15', endDate: '2026-04-30', status: 'on-track', category: 'menu' },
   { id: 'ms-3', title: 'SM MOA Lease Signed', description: 'Formal lease agreement with SM Prime for pilot inline dining location.', startDate: '2026-04-01', endDate: '2026-09-30', status: 'on-track', category: 'expansion' },
@@ -245,7 +248,7 @@ export const ROCKS: RockStatus[] = [
     target: 'Apr 2026',
     progress: 100,
     status: 'complete',
-    milestones: ['7 SKUs locked', 'FC ≤35% validated', 'Aoyama-san signed off', 'Broth specs finalized'],
+    milestones: ['10 SKUs locked', 'FC ≤35% validated', 'Aoyama-san signed off', 'Broth specs finalized'],
   },
   {
     id: 'rock-2',

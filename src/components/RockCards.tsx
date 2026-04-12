@@ -25,7 +25,7 @@ const ROCKS: RockData[] = [
     target: 'Apr 2026',
     progress: 100,
     milestones: [
-      '7 SKUs locked',
+      '10 SKUs locked',
       'FC validated at ≤35%',
       'Recipe documentation complete',
     ],

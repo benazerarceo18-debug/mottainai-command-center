@@ -3,7 +3,7 @@ import { PIPELINE_SITES, MILESTONES, MENU_ITEMS, BRAND, SERVICE_FORMATS } from '
 
 const QUICK_LINKS = [
   { href: '/brand',      title: 'Brand Identity',     emoji: '🎯', color: 'from-violet-500/20 to-violet-500/5',  border: 'border-violet-200',  desc: 'Positioning & visual direction' },
-  { href: '/menu',       title: 'Core Menu',           emoji: '🍜', color: 'from-orange-500/20 to-orange-500/5',  border: 'border-orange-200',  desc: '7 SKUs — all locked' },
+  { href: '/menu',       title: 'Core Menu',           emoji: '🍜', color: 'from-orange-500/20 to-orange-500/5',  border: 'border-orange-200',  desc: '10 SKUs — all locked' },
   { href: '/expansion',  title: 'Expansion Playbook',  emoji: '📍', color: 'from-blue-500/20 to-blue-500/5',     border: 'border-blue-200',    desc: 'Site pipeline & scoring' },
   { href: '/financials', title: 'Financial Model',     emoji: '📊', color: 'from-emerald-500/20 to-emerald-500/5', border: 'border-emerald-200', desc: '5-year · 3 scenarios' },
   { href: '/roadmap',    title: 'Roadmap',             emoji: '🗺️', color: 'from-amber-500/20 to-amber-500/5',   border: 'border-amber-200',   desc: 'Q4 2025 → Q4 2027' },
@@ -13,7 +13,7 @@ const QUICK_LINKS = [
 
 const HIGHLIGHTS = [
   { date: 'Dec 2026', label: 'Business Plan Approved',   detail: 'Presented to & approved by Owners and Board of Directors', color: 'bg-emerald-600', pill: 'bg-emerald-50 text-emerald-700' },
-  { date: 'Apr 7',  label: 'Rock #1 Complete',          detail: '7 SKUs locked · FC 31.4% avg',     color: 'bg-emerald-500', pill: 'bg-emerald-50 text-emerald-700' },
+  { date: 'Apr 7',  label: 'Rock #1 Complete',          detail: '10 SKUs locked · FC 31.0% avg',     color: 'bg-emerald-500', pill: 'bg-emerald-50 text-emerald-700' },
   { date: 'Mar 31', label: 'Strategy Pivot Finalized',  detail: 'Single unified concept confirmed',  color: 'bg-blue-500',    pill: 'bg-blue-50 text-blue-700' },
   { date: 'Mar 15', label: 'SM MOA Site — 9.0/10',      detail: 'Strong GO · demographics pass',     color: 'bg-amber-500',   pill: 'bg-amber-50 text-amber-700' },
   { date: 'Mar 1',  label: 'Unit Economics Approved',   detail: '37% EBITDA · ₱580M Y5 revenue',    color: 'bg-violet-500',  pill: 'bg-violet-50 text-violet-700' },
@@ -52,7 +52,7 @@ export default function Dashboard() {
           </div>
           <div className="flex flex-wrap gap-4">
             {[
-              { value: '7/7', label: 'SKUs Locked', color: 'text-emerald-400' },
+              { value: '10/10', label: 'SKUs Locked', color: 'text-emerald-400' },
               { value: `${avgFC.toFixed(1)}%`, label: 'Avg Food Cost', color: 'text-amber-400' },
               { value: String(PIPELINE_SITES.length), label: 'Pipeline Sites', color: 'text-blue-400' },
               { value: 'Jul 2027', label: 'Grand Launch', color: 'text-violet-400' },
@@ -98,7 +98,7 @@ export default function Dashboard() {
                 <span className="text-sm font-semibold text-gray-800">Rock #1 — Menu Dev</span>
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">COMPLETE</span>
               </div>
-              <p className="text-xs text-gray-500">7/7 SKUs locked · FC ≤35% · Aoyama sign-off</p>
+              <p className="text-xs text-gray-500">10/10 SKUs locked · FC ≤35% · Aoyama sign-off</p>
               <div className="mt-2 h-1.5 rounded-full bg-emerald-100">
                 <div className="h-full rounded-full bg-emerald-500 w-full" />
               </div>

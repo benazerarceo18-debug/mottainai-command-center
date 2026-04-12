@@ -35,7 +35,7 @@ export default function MenuPage() {
 
       {/* Status banner */}
       <div className="bg-emerald-600 text-white rounded-lg px-5 py-3 text-sm font-medium">
-        All 7 SKUs locked as of April 7, 2026
+        All 10 SKUs locked as of April 12, 2026
       </div>
 
       {/* SKU Registry */}
