@@ -7,32 +7,36 @@ interface RACIRow {
   values: Record<string, RACIValue>;
 }
 
-const ROLES = ['Benz', 'Aoyama-san', 'Ryan (CEO)', 'Abbey (Marketing)', 'Jeremi (Projects)'];
+const ROLES = ['Benz', 'Aoyama-san', 'Ryan (CEO)', 'Abbey (Marketing)', 'Jeremi (Projects)', 'HR'];
 
 const ROWS: RACIRow[] = [
   {
     deliverable: 'Menu Lock',
-    values: { Benz: 'A', 'Aoyama-san': 'R', 'Ryan (CEO)': 'I', 'Abbey (Marketing)': 'I', 'Jeremi (Projects)': 'C' },
+    values: { Benz: 'A', 'Aoyama-san': 'R', 'Ryan (CEO)': 'I', 'Abbey (Marketing)': 'I', 'Jeremi (Projects)': 'C', HR: '' },
   },
   {
     deliverable: 'Site Evaluation',
-    values: { Benz: 'R', 'Aoyama-san': 'C', 'Ryan (CEO)': 'A', 'Abbey (Marketing)': 'I', 'Jeremi (Projects)': 'C' },
+    values: { Benz: 'R', 'Aoyama-san': 'C', 'Ryan (CEO)': 'A', 'Abbey (Marketing)': 'I', 'Jeremi (Projects)': 'C', HR: '' },
   },
   {
     deliverable: 'Lease Negotiation',
-    values: { Benz: 'C', 'Aoyama-san': 'I', 'Ryan (CEO)': 'R', 'Abbey (Marketing)': 'I', 'Jeremi (Projects)': 'I' },
+    values: { Benz: 'C', 'Aoyama-san': 'I', 'Ryan (CEO)': 'R', 'Abbey (Marketing)': 'I', 'Jeremi (Projects)': 'I', HR: '' },
   },
   {
     deliverable: 'Store Design',
-    values: { Benz: 'R', 'Aoyama-san': 'C', 'Ryan (CEO)': 'A', 'Abbey (Marketing)': 'C', 'Jeremi (Projects)': 'I' },
+    values: { Benz: 'R', 'Aoyama-san': 'C', 'Ryan (CEO)': 'A', 'Abbey (Marketing)': 'C', 'Jeremi (Projects)': 'I', HR: '' },
   },
   {
     deliverable: 'Operations Setup',
-    values: { Benz: 'R', 'Aoyama-san': 'C', 'Ryan (CEO)': 'A', 'Abbey (Marketing)': 'I', 'Jeremi (Projects)': 'R' },
+    values: { Benz: 'R', 'Aoyama-san': 'C', 'Ryan (CEO)': 'A', 'Abbey (Marketing)': 'I', 'Jeremi (Projects)': 'R', HR: 'C' },
   },
   {
     deliverable: 'Marketing Launch',
-    values: { Benz: 'A', 'Aoyama-san': 'I', 'Ryan (CEO)': 'I', 'Abbey (Marketing)': 'R', 'Jeremi (Projects)': 'C' },
+    values: { Benz: 'A', 'Aoyama-san': 'I', 'Ryan (CEO)': 'I', 'Abbey (Marketing)': 'R', 'Jeremi (Projects)': 'C', HR: 'I' },
+  },
+  {
+    deliverable: 'Hiring & Training',
+    values: { Benz: 'C', 'Aoyama-san': 'C', 'Ryan (CEO)': 'A', 'Abbey (Marketing)': 'I', 'Jeremi (Projects)': 'I', HR: 'R' },
   },
 ];
 

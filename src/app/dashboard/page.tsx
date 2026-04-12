@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PIPELINE_SITES, MILESTONES, MENU_ITEMS } from '@/lib/data';
+import { PIPELINE_SITES, MILESTONES, MENU_ITEMS, BRAND, SERVICE_FORMATS } from '@/lib/data';
 
 const QUICK_LINKS = [
   { href: '/brand',      title: 'Brand Identity',     emoji: '🎯', color: 'from-violet-500/20 to-violet-500/5',  border: 'border-violet-200',  desc: 'Positioning & visual direction' },
@@ -13,7 +13,7 @@ const QUICK_LINKS = [
 
 const HIGHLIGHTS = [
   { date: 'Dec 2026', label: 'Business Plan Approved',   detail: 'Presented to & approved by Owners and Board of Directors', color: 'bg-emerald-600', pill: 'bg-emerald-50 text-emerald-700' },
-  { date: 'Apr 7',  label: 'Rock #1 Complete',          detail: '7 SKUs locked · FC 24.6% avg',     color: 'bg-emerald-500', pill: 'bg-emerald-50 text-emerald-700' },
+  { date: 'Apr 7',  label: 'Rock #1 Complete',          detail: '7 SKUs locked · FC 31.4% avg',     color: 'bg-emerald-500', pill: 'bg-emerald-50 text-emerald-700' },
   { date: 'Mar 31', label: 'Strategy Pivot Finalized',  detail: 'Single unified concept confirmed',  color: 'bg-blue-500',    pill: 'bg-blue-50 text-blue-700' },
   { date: 'Mar 15', label: 'SM MOA Site — 9.0/10',      detail: 'Strong GO · demographics pass',     color: 'bg-amber-500',   pill: 'bg-amber-50 text-amber-700' },
   { date: 'Mar 1',  label: 'Unit Economics Approved',   detail: '37% EBITDA · ₱580M Y5 revenue',    color: 'bg-violet-500',  pill: 'bg-violet-50 text-violet-700' },
@@ -30,36 +30,52 @@ const STAGE_META: Record<string, { label: string; color: string; bg: string }> =
 export default function Dashboard() {
   const completedCount = MILESTONES.filter(m => m.status === 'completed').length;
   const progressPct = Math.round((completedCount / MILESTONES.length) * 100);
-  const avgFC = MENU_ITEMS.reduce((s, m) => s + m.fcPercent, 0) / MENU_ITEMS.length;
+  const lockedItems = MENU_ITEMS.filter(m => m.status === 'locked');
+  const avgFC = lockedItems.reduce((s, m) => s + m.fcPercent, 0) / lockedItems.length;
 
   return (
     <div className="p-6 max-w-7xl mx-auto space-y-8">
 
       {/* ── HERO HEADER ── */}
-      <div className="relative rounded-2xl overflow-hidden bg-[#111827] p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div className="relative rounded-2xl overflow-hidden bg-[#111827] p-8 flex flex-col gap-6">
         <div className="absolute inset-0 bg-[url('/images/ramen-hero.png')] bg-cover bg-center opacity-10 pointer-events-none" />
-        <div className="relative z-10">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-emerald-400 text-xs font-semibold tracking-widest uppercase">In Development · 2026</span>
-          </div>
-          <h1 className="text-4xl font-bold text-white leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Mottainai
-          </h1>
-          <p className="text-white/50 text-sm mt-1 tracking-wider">Command Center · Nippon Hasha Inc.</p>
-        </div>
-        <div className="relative z-10 flex flex-wrap gap-4">
-          {[
-            { value: '7/7', label: 'SKUs Locked', color: 'text-emerald-400' },
-            { value: `${avgFC.toFixed(1)}%`, label: 'Avg Food Cost', color: 'text-amber-400' },
-            { value: String(PIPELINE_SITES.length), label: 'Pipeline Sites', color: 'text-blue-400' },
-            { value: 'Q3–Q4', label: 'Pilot Launch', color: 'text-violet-400' },
-          ].map(s => (
-            <div key={s.label} className="text-center min-w-[72px]">
-              <div className={`text-2xl font-bold ${s.color}`} style={{ fontFamily: "'Playfair Display', serif" }}>{s.value}</div>
-              <div className="text-white/40 text-[10px] uppercase tracking-wider mt-0.5">{s.label}</div>
+        <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="text-emerald-400 text-xs font-semibold tracking-widest uppercase">In Development · Launch {BRAND.launchTarget}</span>
             </div>
-          ))}
+            <h1 className="text-4xl font-bold text-white leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Mottainai
+            </h1>
+            <p className="text-white/50 text-sm mt-1 tracking-wider">Command Center · Nippon Hasha Inc.</p>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            {[
+              { value: '7/7', label: 'SKUs Locked', color: 'text-emerald-400' },
+              { value: `${avgFC.toFixed(1)}%`, label: 'Avg Food Cost', color: 'text-amber-400' },
+              { value: String(PIPELINE_SITES.length), label: 'Pipeline Sites', color: 'text-blue-400' },
+              { value: 'Jul 2027', label: 'Grand Launch', color: 'text-violet-400' },
+            ].map(s => (
+              <div key={s.label} className="text-center min-w-[72px]">
+                <div className={`text-2xl font-bold ${s.color}`} style={{ fontFamily: "'Playfair Display', serif" }}>{s.value}</div>
+                <div className="text-white/40 text-[10px] uppercase tracking-wider mt-0.5">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Ramen of Uniqlo positioning */}
+        <div className="relative z-10 border-t border-white/10 pt-4 flex flex-col md:flex-row md:items-center gap-4">
+          <div className="flex items-center gap-3">
+            <span className="px-3 py-1 rounded-full bg-[#F97316]/20 text-[#F97316] text-xs font-bold tracking-wider uppercase">{BRAND.strategicFrame}</span>
+            <span className="text-white/40 text-xs italic">{BRAND.positioningStatement}</span>
+          </div>
+          <div className="flex gap-2 md:ml-auto">
+            {BRAND.coreValues.map(v => (
+              <span key={v} className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/60 text-[10px] font-medium tracking-wide">{v}</span>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -110,6 +126,53 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── SERVICE FORMATS ── */}
+      <section>
+        <h2 className="text-xs font-bold text-gray-800 mb-3 uppercase tracking-wider">Service Formats</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {SERVICE_FORMATS.map((fmt) => (
+            <div
+              key={fmt.id}
+              className={`bg-white rounded-xl p-5 ${
+                fmt.status === 'confirmed'
+                  ? 'border-2 border-emerald-300'
+                  : 'border-2 border-dashed border-amber-300 bg-amber-50/30'
+              }`}
+            >
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-sm font-bold text-gray-800">{fmt.name}</h3>
+                <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wide ${
+                  fmt.status === 'confirmed'
+                    ? 'bg-emerald-50 text-emerald-700'
+                    : 'bg-amber-50 text-amber-700'
+                }`}>
+                  {fmt.status === 'confirmed' ? 'Confirmed' : 'Exploratory *'}
+                </span>
+              </div>
+              <p className="text-xs text-gray-500 mb-3">{fmt.description}</p>
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="rounded-lg bg-gray-50 p-2">
+                  <span className="text-gray-400 block text-[10px] uppercase">Size</span>
+                  <span className="font-semibold text-gray-700">{fmt.size}</span>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-2">
+                  <span className="text-gray-400 block text-[10px] uppercase">Automation</span>
+                  <span className="font-semibold text-gray-700">{fmt.automation}</span>
+                </div>
+              </div>
+              {fmt.risk && (
+                <div className="mt-3 p-3 rounded-lg bg-red-50 border border-red-200">
+                  <div className="flex items-start gap-2">
+                    <span className="text-red-500 text-sm shrink-0">&#9888;</span>
+                    <p className="text-xs text-red-700 font-medium">{fmt.risk}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 

@@ -1,29 +1,33 @@
-import type { KPI, BDHighlight, MenuItem, PipelineSite, FinancialScenario, Milestone, RockStatus } from './types';
+import type { KPI, BDHighlight, MenuItem, PipelineSite, FinancialScenario, Milestone, RockStatus, ServiceFormat } from './types';
 
 export const BRAND = {
   name: 'Mottainai',
   tagline: 'Japanese Ramen, Reimagined for Everyone',
-  positioning: 'Value-segment fast-casual Japanese ramen concept by the makers of Yushoken',
-  architecture: 'Standalone brand — NHI Group',
+  positioning: 'Mass-market fast-casual Japanese ramen — broad appeal without dilution',
+  architecture: 'Independent brand',
   tone: 'Friendly, inclusive, approachable — no chef ego',
   priceRange: '₱250–450',
   status: 'Under Development',
   target: '50 stores by 2033',
   annualRevenue: '₱900M',
   annualNOI: '₱207M',
+  launchTarget: 'Q3 2027 (July)',
+  strategicFrame: 'Ramen of Uniqlo',
+  coreValues: ['Customer Focus', 'Continuous Innovation / Kaizen', 'Quality'] as const,
+  positioningStatement: 'An experience designed for everyone, without being designed down for anyone.',
   personas: [
-    { name: 'Budget-Conscious Ramen Lover', age: '18-35', description: 'Wants quality ramen at accessible prices. Frequents food courts and malls.' },
+    { name: 'Budget-Conscious Ramen Lover', age: '18-35', description: 'Wants quality ramen at accessible prices. Frequents malls and inline dining.' },
     { name: 'Mall Family Diner', age: '30-50', description: 'Looking for quick, satisfying meals for the family. Values consistency and speed.' },
     { name: 'Office Worker', age: '25-40', description: 'Needs a reliable lunch option. Appreciates efficiency and good value.' },
     { name: 'Delivery-First Customer', age: '20-35', description: 'Orders through GrabFood/Foodpanda. Values packaging quality and delivery speed.' },
   ],
-  competitiveFrame: ['Tokyo Tokyo', 'Marugame Udon', 'Ramen Kuroda', 'Yoshinoya'],
+  competitiveFrame: ['Tokyo Tokyo', 'Marugame Udon', 'Ramen Kuroda', 'Yoshinoya', 'Pepper Lunch'],
   nonNegotiables: [
     'Single unified concept — no tiers',
     'Price band ₱250–450',
     'Food cost ₱70/bowl (≤35% FC%)',
     'Friendly, inclusive tone',
-    'Standalone brand — no Yushoken endorsement',
+    'Independent brand — standalone identity',
     'Aoyama-san is a consultant, not an employee',
     'Delivery = 30–40% of revenue',
     'No delivery platform exclusivity',
@@ -49,17 +53,18 @@ export const KPIS: KPI[] = [
   { id: 'rock-1', label: 'Rock #1 Menu Development', value: 'Complete', status: 'success', description: '7 core SKUs locked with FC ≤35%. Aoyama-san signed off.' },
   { id: 'rock-2', label: 'Rock #2 Expansion Playbook', value: 'Complete', status: 'success', description: 'Playbook V1 finalized. All 8 appendices board-ready. Consumer testing next (Q3 2026).' },
   { id: 'pipeline', label: 'Pipeline Sites', value: '3 Active', status: 'info', description: 'SMDC Ice Tower + SMDC Light Mall (Award Notices signed). SM North EDSA identified.' },
-  { id: 'fc-target', label: 'Target Food Cost', value: '≤35%', status: 'success', description: 'All 7 SKUs validated below 35% FC. Weighted avg 24.6%.' },
+  { id: 'fc-target', label: 'Target Food Cost', value: '≤35%', status: 'success', description: 'All 7 SKUs validated below 35% FC. Weighted avg 31.4%.' },
 ];
 
 export const MENU_ITEMS: MenuItem[] = [
-  { id: 'shoyu', name: 'Shoyu Ramen', nameJp: '醤油ラーメン', description: 'Classic soy-based broth with chashu, ajitama, nori, and green onions', targetCost: 62, actualCost: 62, fcPercent: 24.8, price: 250, status: 'locked' },
-  { id: 'shio', name: 'Shio Ramen', nameJp: '塩ラーメン', description: 'Light salt-based broth with tender chicken, bamboo shoots, and yuzu zest', targetCost: 58, actualCost: 58, fcPercent: 23.2, price: 250, status: 'locked' },
-  { id: 'miso', name: 'Miso Ramen', nameJp: '味噌ラーメン', description: 'Rich miso broth with ground pork, corn, butter, and bean sprouts', targetCost: 70, actualCost: 70, fcPercent: 25.0, price: 280, status: 'locked' },
-  { id: 'tantanmen', name: 'Tantanmen', nameJp: '担々麺', description: 'Spicy sesame broth with minced pork, bok choy, and chili oil', targetCost: 68, actualCost: 68, fcPercent: 24.3, price: 280, status: 'locked' },
-  { id: 'tsukemen', name: 'Tsukemen', nameJp: 'つけ麺', description: 'Dipping-style ramen with rich tonkotsu dipping broth and thick noodles', targetCost: 65, actualCost: 65, fcPercent: 26.0, price: 250, status: 'locked' },
-  { id: 'mazesoba', name: 'Mazesoba', nameJp: 'まぜそば', description: 'Brothless ramen tossed in savory tare with egg yolk, nori, and garlic chips', targetCost: 52, actualCost: 52, fcPercent: 23.6, price: 220, status: 'locked' },
-  { id: 'gyudon', name: 'Gyudon', nameJp: '牛丼', description: 'Simmered beef over rice with onions and pickled ginger', targetCost: 45, actualCost: 45, fcPercent: 25.0, price: 180, status: 'locked' },
+  { id: 'konbu-sui', name: 'Konbu Sui Ramen', nameJp: '昆布水ラーメン', description: 'Kelp-infused clear broth ramen with delicate umami depth', targetCost: 70.30, actualCost: 70.30, fcPercent: 31.5, price: 250, status: 'locked' },
+  { id: 'sanratanmen', name: 'Sanratanmen', nameJp: '酸辣湯麺', description: 'Hot and sour ramen with rich chili-vinegar broth', targetCost: 83.28, actualCost: 83.28, fcPercent: 31.1, price: 300, status: 'locked' },
+  { id: 'tori-sushi-noko', name: 'Tori Sushi Noko (Agemono)', nameJp: '鶏すしノコ', description: 'Crispy chicken agemono with seasoned rice', targetCost: 59.11, actualCost: 59.11, fcPercent: 31.5, price: 210, status: 'locked' },
+  { id: 'chahan', name: 'Chahan', nameJp: 'チャーハン', description: 'Japanese-style fried rice with savory garlic and egg', targetCost: 59.14, actualCost: 59.14, fcPercent: 31.5, price: 210, status: 'locked' },
+  { id: 'chimaki', name: 'Chimaki (3pcs)', nameJp: 'ちまき', description: 'Steamed sticky rice dumplings wrapped in bamboo leaf', targetCost: 137.49, actualCost: 137.49, fcPercent: 32.1, price: 480, status: 'locked' },
+  { id: 'gyoza', name: 'Gyoza', nameJp: '餃子', description: 'Pan-fried dumplings with savory filling — Chef Popoy recipe', targetCost: 59.10, actualCost: 59.10, fcPercent: 31.5, price: 210, status: 'locked' },
+  { id: 'daifuku', name: 'Daifuku', nameJp: '大福', description: 'Soft mochi filled with sweet red bean paste', targetCost: 33.64, actualCost: 33.64, fcPercent: 31.4, price: 120, status: 'locked' },
+  { id: 'ebi-fry', name: 'Ebi Fry (5pcs)', nameJp: 'エビフライ', description: 'Deep-fried breaded shrimp — excluded due to 81.5% FC%', targetCost: 181.95, actualCost: 181.95, fcPercent: 81.5, price: 250, status: 'excluded' },
 ];
 
 export const PIPELINE_SITES: PipelineSite[] = [
@@ -198,13 +203,37 @@ export const BD_HIGHLIGHTS: BDHighlight[] = [
   { id: 'bd-3', date: '2026-02-13', title: 'SMDC Ice Tower — Award Notice Signed', content: 'Ramen Yushoken at SMDC Ice Tower, MOA Complex, Pasay City. 221.74 sqm, site score 45.9/60, lease May 15, 2026 – Apr 30, 2029. Validates NHI as SMDC tenant — entry point for Mottainai placement.', category: 'expansion' },
 ];
 
+export const SERVICE_FORMATS: ServiceFormat[] = [
+  {
+    id: 'full-service',
+    name: 'Full Service (with Automation)',
+    status: 'confirmed',
+    description: 'Primary format. Inline dining, fast casual with kiosk ordering and KDS automation.',
+    size: '60–80 sqm',
+    automation: 'Touchscreen ordering, kitchen display system',
+    risk: null,
+  },
+  {
+    id: 'kaiten',
+    name: 'Kaiten',
+    status: 'exploratory',
+    description: 'Conveyor belt service model. Under investigation — NOT approved.',
+    size: 'TBD',
+    automation: 'Automated conveyor line',
+    risk: 'BURN RISK: Hot soup on automated conveyor presents safety liability to customers. Requires food safety engineering study before approval.',
+  },
+];
+
 export const MILESTONES: Milestone[] = [
-  { id: 'ms-0', title: 'Business Plan Approved by Board', description: 'Full business plan presented to and approved by Owners and Board of Directors.', startDate: '2026-12-01', endDate: '2026-12-31', status: 'upcoming', category: 'strategy' },
+  { id: 'ms-0', title: 'Business Plan Approved by Board', description: 'Full business plan presented to and approved by Owners and Board of Directors.', startDate: '2026-10-01', endDate: '2026-12-31', status: 'upcoming', category: 'strategy' },
   { id: 'ms-1', title: 'Menu Development Complete', description: '7 core SKUs locked with FC ≤35%. Aoyama-san signed off.', startDate: '2026-01-01', endDate: '2026-04-07', status: 'completed', category: 'menu' },
   { id: 'ms-2', title: 'Expansion Playbook V1', description: 'All 8 appendices finalized. Board-ready document.', startDate: '2026-02-01', endDate: '2026-04-10', status: 'completed', category: 'expansion' },
-  { id: 'ms-3', title: 'SM MOA Lease Negotiation', description: 'Formal lease proposal to SM Prime for pilot food court location.', startDate: '2026-04-01', endDate: '2026-07-31', status: 'on-track', category: 'expansion' },
-  { id: 'ms-4', title: 'Pilot Store Build-out', description: 'Construction and fit-out of first SM MOA location.', startDate: '2026-07-01', endDate: '2026-10-31', status: 'on-track', category: 'operations' },
-  { id: 'ms-5', title: 'Soft Launch', description: 'Controlled opening at first SMDC location with limited marketing.', startDate: '2027-04-01', endDate: '2027-09-30', status: 'on-track', category: 'operations' },
+  { id: 'ms-3', title: 'SM MOA Lease Signed', description: 'Formal lease agreement with SM Prime for pilot inline dining location.', startDate: '2026-04-01', endDate: '2026-09-30', status: 'on-track', category: 'expansion' },
+  { id: 'ms-4', title: 'Pilot Store Build-out', description: 'Construction and fit-out of first SM MOA location.', startDate: '2026-10-01', endDate: '2027-03-31', status: 'upcoming', category: 'operations' },
+  { id: 'ms-5', title: 'Ops Training', description: 'Staff recruitment, training program execution, and dry runs.', startDate: '2027-01-01', endDate: '2027-05-31', status: 'upcoming', category: 'operations' },
+  { id: 'ms-6', title: 'Marketing Activation', description: 'Pre-launch marketing campaign and brand awareness push.', startDate: '2027-04-01', endDate: '2027-06-30', status: 'upcoming', category: 'brand' },
+  { id: 'ms-7', title: 'Soft Open', description: 'Controlled opening with limited marketing and feedback collection.', startDate: '2027-06-01', endDate: '2027-06-30', status: 'upcoming', category: 'operations' },
+  { id: 'ms-8', title: 'Grand Launch', description: 'Full public launch of Mottainai at SM MOA — Q3 2027.', startDate: '2027-07-01', endDate: '2027-07-31', status: 'upcoming', category: 'operations' },
 ];
 
 export const ROCKS: RockStatus[] = [
@@ -240,7 +269,7 @@ export const APPENDICES = [
 ];
 
 export const RISKS = [
-  { id: 'r-1', risk: 'Cannibalization of Yushoken', severity: 'Medium', mitigation: 'Different price segment (₱250-450 vs ₱500-700). Different positioning. Endorsed model creates halo effect.' },
+  { id: 'r-1', risk: 'Cannibalization of Yushoken', severity: 'Medium', mitigation: 'Different price segment (₱250-450 vs ₱500-700). Different positioning. Independent brand identity — no cross-endorsement.' },
   { id: 'r-2', risk: 'Food cost volatility', severity: 'High', mitigation: 'Locked supplier contracts. 35% FC ceiling with ₱70/bowl target. Quarterly price review mechanism.' },
   { id: 'r-3', risk: 'Mall landlord dependency (70% SM Prime)', severity: 'Medium', mitigation: 'Multi-landlord strategy. Ayala 16%, Robinsons 10%. Standalone options for diversification.' },
   { id: 'r-4', risk: 'Execution speed — 50 stores in 7 years', severity: 'Medium', mitigation: 'Phased rollout. Proven unit economics before scaling. Franchise model after Year 3.' },

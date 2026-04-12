@@ -41,7 +41,7 @@ function Slide1() {
           Mottainai — Investment Thesis
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl text-center mb-12">
-          Authentic Japanese ramen at accessible prices, powered by Yushoken&apos;s 10+ years of expertise
+          The Ramen of Uniqlo — mass-market Japanese ramen designed for everyone, without being designed down for anyone
         </p>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-4xl mb-12">
           <KpiCard value="50" label="Stores by 2033" />
@@ -164,7 +164,7 @@ function Slide3() {
             </div>
             <div className="bg-[#111827] text-white rounded-lg p-6">
               <div className="text-sm uppercase tracking-wider opacity-70 mb-2">Avg Food Cost</div>
-              <div className="text-3xl font-bold">24.6%</div>
+              <div className="text-3xl font-bold">31.4%</div>
               <div className="text-sm opacity-70 mt-1">Target ≤35%</div>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
@@ -432,7 +432,7 @@ function Slide8() {
     { risk: 'Cannibalization of Yushoken', severity: 'Medium', mitigation: 'Different segment (₱250–450 vs ₱500–700), separate locations' },
     { risk: 'Food cost volatility', severity: 'High', mitigation: 'Centralized commissary, supplier contracts, menu flexibility' },
     { risk: 'Expansion execution', severity: 'Medium', mitigation: 'Standardized playbook, SM partnership, proven format' },
-    { risk: 'Brand dilution', severity: 'Low', mitigation: 'Endorsed model (not co-branded), separate identity' },
+    { risk: 'Brand dilution', severity: 'Low', mitigation: 'Standalone brand (not co-branded), separate identity' },
     { risk: 'Key person (Aoyama)', severity: 'High', mitigation: 'Recipe documentation, training program, handover by Sep 2026' },
   ];
 
