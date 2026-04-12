@@ -123,13 +123,16 @@ function Slide2() {
 /* ─── Slide 3: Brand & Product ─── */
 function Slide3() {
   const skus = [
-    'Tonkotsu Classic',
+    'Konbu Sui Ramen',
+    'Sanratanmen',
     'Shoyu Ramen',
-    'Miso Ramen',
-    'Spicy Tan Tan',
-    'Tsukemen',
-    'Karaage Don',
-    'Gyoza Set',
+    'Shio Ramen',
+    'Tantanmen',
+    'Tori Sushi Noko',
+    'Chahan',
+    'Chimaki',
+    'Gyoza',
+    'Daifuku',
   ];
 
   return (
@@ -146,7 +149,7 @@ function Slide3() {
               <p className="text-gray-600">Standalone brand under NHI Group — accessible price points anchored on proprietary ramen expertise</p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
-              <h3 className="text-lg font-semibold text-[#111827] mb-3">7 Core SKUs</h3>
+              <h3 className="text-lg font-semibold text-[#111827] mb-3">10 Core SKUs</h3>
               <ul className="space-y-2">
                 {skus.map((s) => (
                   <li key={s} className="flex items-center gap-2 text-gray-700">
@@ -164,7 +167,7 @@ function Slide3() {
             </div>
             <div className="bg-[#111827] text-white rounded-lg p-6">
               <div className="text-sm uppercase tracking-wider opacity-70 mb-2">Avg Food Cost</div>
-              <div className="text-3xl font-bold">31.4%</div>
+              <div className="text-3xl font-bold">31.0%</div>
               <div className="text-sm opacity-70 mt-1">Target ≤35%</div>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">

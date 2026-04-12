@@ -22,7 +22,7 @@ export default function MenuPage() {
         <div>
           <h1 className="text-3xl font-bold text-[#111827]">Menu Development</h1>
           <p className="text-sm text-gray-500 mt-1">
-            Rock #1 — Complete ✓ | 7 Core SKUs Locked &amp; FC-Validated
+            Rock #1 — Complete ✓ | 10 Core SKUs Locked &amp; FC-Validated
           </p>
         </div>
         <Link
