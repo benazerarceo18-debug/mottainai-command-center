@@ -244,12 +244,14 @@ export default function LandingPage() {
       <div
         ref={sceneRef}
         onMouseMove={handleMouseMove}
+        className="!ml-0"
         style={{
           position: 'fixed',
-          inset: 0,
-          zIndex: 200,
+          top: 0,
+          left: 0,
           width: '100vw',
           height: '100vh',
+          zIndex: 200,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
