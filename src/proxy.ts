@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server'
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  if (pathname === '/login' || pathname.startsWith('/api/auth')) {
+  if (pathname === '/' || pathname === '/login' || pathname.startsWith('/api/auth')) {
     return NextResponse.next()
   }
 
@@ -13,8 +13,8 @@ export function proxy(request: NextRequest) {
     return NextResponse.next()
   }
 
-  const loginUrl = new URL('/login', request.url)
-  return NextResponse.redirect(loginUrl)
+  const landingUrl = new URL('/', request.url)
+  return NextResponse.redirect(landingUrl)
 }
 
 export const config = {
