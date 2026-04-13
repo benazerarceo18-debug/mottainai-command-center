@@ -3,41 +3,42 @@ import StoreGrowthChart from '@/components/charts/StoreGrowthChart';
 import SensitivityMatrix from '@/components/charts/SensitivityMatrix';
 
 const unitEconomics = [
-  { label: 'Covers/Day', value: '240' },
-  { label: 'Avg Check', value: '₱250–450' },
-  { label: 'Monthly Revenue', value: '₱5M–₱6M' },
+  { label: 'Covers/Day', value: '400 (base)' },
+  { label: 'Avg Check', value: '₱625' },
+  { label: 'Monthly Revenue', value: '₱7.5M' },
   { label: 'Food Cost %', value: '25%' },
-  { label: 'Store EBITDA', value: '37% (~₱2M/mo)' },
-  { label: 'Capex', value: '₱10–15M' },
+  { label: 'Store EBITDA', value: '7% (~₱525K/mo)' },
+  { label: 'Capex', value: '₱18–20M per 150sqm' },
+  { label: 'Commissary', value: 'TBA' },
 ];
 
 const scenarios = [
   {
-    name: 'Conservative',
+    name: 'Conservative (350 covers · 6% EBITDA)',
     color: 'text-slate-500',
     stores: [2, 4, 7, 10, 14],
-    revenue: ['₱48M', '₱97M', '₱168M', '₱240M', '₱336M'],
-    y5Ebitda: '₱124M',
-    roic: '58%',
-    payback: '12 mo',
+    revenue: ['₱158M', '₱315M', '₱551M', '₱788M', '₱1.1B'],
+    y5Ebitda: '₱66M',
+    roic: '24%',
+    payback: '51 mo',
   },
   {
-    name: 'Base',
+    name: 'Base (400 covers · 7% EBITDA)',
     color: 'text-[#FB923C]',
     stores: [3, 6, 12, 18, 24],
-    revenue: ['₱72M', '₱145M', '₱290M', '₱435M', '₱580M'],
-    y5Ebitda: '₱215M',
-    roic: '82%',
-    payback: '9 mo',
+    revenue: ['₱270M', '₱540M', '₱1.08B', '₱1.62B', '₱2.16B'],
+    y5Ebitda: '₱151M',
+    roic: '33%',
+    payback: '36 mo',
   },
   {
-    name: 'Aggressive',
+    name: 'Aggressive (500 covers · 8% EBITDA)',
     color: 'text-[#111827]',
     stores: [4, 9, 18, 26, 35],
-    revenue: ['₱97M', '₱218M', '₱435M', '₱629M', '₱847M'],
-    y5Ebitda: '₱313M',
-    roic: '105%',
-    payback: '7 mo',
+    revenue: ['₱450M', '₱1.01B', '₱2.03B', '₱2.93B', '₱3.94B'],
+    y5Ebitda: '₱315M',
+    roic: '50%',
+    payback: '24 mo',
   },
 ];
 
@@ -48,12 +49,11 @@ export default function FinancialsPage() {
       <div>
         <h1
           className="text-3xl font-bold text-text-primary"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Financial Projections
         </h1>
         <p className="text-text-secondary mt-1">
-          3-Scenario 5-Year Model | Base: 82% ROIC
+          3-Scenario 5-Year Model | Base: 33% ROIC | Commissary costs TBA
         </p>
       </div>
 
@@ -61,8 +61,7 @@ export default function FinancialsPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Unit Economics
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -73,8 +72,7 @@ export default function FinancialsPage() {
             >
               <p
                 className="text-xl font-bold text-text-primary"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
+                             >
                 {item.value}
               </p>
               <p className="text-xs text-text-muted mt-1">{item.label}</p>
@@ -87,8 +85,7 @@ export default function FinancialsPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Revenue Projections
         </h2>
         <div className="bg-white rounded-xl border border-border p-6">
@@ -100,8 +97,7 @@ export default function FinancialsPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Store Growth
         </h2>
         <div className="bg-white rounded-xl border border-border p-6">
@@ -113,8 +109,7 @@ export default function FinancialsPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           3-Scenario P&L Table
         </h2>
         <div className="bg-white rounded-xl border border-border p-6 overflow-x-auto">
@@ -172,8 +167,7 @@ export default function FinancialsPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Sensitivity Matrix
         </h2>
         <div className="bg-white rounded-xl border border-border p-6">
@@ -185,8 +179,7 @@ export default function FinancialsPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Investment Requirements
         </h2>
         <div className="bg-white rounded-xl border border-border p-6">
@@ -198,8 +191,7 @@ export default function FinancialsPage() {
                 </p>
                 <p
                   className="text-2xl font-bold text-text-primary mt-1"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
+                                 >
                   ₱30–45M
                 </p>
                 <p className="text-sm text-text-secondary mt-0.5">First 3 stores</p>
@@ -210,12 +202,11 @@ export default function FinancialsPage() {
                 </p>
                 <p
                   className="text-2xl font-bold text-text-primary mt-1"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  ₱10–15M
+                                 >
+                  ₱18–20M
                 </p>
                 <p className="text-sm text-text-secondary mt-0.5">
-                  Inline dining format
+                  Per 150sqm store
                 </p>
               </div>
             </div>
@@ -226,8 +217,7 @@ export default function FinancialsPage() {
                 </p>
                 <p
                   className="text-2xl font-bold text-text-primary mt-1"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
+                                 >
                   Q1 2030
                 </p>
                 <p className="text-sm text-text-secondary mt-0.5">Base scenario</p>
@@ -238,8 +228,7 @@ export default function FinancialsPage() {
                 </p>
                 <p
                   className="text-2xl font-bold text-text-primary mt-1"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
+                                 >
                   8–10 months
                 </p>
                 <p className="text-sm text-text-secondary mt-0.5">Per store</p>

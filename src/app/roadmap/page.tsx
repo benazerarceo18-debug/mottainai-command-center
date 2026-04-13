@@ -9,8 +9,7 @@ export default function RoadmapPage() {
       <div>
         <h1
           className="text-3xl font-bold text-text-primary"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Execution Roadmap
         </h1>
         <p className="text-text-secondary mt-1">
@@ -22,8 +21,7 @@ export default function RoadmapPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Timeline
         </h2>
         <GanttTimeline />
@@ -33,8 +31,7 @@ export default function RoadmapPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           EOS Rocks
         </h2>
         <RockCards />
@@ -44,8 +41,7 @@ export default function RoadmapPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           RACI Matrix
         </h2>
         <RACIMatrix />
@@ -55,8 +51,7 @@ export default function RoadmapPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Blockers &amp; Escalations
         </h2>
         <div className="bg-card rounded-xl border border-border shadow-sm p-8 flex flex-col items-center justify-center text-center">

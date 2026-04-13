@@ -9,10 +9,10 @@ export const BRAND = {
   priceRange: '₱250–450',
   status: 'Under Development',
   target: '50 stores by 2033',
-  annualRevenue: '₱900M',
-  annualNOI: '₱207M',
+  annualRevenue: '₱4.5B (50 stores)',
+  annualNOI: '₱315M (7% EBITDA)',
   launchTarget: 'Q3 2027 (July)',
-  strategicFrame: 'Ramen of Uniqlo',
+  strategicFrame: 'Uniqlo of Ramen',
   coreValues: ['Customer Focus', 'Continuous Innovation / Kaizen', 'Quality'] as const,
   positioningStatement: 'An experience designed for everyone, without being designed down for anyone.',
   personas: [
@@ -36,17 +36,18 @@ export const BRAND = {
 };
 
 export const UNIT_ECONOMICS = {
-  coversPerDay: 240,
-  avgCheck: 280,
+  coversPerDay: 400,
+  avgCheck: 625,
   foodCostPerBowl: 70,
   fcPercent: 25,
-  ebitdaPercent: 37,
-  capexPerStore: '₱10–15M',
-  capexStandalone: '₱15–20M standalone',
-  monthlyRevenue: 2016000,
-  monthlyEbitda: 745920,
-  paybackMonths: '8–10',
-  sqm: '60–80',
+  ebitdaPercent: 7,
+  capexPerStore: '₱18–20M',
+  capexStandalone: '₱18–20M per 150sqm store',
+  monthlyRevenue: 7500000,   // 400 covers × ₱625 × 30 days
+  monthlyEbitda: 525000,     // 7.5M × 7%
+  paybackMonths: '34–38',    // ₱19M / ₱525K ≈ 36 months
+  sqm: '~150',
+  commissary: 'TBA — costs pending',
 };
 
 export const KPIS: KPI[] = [
@@ -173,28 +174,34 @@ export const PIPELINE_SITES: PipelineSite[] = [
 
 export const FINANCIAL_SCENARIOS: FinancialScenario[] = [
   {
+    // Conservative: 350 covers/day, ₱625 avg check, 6% EBITDA, ₱20M CapEx
+    // Rev/store/yr = 350 × 625 × 360 = ₱78.75M
     name: 'conservative',
     storesY1: 2, storesY2: 4, storesY3: 7, storesY4: 10, storesY5: 14,
-    revenueY1: 48_000_000, revenueY2: 97_000_000, revenueY3: 168_000_000, revenueY4: 240_000_000, revenueY5: 336_000_000,
-    ebitdaY1: 17_760_000, ebitdaY2: 35_890_000, ebitdaY3: 62_160_000, ebitdaY4: 88_800_000, ebitdaY5: 124_320_000,
-    roic: 48,
-    paybackMonths: 14,
+    revenueY1: 157_500_000, revenueY2: 315_000_000, revenueY3: 551_250_000, revenueY4: 787_500_000, revenueY5: 1_102_500_000,
+    ebitdaY1: 9_450_000, ebitdaY2: 18_900_000, ebitdaY3: 33_075_000, ebitdaY4: 47_250_000, ebitdaY5: 66_150_000,
+    roic: 24,
+    paybackMonths: 51,  // ₱20M / (₱78.75M × 6% / 12) = 50.8
   },
   {
+    // Base: 400 covers/day, ₱625 avg check, 7% EBITDA, ₱19M CapEx
+    // Rev/store/yr = 400 × 625 × 360 = ₱90M
     name: 'base',
     storesY1: 3, storesY2: 6, storesY3: 12, storesY4: 18, storesY5: 24,
-    revenueY1: 72_000_000, revenueY2: 145_000_000, revenueY3: 290_000_000, revenueY4: 435_000_000, revenueY5: 580_000_000,
-    ebitdaY1: 26_640_000, ebitdaY2: 53_650_000, ebitdaY3: 107_300_000, ebitdaY4: 160_950_000, ebitdaY5: 214_600_000,
-    roic: 82,
-    paybackMonths: 9,
+    revenueY1: 270_000_000, revenueY2: 540_000_000, revenueY3: 1_080_000_000, revenueY4: 1_620_000_000, revenueY5: 2_160_000_000,
+    ebitdaY1: 18_900_000, ebitdaY2: 37_800_000, ebitdaY3: 75_600_000, ebitdaY4: 113_400_000, ebitdaY5: 151_200_000,
+    roic: 33,
+    paybackMonths: 36,  // ₱19M / (₱90M × 7% / 12) = 36.2
   },
   {
+    // Aggressive: 500 covers/day, ₱625 avg check, 8% EBITDA, ₱18M CapEx
+    // Rev/store/yr = 500 × 625 × 360 = ₱112.5M
     name: 'aggressive',
     storesY1: 4, storesY2: 9, storesY3: 18, storesY4: 26, storesY5: 35,
-    revenueY1: 97_000_000, revenueY2: 218_000_000, revenueY3: 435_000_000, revenueY4: 629_000_000, revenueY5: 847_000_000,
-    ebitdaY1: 35_890_000, ebitdaY2: 80_660_000, ebitdaY3: 160_950_000, ebitdaY4: 232_730_000, ebitdaY5: 313_390_000,
-    roic: 124,
-    paybackMonths: 6,
+    revenueY1: 450_000_000, revenueY2: 1_012_500_000, revenueY3: 2_025_000_000, revenueY4: 2_925_000_000, revenueY5: 3_937_500_000,
+    ebitdaY1: 36_000_000, ebitdaY2: 81_000_000, ebitdaY3: 162_000_000, ebitdaY4: 234_000_000, ebitdaY5: 315_000_000,
+    roic: 50,
+    paybackMonths: 24,  // ₱18M / (₱112.5M × 8% / 12) = 24
   },
 ];
 
@@ -212,7 +219,7 @@ export const SERVICE_FORMATS: ServiceFormat[] = [
     name: 'Full Service (with Automation)',
     status: 'confirmed',
     description: 'Primary format. Inline dining, fast casual with kiosk ordering and KDS automation.',
-    size: '60–80 sqm',
+    size: '~150 sqm',
     automation: 'Touchscreen ordering, kitchen display system',
     risk: null,
   },

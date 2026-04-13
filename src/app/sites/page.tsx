@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const playfairStyle = { fontFamily: "'Playfair Display', 'Noto Serif JP', serif" };
+const playfairStyle = { fontFamily: "'Noto Serif JP', serif" };
 
 export default function SitesPage() {
   return (
@@ -10,7 +10,7 @@ export default function SitesPage() {
       <div className="flex items-start justify-between mb-6">
         <div>
           <h1 style={playfairStyle} className="text-2xl font-bold text-[#111827]">Tested Locations</h1>
-          <p className="text-sm text-gray-500 mt-1">SMDC Site Pipeline — 2 Award Notices Signed</p>
+          <p className="text-sm text-gray-500 mt-1">SMDC Site Pipeline — 2 Sites Mock-Tested</p>
         </div>
         <Link href="/expansion" className="text-sm text-gray-400 hover:text-[#F97316] transition-colors">
           ← Expansion Playbook
@@ -20,8 +20,8 @@ export default function SitesPage() {
       {/* Status Bar */}
       <div className="grid grid-cols-3 gap-4">
         {[
-          { value: '2', label: 'Award Notices Signed' },
-          { value: 'Feb–May 2026', label: 'Lease Start Window' },
+          { value: '2', label: 'Sites Mock-Tested' },
+          { value: 'TBD', label: 'Lease Start Window' },
           { value: 'SMDC', label: 'Primary Landlord' },
         ].map((tile) => (
           <div key={tile.label} className="bg-white rounded-xl border border-gray-200 p-5 text-center">
@@ -45,7 +45,7 @@ export default function SitesPage() {
             </div>
             <p className="text-sm text-gray-500">SM MOA Complex, Pasay City</p>
           </div>
-          <span className="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Award Notice Signed ✓</span>
+          <span className="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Mock-Tested</span>
         </div>
 
         {/* Site Overview */}
@@ -59,8 +59,8 @@ export default function SitesPage() {
                   ['Trade Name', 'Ramen Yushoken'],
                   ['Landlord', 'SM Development Corporation (SMDC)'],
                   ['Floor Area', '221.74 sqm'],
-                  ['Lease Term', 'May 15, 2026 – April 30, 2029 (3 years)'],
-                  ['Status', 'Award Notice Signed — Feb 13, 2026'],
+                  ['Lease Term', 'TBD — Pending formal award'],
+                  ['Status', 'Mock-Tested — Pending Formal Award'],
                 ].map(([field, value], i) => (
                   <tr key={field} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                     <td className="py-2 px-4 font-medium text-gray-600 w-48">{field}</td>
@@ -186,7 +186,7 @@ export default function SitesPage() {
             </div>
             <p className="text-sm text-gray-500">EDSA corner Madison St., Mandaluyong City</p>
           </div>
-          <span className="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Award Notice Signed ✓</span>
+          <span className="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Mock-Tested</span>
         </div>
 
         {/* Site Overview */}
@@ -201,7 +201,7 @@ export default function SitesPage() {
                   ['Landlord', 'SM Development Corporation (SMDC)'],
                   ['Floor Area (Yushoken)', '229.46 sqm (Units 119b, 120)'],
                   ['Floor Area (Eval)', '246 sqm (Mottainai evaluation space)'],
-                  ['Lease Term', 'May 1, 2026 – April 30, 2029 (3 years)'],
+                  ['Lease Term', 'TBD — Pending formal award'],
                   ['Renewal', '2 years; 8% up depending on status'],
                   ['MRT Access', 'Connected to MRT Boni Station'],
                 ].map(([field, value], i) => (
@@ -377,7 +377,7 @@ export default function SitesPage() {
                 ['Fit-Out', '45 days', '90 days'],
                 ['MRT Access', 'No (bus/jeep)', 'Yes (MRT Boni)'],
                 ['Lease Term', 'May 2026 – Apr 2029', 'May 2026 – Apr 2029'],
-                ['Status', 'Award Notice Signed ✓', 'Award Notice Signed ✓'],
+                ['Status', 'Mock-Tested', 'Mock-Tested'],
               ].map(([metric, ice, light], i) => (
                 <tr key={metric} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                   <td className="py-2 px-4 font-medium text-gray-600">{metric}</td>

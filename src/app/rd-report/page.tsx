@@ -19,8 +19,7 @@ export default function RDReportPage() {
         </span>
         <h1
           className="text-4xl font-bold mb-2 text-white"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Mottainai Core Menu Finalization
         </h1>
         <p className="text-slate-300 text-base mb-8 max-w-2xl">
@@ -44,7 +43,7 @@ export default function RDReportPage() {
 
       {/* ─── 2. EXECUTIVE SUMMARY ─── */}
       <section>
-        <h2 className="text-2xl font-bold text-navy mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-2xl font-bold text-navy mb-5">
           Executive Summary
         </h2>
 
@@ -84,7 +83,7 @@ export default function RDReportPage() {
 
       {/* ─── 3. 7 CORE SKUs ─── */}
       <section>
-        <h2 className="text-2xl font-bold text-navy mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-2xl font-bold text-navy mb-5">
           10 Core SKUs
         </h2>
 
@@ -184,7 +183,7 @@ export default function RDReportPage() {
 
       {/* ─── 4. FC VALIDATION ─── */}
       <section>
-        <h2 className="text-2xl font-bold text-navy mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-2xl font-bold text-navy mb-5">
           FC Validation by Category
         </h2>
 
@@ -240,7 +239,7 @@ export default function RDReportPage() {
 
       {/* ─── 5. BROTH DECISION ─── */}
       <section>
-        <h2 className="text-2xl font-bold text-navy mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-2xl font-bold text-navy mb-5">
           Broth Decision
         </h2>
 
@@ -297,7 +296,7 @@ export default function RDReportPage() {
 
       {/* ─── 6. FINANCIAL IMPACT ─── */}
       <section>
-        <h2 className="text-2xl font-bold text-navy mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-2xl font-bold text-navy mb-5">
           Financial Impact at Scale
         </h2>
 
@@ -325,11 +324,11 @@ export default function RDReportPage() {
             <table className="w-full text-sm">
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { label: 'Revenue', value: '₱5M–₱6M', color: 'text-navy' },
-                  { label: 'COGS (~25% avg FC)', value: '−₱1.25M–₱1.5M', color: 'text-red-600' },
-                  { label: 'Gross Profit (~75%)', value: '₱3.75M–₱4.5M', color: 'text-emerald-600', bold: true },
-                  { label: 'Operating Costs (est. ~38%)', value: '−₱1.9M–₱2.28M', color: 'text-red-600' },
-                  { label: 'Store EBITDA (37%)', value: '~₱1.85M–₱2.22M', color: 'text-gold', bold: true },
+                  { label: 'Revenue', value: '₱7.5M', color: 'text-navy' },
+                  { label: 'COGS (~25% FC)', value: '−₱1.875M', color: 'text-red-600' },
+                  { label: 'Gross Profit (~75%)', value: '₱5.625M', color: 'text-emerald-600', bold: true },
+                  { label: 'Operating Costs (est. ~68%)', value: '−₱5.1M', color: 'text-red-600' },
+                  { label: 'Store EBITDA (7%)', value: '~₱525K', color: 'text-gold', bold: true },
                 ].map((row) => (
                   <tr key={row.label} className={row.bold ? 'bg-gray-50' : ''}>
                     <td className="px-4 py-2.5 text-text-secondary">{row.label}</td>
@@ -348,10 +347,11 @@ export default function RDReportPage() {
             <table className="w-full text-sm">
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { label: 'Annual Revenue', value: '₱3B–₱3.6B', color: 'text-navy' },
-                  { label: 'Annual EBITDA', value: '₱1.11B–₱1.33B', color: 'text-emerald-600' },
+                  { label: 'Annual Revenue (50 stores)', value: '₱4.5B', color: 'text-navy' },
+                  { label: 'Annual EBITDA (7%)', value: '₱315M', color: 'text-emerald-600' },
                   { label: 'COGS Savings (vs CK Broth)', value: '+₱69.6M/yr', color: 'text-gold' },
-                  { label: 'Investment per Unit', value: '₱10–15M', color: 'text-text-secondary' },
+                  { label: 'Investment per Unit', value: '₱18–20M', color: 'text-text-secondary' },
+                  { label: 'Commissary Costs', value: 'TBA', color: 'text-amber-500' },
                 ].map((row) => (
                   <tr key={row.label}>
                     <td className="px-4 py-2.5 text-text-secondary">{row.label}</td>
@@ -366,7 +366,7 @@ export default function RDReportPage() {
 
       {/* ─── 7. OPERATIONAL SPECS ─── */}
       <section>
-        <h2 className="text-2xl font-bold text-navy mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-2xl font-bold text-navy mb-5">
           Operational Specifications
         </h2>
 
@@ -459,7 +459,7 @@ export default function RDReportPage() {
 
       {/* ─── 8. ROCK #1 COMPLETION CRITERIA ─── */}
       <section>
-        <h2 className="text-2xl font-bold text-navy mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-2xl font-bold text-navy mb-5">
           Rock #1 Completion Criteria
         </h2>
 
@@ -493,7 +493,7 @@ export default function RDReportPage() {
 
       {/* ─── 9. NEXT STEPS ─── */}
       <section>
-        <h2 className="text-2xl font-bold text-navy mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-2xl font-bold text-navy mb-5">
           Next Steps
         </h2>
 

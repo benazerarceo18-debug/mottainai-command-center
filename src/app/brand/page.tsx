@@ -10,7 +10,7 @@ const PERSONAS = [
   {
     name: 'Japanese Food Enthusiasts',
     age: '20-40',
-    description: 'Seeking authentic Japanese quality and flavor. Drawn by the Yushoken pedigree.',
+    description: 'Seeking authentic Japanese quality and flavor. Drawn by craft-level ramen at accessible prices.',
   },
   {
     name: 'Quick-Service Upgraders',
@@ -20,7 +20,7 @@ const PERSONAS = [
 ];
 
 const COMPETITORS = [
-  { brand: 'Mottainai', segment: 'Value Fast Casual', price: '₱250-450', format: 'Fast Casual', differentiator: 'Kaiten-inspired + touchscreen, "accessible decadence"' },
+  { brand: 'Mottainai', segment: 'Value Fast Casual', price: '₱250-450', format: 'Fast Casual Inline', differentiator: 'Automation-driven service, "Uniqlo of Ramen"' },
   { brand: 'Tokyo Tokyo', segment: 'QSR Japanese', price: '₱120-200', format: 'QSR Counter', differentiator: 'Filipino-adapted Japanese, rice bowls' },
   { brand: 'Marugame Udon', segment: 'Fast Casual Japanese', price: '₱180-280', format: 'Cafeteria-style', differentiator: 'Udon specialist, self-serve' },
   { brand: 'Ramen Kuroda', segment: 'Casual Ramen', price: '₱250-380', format: 'Casual dining', differentiator: 'Value ramen chain' },
@@ -31,7 +31,7 @@ const NON_NEGOTIABLES = [
   'Single unified concept (no tiers)',
   'Price band ₱250-450',
   'Friendly, inclusive tone (no chef ego)',
-  'Endorsed brand model ("By the makers of Yushoken")',
+  'Independent brand — standalone identity',
   'Sustainability = operational only, not branded',
   'No delivery platform exclusivity',
   'Delivery = 30-40% of revenue',
@@ -54,12 +54,41 @@ export default function BrandPage() {
           </svg>
         </Link>
       </div>
+      {/* Section 0: Uniqlo of Ramen */}
+      <section className="bg-gradient-to-br from-[#111827] to-[#1a2744] rounded-xl shadow-sm border border-[#F97316]/20 p-6 space-y-4">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="px-3 py-1 rounded-full bg-[#F97316]/20 text-[#F97316] text-xs font-bold tracking-wider uppercase">Strategic Frame</span>
+        </div>
+        <h2 className="text-2xl font-bold text-white">
+          The Uniqlo of Ramen
+        </h2>
+        <p className="text-white/60 text-sm max-w-2xl">
+          Mass market, but embodying critical values. An experience designed for everyone, without being designed down for anyone. Broad appeal without dilution.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-2">
+          {[
+            { value: 'Customer Focus', desc: 'Every decision starts with the guest experience' },
+            { value: 'Continuous Innovation / Kaizen', desc: 'Relentless improvement across operations and product' },
+            { value: 'Quality', desc: 'Craft-level standards at mass-market scale' },
+          ].map((v) => (
+            <div key={v.value} className="rounded-lg bg-white/5 border border-white/10 p-4">
+              <p className="text-sm font-semibold text-[#F97316]">{v.value}</p>
+              <p className="text-xs text-white/40 mt-1">{v.desc}</p>
+            </div>
+          ))}
+        </div>
+        <div className="pt-3 border-t border-white/10">
+          <p className="text-xs text-white/30 uppercase tracking-wider">Target Launch</p>
+          <p className="text-sm font-bold text-white">Q3 2027 (July) · SM Mall of Asia</p>
+        </div>
+      </section>
+
       {/* Section 1: Brand Positioning */}
       <section className="bg-white rounded-xl shadow-sm border border-border p-6 space-y-6">
         <div>
           <h1 className="text-3xl font-bold text-text-primary">Brand Identity</h1>
           <p className="text-text-secondary mt-3 max-w-3xl">
-            Mottainai is NHI&apos;s Japanese fast casual concept — accessible decadence at ₱250–450.
+            Mottainai is a mass-market fast-casual Japanese ramen concept — accessible decadence at ₱250–450.
             80–90% of the premium ramen experience at 50% of the cost. Built for diners who want
             premium flavor without the premium friction.
           </p>
@@ -68,7 +97,7 @@ export default function BrandPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-lg bg-bg p-4">
             <p className="text-xs text-text-muted uppercase tracking-wider font-medium mb-1">Brand Architecture</p>
-            <p className="text-sm text-text-primary font-semibold">&ldquo;By the makers of Yushoken&rdquo; &mdash; endorsed model</p>
+            <p className="text-sm text-text-primary font-semibold">Independent brand</p>
           </div>
           <div className="rounded-lg bg-bg p-4">
             <p className="text-xs text-text-muted uppercase tracking-wider font-medium mb-1">Tagline</p>
@@ -131,7 +160,7 @@ export default function BrandPage() {
         </div>
         <div className="mt-4 p-3 rounded-lg bg-danger/5 border border-danger/10">
           <p className="text-xs text-danger font-medium">
-            Not competitors: Mendokoro Ramenba, Yushoken (sister brands, premium segment ₱350-500)
+            Not competitors: Mendokoro Ramenba, Yushoken (premium segment ₱350-500 — different market)
           </p>
         </div>
       </section>

@@ -23,7 +23,7 @@ function SlideHeader({ slideNum }: { slideNum: number }) {
 function KpiCard({ value, label }: { value: string; label: string }) {
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-sm">
-      <div className="text-3xl font-bold text-[#111827]" style={{ fontFamily: 'Playfair Display, serif' }}>
+      <div className="text-3xl font-bold text-[#111827]">
         {value}
       </div>
       <div className="text-sm text-gray-500 mt-2">{label}</div>
@@ -37,20 +37,20 @@ function Slide1() {
     <div className="flex flex-col h-full">
       <SlideHeader slideNum={1} />
       <div className="flex-1 flex flex-col items-center justify-center px-12 py-8 bg-white">
-        <h1 className="text-5xl font-bold text-[#111827] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h1 className="text-5xl font-bold text-[#111827] mb-4">
           Mottainai — Investment Thesis
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl text-center mb-12">
-          The Ramen of Uniqlo — mass-market Japanese ramen designed for everyone, without being designed down for anyone
+          The Uniqlo of Ramen — mass-market Japanese ramen designed for everyone, without being designed down for anyone
         </p>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-4xl mb-12">
           <KpiCard value="50" label="Stores by 2033" />
-          <KpiCard value="₱900M" label="Revenue Target" />
-          <KpiCard value="37%" label="Store EBITDA" />
-          <KpiCard value="82%" label="Base ROIC" />
+          <KpiCard value="₱4.5B" label="Revenue Target (50 stores)" />
+          <KpiCard value="6–8%" label="Store EBITDA" />
+          <KpiCard value="33%" label="Base ROIC" />
         </div>
         <div className="bg-[#111827] text-white px-8 py-4 rounded-lg text-center">
-          <p className="text-lg font-semibold">Seeking ₱30–45M initial investment for first 3 stores</p>
+          <p className="text-lg font-semibold">Seeking ₱57–60M initial investment for first 3 stores + commissary (TBA)</p>
         </div>
       </div>
     </div>
@@ -69,7 +69,7 @@ function Slide2() {
     <div className="flex flex-col h-full">
       <SlideHeader slideNum={2} />
       <div className="flex-1 flex flex-col px-12 py-8 bg-white">
-        <h2 className="text-3xl font-bold text-[#111827] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h2 className="text-3xl font-bold text-[#111827] mb-8">
           Philippine QSR Japanese Segment
         </h2>
         <div className="grid grid-cols-3 gap-6 mb-8">
@@ -139,7 +139,7 @@ function Slide3() {
     <div className="flex flex-col h-full">
       <SlideHeader slideNum={3} />
       <div className="flex-1 flex flex-col px-12 py-8 bg-white">
-        <h2 className="text-3xl font-bold text-[#111827] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h2 className="text-3xl font-bold text-[#111827] mb-8">
           Brand Identity &amp; Menu
         </h2>
         <div className="grid grid-cols-2 gap-8 flex-1">
@@ -185,30 +185,30 @@ function Slide3() {
 function Slide4() {
   const costStructure = [
     { item: 'Food Cost', pct: '25%', color: 'bg-red-400' },
-    { item: 'Labor', pct: '15%', color: 'bg-blue-400' },
-    { item: 'Rent', pct: '12%', color: 'bg-purple-400' },
-    { item: 'Others', pct: '11%', color: 'bg-gray-400' },
-    { item: 'EBITDA', pct: '37%', color: 'bg-[#FB923C]' },
+    { item: 'Labor', pct: '20%', color: 'bg-blue-400' },
+    { item: 'Rent', pct: '15%', color: 'bg-purple-400' },
+    { item: 'Utilities & Others', pct: '33%', color: 'bg-gray-400' },
+    { item: 'EBITDA', pct: '7%', color: 'bg-[#FB923C]' },
   ];
 
   return (
     <div className="flex flex-col h-full">
       <SlideHeader slideNum={4} />
       <div className="flex-1 flex flex-col px-12 py-8 bg-white">
-        <h2 className="text-3xl font-bold text-[#111827] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h2 className="text-3xl font-bold text-[#111827] mb-8">
           Per-Store Economics
         </h2>
         <div className="grid grid-cols-3 gap-6 mb-8">
           <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 text-center">
-            <div className="text-2xl font-bold text-[#111827]">240</div>
-            <div className="text-sm text-gray-500">Covers/Day</div>
+            <div className="text-2xl font-bold text-[#111827]">400</div>
+            <div className="text-sm text-gray-500">Covers/Day (base)</div>
           </div>
           <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 text-center">
-            <div className="text-2xl font-bold text-[#111827]">₱250–450</div>
+            <div className="text-2xl font-bold text-[#111827]">₱625</div>
             <div className="text-sm text-gray-500">Avg Check</div>
           </div>
           <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 text-center">
-            <div className="text-2xl font-bold text-[#111827]">₱5M–₱6M</div>
+            <div className="text-2xl font-bold text-[#111827]">₱7.5M</div>
             <div className="text-sm text-gray-500">Monthly Revenue</div>
           </div>
         </div>
@@ -259,7 +259,7 @@ function Slide5() {
     <div className="flex flex-col h-full">
       <SlideHeader slideNum={5} />
       <div className="flex-1 flex flex-col px-12 py-8 bg-white">
-        <h2 className="text-3xl font-bold text-[#111827] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h2 className="text-3xl font-bold text-[#111827] mb-8">
           50-Store Roadmap
         </h2>
         <div className="grid grid-cols-2 gap-8 flex-1">
@@ -282,7 +282,7 @@ function Slide5() {
                 <span className="font-semibold">Geographic:</span> Metro Manila first, Cebu/Davao Y3+
               </p>
               <p className="text-sm text-gray-600 mt-1">
-                <span className="font-semibold">Format:</span> 60–80 sqm fast casual inline dining
+                <span className="font-semibold">Format:</span> ~150 sqm fast casual inline dining
               </p>
             </div>
           </div>
@@ -313,16 +313,16 @@ function Slide5() {
 /* ─── Slide 6: Financial Projections ─── */
 function Slide6() {
   const scenarios = [
-    { name: 'Conservative', y5Stores: 14, y5Revenue: '₱336M', y5Ebitda: '₱124M', roic: '58%', highlight: false },
-    { name: 'Base', y5Stores: 24, y5Revenue: '₱580M', y5Ebitda: '₱215M', roic: '82%', highlight: true },
-    { name: 'Aggressive', y5Stores: 36, y5Revenue: '₱870M', y5Ebitda: '₱322M', roic: '110%', highlight: false },
+    { name: 'Conservative', y5Stores: 14, y5Revenue: '₱1.1B', y5Ebitda: '₱66M', roic: '24%', highlight: false },
+    { name: 'Base', y5Stores: 24, y5Revenue: '₱2.16B', y5Ebitda: '₱151M', roic: '33%', highlight: true },
+    { name: 'Aggressive', y5Stores: 35, y5Revenue: '₱3.94B', y5Ebitda: '₱315M', roic: '50%', highlight: false },
   ];
 
   return (
     <div className="flex flex-col h-full">
       <SlideHeader slideNum={6} />
       <div className="flex-1 flex flex-col px-12 py-8 bg-white">
-        <h2 className="text-3xl font-bold text-[#111827] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h2 className="text-3xl font-bold text-[#111827] mb-8">
           5-Year Financial Outlook
         </h2>
         <div className="overflow-x-auto mb-8">
@@ -358,7 +358,7 @@ function Slide6() {
             <div className="text-sm text-gray-500">Base Stores Y5</div>
           </div>
           <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 text-center">
-            <div className="text-2xl font-bold text-[#FB923C]">₱215M</div>
+            <div className="text-2xl font-bold text-[#FB923C]">₱151M</div>
             <div className="text-sm text-gray-500">Base EBITDA Y5</div>
           </div>
           <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 text-center">
@@ -399,7 +399,7 @@ function Slide7() {
     <div className="flex flex-col h-full">
       <SlideHeader slideNum={7} />
       <div className="flex-1 flex flex-col px-12 py-8 bg-white">
-        <h2 className="text-3xl font-bold text-[#111827] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h2 className="text-3xl font-bold text-[#111827] mb-8">
           Launch Timeline
         </h2>
         <div className="flex-1 flex flex-col justify-center">
@@ -449,7 +449,7 @@ function Slide8() {
     <div className="flex flex-col h-full">
       <SlideHeader slideNum={8} />
       <div className="flex-1 flex flex-col px-12 py-8 bg-white">
-        <h2 className="text-3xl font-bold text-[#111827] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h2 className="text-3xl font-bold text-[#111827] mb-8">
           Key Risks &amp; Mitigations
         </h2>
         <div className="overflow-x-auto">
@@ -496,7 +496,7 @@ function Slide9() {
     <div className="flex flex-col h-full">
       <SlideHeader slideNum={9} />
       <div className="flex-1 flex flex-col px-12 py-8 bg-white">
-        <h2 className="text-3xl font-bold text-[#111827] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h2 className="text-3xl font-bold text-[#111827] mb-8">
           Investment Ask
         </h2>
         <div className="grid grid-cols-2 gap-8 flex-1">
@@ -508,17 +508,17 @@ function Slide9() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <div className="text-lg font-bold text-[#111827]">₱10–15M</div>
+                <div className="text-lg font-bold text-[#111827]">₱18–20M</div>
                 <div className="text-xs text-gray-500">Per store (inline dining)</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <div className="text-lg font-bold text-[#111827]">₱8M</div>
-                <div className="text-xs text-gray-500">Per store (standalone)</div>
+                <div className="text-lg font-bold text-[#111827]">₱18–20M</div>
+                <div className="text-xs text-gray-500">Per 150sqm store</div>
               </div>
             </div>
             <div className="bg-[#FB923C]/10 border border-[#FB923C]/30 rounded-lg p-4">
               <div className="text-sm font-semibold text-[#111827] mb-1">Expected Returns</div>
-              <p className="text-sm text-gray-700">82% ROIC &middot; 9-month payback per store</p>
+              <p className="text-sm text-gray-700">33% ROIC &middot; 36-month payback per store (base)</p>
             </div>
           </div>
           <div>
@@ -564,7 +564,7 @@ function Slide10() {
     <div className="flex flex-col h-full">
       <SlideHeader slideNum={10} />
       <div className="flex-1 flex flex-col items-center justify-center px-12 py-8 bg-white">
-        <h2 className="text-3xl font-bold text-[#111827] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <h2 className="text-3xl font-bold text-[#111827] mb-8">
           Supporting Materials
         </h2>
         <div className="grid grid-cols-2 gap-4 max-w-2xl w-full mb-10">
@@ -633,7 +633,7 @@ export default function BoardDeckPage() {
     return (
       <div className="fixed inset-0 z-50 bg-[#111827] p-8 overflow-auto">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-white text-xl font-semibold" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-white text-xl font-semibold">
             Slide Overview
           </h2>
           <button

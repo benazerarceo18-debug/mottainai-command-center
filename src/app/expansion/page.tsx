@@ -52,8 +52,7 @@ export default function ExpansionPage() {
         <div>
           <h1
             className="text-2xl font-bold text-text-primary"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+                     >
             Expansion Playbook
           </h1>
           <p className="text-sm text-text-secondary mt-1">
@@ -82,7 +81,7 @@ export default function ExpansionPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
           {PIPELINE_METRICS.map((m) => (
             <div key={m.label} className={`rounded-xl p-5 flex flex-col items-center justify-center text-center ${m.color}`}>
-              <span className="text-3xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>{m.value}</span>
+              <span className="text-3xl font-bold">{m.value}</span>
               <span className="text-xs font-medium mt-1 opacity-80 uppercase tracking-wider">{m.label}</span>
             </div>
           ))}
@@ -118,8 +117,7 @@ export default function ExpansionPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Playbook Appendices
         </h2>
         <PlaybookAccordion />
@@ -134,8 +132,7 @@ export default function ExpansionPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Store Design — W-Shaped Ramen Counter
         </h2>
         <div className="bg-white rounded-xl border border-border overflow-hidden">
@@ -171,8 +168,7 @@ export default function ExpansionPage() {
           </span>
           <h2
             className="text-xl font-bold"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+                     >
             SM Mall of Asia — Pilot Site
           </h2>
         </div>
@@ -200,8 +196,7 @@ export default function ExpansionPage() {
       <section>
         <h2
           className="text-xl font-bold text-text-primary mb-4"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+                 >
           Landlord Portfolio Strategy
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -213,8 +208,7 @@ export default function ExpansionPage() {
               <p className="text-sm font-medium opacity-70">{l.name}</p>
               <p
                 className="text-3xl font-bold mt-2"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
+                             >
                 {l.share}
               </p>
               <p className="text-sm mt-1 opacity-70">{l.stores}</p>

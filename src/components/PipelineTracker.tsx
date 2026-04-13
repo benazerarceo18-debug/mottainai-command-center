@@ -35,7 +35,7 @@ export default function PipelineTracker() {
     <div className="bg-card rounded-xl border border-border overflow-hidden">
       {/* Header */}
       <div className="px-6 pt-6 pb-4 flex items-center justify-between">
-        <h2 className="text-xl font-bold text-text-primary" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-xl font-bold text-text-primary">
           Site Pipeline
         </h2>
         <div className="flex items-center gap-2">

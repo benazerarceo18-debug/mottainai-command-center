@@ -58,7 +58,7 @@ export default function RockCards() {
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-text-primary" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h3 className="text-lg font-semibold text-text-primary">
               Rock #{rock.number} — {rock.title}
             </h3>
             <span className={`px-3 py-1 rounded-full text-xs font-bold tracking-wide ${rock.statusColor}`}>

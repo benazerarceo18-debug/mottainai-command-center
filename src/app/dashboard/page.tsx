@@ -16,7 +16,7 @@ const HIGHLIGHTS = [
   { date: 'Apr 7',  label: 'Rock #1 Complete',          detail: '10 SKUs locked · FC 31.0% avg',     color: 'bg-emerald-500', pill: 'bg-emerald-50 text-emerald-700' },
   { date: 'Mar 31', label: 'Strategy Pivot Finalized',  detail: 'Single unified concept confirmed',  color: 'bg-blue-500',    pill: 'bg-blue-50 text-blue-700' },
   { date: 'Mar 15', label: 'SM MOA Site — 9.0/10',      detail: 'Strong GO · demographics pass',     color: 'bg-amber-500',   pill: 'bg-amber-50 text-amber-700' },
-  { date: 'Mar 1',  label: 'Unit Economics Approved',   detail: '37% EBITDA · ₱580M Y5 revenue',    color: 'bg-violet-500',  pill: 'bg-violet-50 text-violet-700' },
+  { date: 'Mar 1',  label: 'Unit Economics Revised',     detail: '6–8% EBITDA · ₱2.16B Y5 base revenue',    color: 'bg-violet-500',  pill: 'bg-violet-50 text-violet-700' },
 ];
 
 const STAGE_META: Record<string, { label: string; color: string; bg: string }> = {
@@ -45,7 +45,7 @@ export default function Dashboard() {
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-emerald-400 text-xs font-semibold tracking-widest uppercase">In Development · Launch {BRAND.launchTarget}</span>
             </div>
-            <h1 className="text-4xl font-bold text-white leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h1 className="text-4xl font-bold text-white leading-tight">
               Mottainai
             </h1>
             <p className="text-white/50 text-sm mt-1 tracking-wider">Command Center · Nippon Hasha Inc.</p>
@@ -58,14 +58,14 @@ export default function Dashboard() {
               { value: 'Jul 2027', label: 'Grand Launch', color: 'text-violet-400' },
             ].map(s => (
               <div key={s.label} className="text-center min-w-[72px]">
-                <div className={`text-2xl font-bold ${s.color}`} style={{ fontFamily: "'Playfair Display', serif" }}>{s.value}</div>
+                <div className={`text-2xl font-bold ${s.color}`}>{s.value}</div>
                 <div className="text-white/40 text-[10px] uppercase tracking-wider mt-0.5">{s.label}</div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Ramen of Uniqlo positioning */}
+        {/* Uniqlo of Ramen positioning */}
         <div className="relative z-10 border-t border-white/10 pt-4 flex flex-col md:flex-row md:items-center gap-4">
           <div className="flex items-center gap-3">
             <span className="px-3 py-1 rounded-full bg-[#F97316]/20 text-[#F97316] text-xs font-bold tracking-wider uppercase">{BRAND.strategicFrame}</span>

@@ -1,13 +1,13 @@
 'use client';
 
-const checks = [250, 300, 350, 400, 450];
-const covers = [200, 250, 300, 350, 400, 450];
+const checks = [500, 550, 600, 625, 700, 750];
+const covers = [300, 350, 400, 450, 500, 550];
 
 function cellColor(revenue: number) {
-  if (revenue < 2_000_000)  return 'bg-red-100 text-red-800';
-  if (revenue < 3_500_000)  return 'bg-yellow-100 text-yellow-800';
-  if (revenue < 5_000_000)  return 'bg-green-100 text-green-800';
-  if (revenue <= 6_000_000) return 'bg-emerald-200 text-emerald-900 font-bold';
+  if (revenue < 5_000_000)  return 'bg-red-100 text-red-800';
+  if (revenue < 6_500_000)  return 'bg-yellow-100 text-yellow-800';
+  if (revenue < 7_500_000)  return 'bg-green-100 text-green-800';
+  if (revenue <= 9_000_000) return 'bg-emerald-200 text-emerald-900 font-bold';
   return 'bg-emerald-300 text-emerald-900 font-bold';
 }
 
@@ -40,7 +40,7 @@ export default function SensitivityMatrix() {
               <td className="py-2 px-3 font-semibold text-text-primary">₱{check}</td>
               {covers.map((cover) => {
                 const revenue = check * cover * 30;
-                const isTarget = revenue >= 5_000_000 && revenue <= 6_000_000;
+                const isTarget = revenue >= 7_000_000 && revenue <= 8_000_000;
                 return (
                   <td
                     key={cover}
@@ -57,10 +57,10 @@ export default function SensitivityMatrix() {
         </tbody>
       </table>
       <div className="flex flex-wrap gap-4 mt-3 text-xs text-text-muted">
-        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-red-100 inline-block" />{'<'}₱2M</span>
-        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-yellow-100 inline-block" />₱2M–₱3.5M</span>
-        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-green-100 inline-block" />₱3.5M–₱5M</span>
-        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-emerald-200 inline-block" />₱5M–₱6M · Target Zone</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-red-100 inline-block" />{'<'}₱5M</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-yellow-100 inline-block" />₱5M–₱6.5M</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-green-100 inline-block" />₱6.5M–₱7.5M</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm bg-emerald-200 inline-block" />₱7.5M–₱9M · Target Zone</span>
       </div>
     </div>
   );

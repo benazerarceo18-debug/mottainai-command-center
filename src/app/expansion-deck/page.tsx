@@ -42,7 +42,7 @@ function Slide1() {
           <div className="h-px w-24 bg-[#FB923C] mx-auto mb-8" />
           <h1
             className="text-6xl font-bold text-white mb-4 leading-tight"
-            style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
+            style={{ fontFamily: "'Noto Serif JP', serif" }}
           >
             Expansion Playbook V1
           </h1>
@@ -86,7 +86,7 @@ function Slide2() {
       <div className="flex-1 flex flex-col px-12 py-8 bg-[#0a0a0f] text-white">
         <h2
           className="text-3xl font-bold text-white mb-8"
-          style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
+          style={{ fontFamily: "'Noto Serif JP', serif" }}
         >
           The Opportunity
         </h2>
@@ -108,7 +108,7 @@ function Slide2() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-[#111827] border border-white/10 rounded-xl p-6 text-center">
-                <p className="text-[#FB923C] text-3xl font-bold mb-1">₱900M</p>
+                <p className="text-[#FB923C] text-3xl font-bold mb-1">₱4.5B</p>
                 <p className="text-white/50 text-xs">Target Revenue</p>
               </div>
               <div className="bg-[#111827] border border-white/10 rounded-xl p-6 text-center">
@@ -162,7 +162,7 @@ function Slide3() {
       <div className="flex-1 flex flex-col px-12 py-8 bg-[#0a0a0f] text-white">
         <h2
           className="text-3xl font-bold text-white mb-8"
-          style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
+          style={{ fontFamily: "'Noto Serif JP', serif" }}
         >
           How We Score Sites
         </h2>
@@ -214,7 +214,7 @@ function Slide4() {
       <div className="flex-1 flex flex-col px-12 py-8 bg-[#0a0a0f] text-white">
         <h2
           className="text-3xl font-bold text-white mb-6"
-          style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
+          style={{ fontFamily: "'Noto Serif JP', serif" }}
         >
           Proof of Concept — SM Mall of Asia
         </h2>
@@ -251,7 +251,7 @@ function Slide4() {
             <div className="text-center">
               <p
                 className="text-8xl font-bold text-[#FB923C]"
-                style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
+                style={{ fontFamily: "'Noto Serif JP', serif" }}
               >
                 9.0
               </p>
@@ -264,7 +264,7 @@ function Slide4() {
               </div>
               <div className="bg-[#111827] border border-white/10 rounded-lg p-4">
                 <p className="text-white/50 text-xs mb-1">Capex</p>
-                <p className="text-[#FB923C] font-bold">₱10–15M</p>
+                <p className="text-[#FB923C] font-bold">₱18–20M</p>
               </div>
               <div className="bg-[#111827] border border-white/10 rounded-lg p-4">
                 <p className="text-white/50 text-xs mb-1">NOI</p>
@@ -298,7 +298,7 @@ function Slide5() {
       <div className="flex-1 flex flex-col px-12 py-8 bg-[#0a0a0f] text-white">
         <h2
           className="text-3xl font-bold text-white mb-6"
-          style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
+          style={{ fontFamily: "'Noto Serif JP', serif" }}
         >
           Active Pipeline
         </h2>
@@ -386,7 +386,7 @@ function Slide6() {
       <div className="flex-1 flex flex-col px-12 py-8 bg-[#0a0a0f] text-white">
         <h2
           className="text-3xl font-bold text-white mb-8"
-          style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
+          style={{ fontFamily: "'Noto Serif JP', serif" }}
         >
           Multi-Landlord Portfolio
         </h2>
@@ -399,7 +399,7 @@ function Slide6() {
               <p className="text-white/60 text-sm mb-2">{l.name}</p>
               <p
                 className={`text-5xl font-bold ${l.text} mb-2`}
-                style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
+                style={{ fontFamily: "'Noto Serif JP', serif" }}
               >
                 {l.share}
               </p>
@@ -426,7 +426,7 @@ function Slide6() {
 /* ─── Slide 7: Lease Parameters ─── */
 function Slide7() {
   const params = [
-    { param: 'Store size', target: '60–80 sqm', walkaway: '<50 sqm' },
+    { param: 'Store size', target: '~150 sqm', walkaway: '<100 sqm' },
     { param: 'Monthly rent', target: '₱180–250/sqm', walkaway: '>₱300/sqm' },
     { param: 'Occupancy cost', target: '≤12% of revenue', walkaway: '>15%' },
     { param: 'Lease term', target: '5+5 years', walkaway: '<3 years' },
@@ -440,7 +440,7 @@ function Slide7() {
       <div className="flex-1 flex flex-col px-12 py-8 bg-[#0a0a0f] text-white">
         <h2
           className="text-3xl font-bold text-white mb-6"
-          style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
+          style={{ fontFamily: "'Noto Serif JP', serif" }}
         >
           Lease Negotiation Framework
         </h2>
@@ -483,8 +483,9 @@ function Slide8() {
 
   const milestones = [
     { date: 'Q3 2026', event: 'SM MOA signed' },
-    { date: 'Q4 2026', event: 'Build-out begins + Soft launch (1 store)' },
-    { date: 'Q2 2027', event: '3 stores operating' },
+    { date: 'Q4 2026', event: 'Build-out begins' },
+    { date: 'Q2–Q3 2027', event: 'Soft launch (1 store)' },
+    { date: 'Q2 2028', event: '3 stores operating' },
     { date: 'Q1 2030', event: 'Cash flow breakeven (base)' },
     { date: '2033', event: '50-store target' },
   ];
@@ -495,7 +496,7 @@ function Slide8() {
       <div className="flex-1 flex flex-col px-12 py-8 bg-[#0a0a0f] text-white">
         <h2
           className="text-3xl font-bold text-white mb-6"
-          style={{ fontFamily: "'Noto Serif JP', 'Playfair Display', serif" }}
+          style={{ fontFamily: "'Noto Serif JP', serif" }}
         >
           50-Store Roadmap
         </h2>

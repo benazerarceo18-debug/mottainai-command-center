@@ -44,8 +44,7 @@ export default function SiteScoringTool() {
     <div className="bg-card rounded-xl border border-border p-6">
       <h2
         className="text-xl font-bold text-text-primary mb-1"
-        style={{ fontFamily: "'Playfair Display', serif" }}
-      >
+             >
         Site Scoring Tool
       </h2>
       <p className="text-sm text-text-secondary mb-6">
@@ -93,8 +92,7 @@ export default function SiteScoringTool() {
           <p className="text-xs text-text-muted uppercase tracking-wider">Weighted Score</p>
           <p
             className="text-3xl font-bold text-text-primary"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+                     >
             {weightedScore.toFixed(1)}
           </p>
         </div>

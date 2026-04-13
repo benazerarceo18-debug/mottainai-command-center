@@ -13,7 +13,6 @@ export default function BusinessPlanPage() {
         {/* Heading */}
         <h1
           className="text-3xl font-bold text-gray-900 mb-3"
-          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Full Business Plan
         </h1>
