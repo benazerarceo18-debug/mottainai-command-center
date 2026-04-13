@@ -54,7 +54,7 @@ export const KPIS: KPI[] = [
   { id: 'rock-1', label: 'Rock #1 Menu Development', value: 'Complete', status: 'success', description: '10 core SKUs locked with FC ≤35%. Aoyama-san signed off.' },
   { id: 'rock-2', label: 'Rock #2 Expansion Playbook', value: 'Complete', status: 'success', description: 'Playbook V1 finalized. All 8 appendices board-ready. Consumer testing next (Q3 2026).' },
   { id: 'pipeline', label: 'Pipeline Sites', value: '3 Active', status: 'info', description: 'SMDC Ice Tower + SMDC Light Mall (Award Notices signed). SM North EDSA identified.' },
-  { id: 'fc-target', label: 'Target Food Cost', value: '≤35%', status: 'success', description: 'All 10 SKUs validated below 35% FC. Weighted avg 31.0%.' },
+  { id: 'fc-target', label: 'Target Food Cost', value: '25%', status: 'success', description: 'Target 25% FC used for all forecasts. Actual weighted avg 31.0% — optimization in progress.' },
 ];
 
 export const MENU_ITEMS: MenuItem[] = [

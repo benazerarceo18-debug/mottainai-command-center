@@ -167,8 +167,8 @@ function Slide3() {
             </div>
             <div className="bg-[#111827] text-white rounded-lg p-6">
               <div className="text-sm uppercase tracking-wider opacity-70 mb-2">Avg Food Cost</div>
-              <div className="text-3xl font-bold">31.0%</div>
-              <div className="text-sm opacity-70 mt-1">Target ≤35%</div>
+              <div className="text-3xl font-bold">25%</div>
+              <div className="text-sm opacity-70 mt-1">Target for all forecasts</div>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
               <div className="text-sm uppercase tracking-wider text-green-700 mb-2">Rock #1 Status</div>

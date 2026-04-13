@@ -29,7 +29,7 @@ export default function RDReportPage() {
           {[
             { value: '11', label: 'Total SKUs Assessed', note: '≤35% FC target' },
             { value: '0', label: 'Open Flags', note: 'Ebi Fry removed from core' },
-            { value: '31.0%', label: 'Avg Food Cost', note: '4.0pp buffer vs ceiling' },
+            { value: '25%', label: 'Target Food Cost', note: 'Used for all forecasts' },
             { value: '100%', label: 'Rock #1 Complete', note: 'Delivered Apr 7, 2026' },
           ].map((kpi) => (
             <div key={kpi.label} className="bg-white/10 rounded-xl p-4">
@@ -57,7 +57,7 @@ export default function RDReportPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           {[
             { value: '10 / 10', label: 'Core SKUs Locked', color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-200' },
-            { value: '31.0%', label: 'Avg FC (10 SKUs)', color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-200' },
+            { value: '25%', label: 'Target FC (forecasts)', color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-200' },
             { value: '3.6pp', label: 'Buffer vs 35% Ceiling', color: 'text-gold', bg: 'bg-amber-50', border: 'border-amber-200' },
             { value: '0', label: 'SKUs Above Threshold', color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-200' },
           ].map((card) => (

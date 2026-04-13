@@ -13,7 +13,7 @@ const QUICK_LINKS = [
 
 const HIGHLIGHTS = [
   { date: 'Dec 2026', label: 'Business Plan Approved',   detail: 'Presented to & approved by Owners and Board of Directors', color: 'bg-emerald-600', pill: 'bg-emerald-50 text-emerald-700' },
-  { date: 'Apr 7',  label: 'Rock #1 Complete',          detail: '10 SKUs locked · FC 31.0% avg',     color: 'bg-emerald-500', pill: 'bg-emerald-50 text-emerald-700' },
+  { date: 'Apr 7',  label: 'Rock #1 Complete',          detail: '10 SKUs locked · 25% FC target',     color: 'bg-emerald-500', pill: 'bg-emerald-50 text-emerald-700' },
   { date: 'Mar 31', label: 'Strategy Pivot Finalized',  detail: 'Single unified concept confirmed',  color: 'bg-blue-500',    pill: 'bg-blue-50 text-blue-700' },
   { date: 'Mar 15', label: 'SM MOA Site — 9.0/10',      detail: 'Strong GO · demographics pass',     color: 'bg-amber-500',   pill: 'bg-amber-50 text-amber-700' },
   { date: 'Mar 1',  label: 'Unit Economics Revised',     detail: '6–8% EBITDA · ₱2.16B Y5 base revenue',    color: 'bg-violet-500',  pill: 'bg-violet-50 text-violet-700' },
@@ -53,7 +53,7 @@ export default function Dashboard() {
           <div className="flex flex-wrap gap-4">
             {[
               { value: '10/10', label: 'SKUs Locked', color: 'text-emerald-400' },
-              { value: `${avgFC.toFixed(1)}%`, label: 'Avg Food Cost', color: 'text-amber-400' },
+              { value: '25%', label: 'Target Food Cost', color: 'text-amber-400' },
               { value: String(PIPELINE_SITES.length), label: 'Pipeline Sites', color: 'text-blue-400' },
               { value: 'Jul 2027', label: 'Grand Launch', color: 'text-violet-400' },
             ].map(s => (
